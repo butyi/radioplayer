@@ -2,15 +2,16 @@
 # -*- coding: utf-8 -*-
 
 # Docstring
-"""Butyi's Python Auto-DJ Radio Player. It plays programme of my radio station."""
+"""Butyi's Python Auto-DJ RadioPlayer. It plays programme of my radio station."""
 
 # Authorship information
 __author__ = "Janos BENCSIK"
 __copyright__ = "Copyright 2020, butyi.hu"
+__credits__ = "James Robert (jiaaro) for pydub (https://github.com/jiaaro/pydub)"
 __license__ = "GPL"
-__version__ = "0.0.0"
+__version__ = "0.0.1"
 __maintainer__ = "Janos BENCSIK"
-__email__ = "padp@butyi.hu"
+__email__ = "radioplayer@butyi.hu"
 __status__ = "Prototype"
 
 # Import section
@@ -21,125 +22,153 @@ from threading import Thread
 from threading import Event
 from ConfigParser import ConfigParser
 
-# Code
-version = "V0.00 2020.10.30.";
-scriptpath = os.getcwd()
-
 # Subfunctions, classes
 class MusicPlayer(Thread):
-    def __init__(self, song):
-        Thread.__init__(self)
-        self.song = song
-        self._stopper = Event()
-        self.setName('MusicThread')
-    def run(self):
-        play(self.song)
-    def stop(self):
-        self._stopper.set()
+  def __init__(self, song):
+    Thread.__init__(self)
+    self.song = song
+    self._stopper = Event()
+    self.setName('MusicThread')
+  def run(self):
+    play(self.song)
+  def stop(self):
+    self._stopper.set()
 
-def ReadConfig():
-  c = ConfigParser()
-  c.read(scriptpath+"/config.ini")
-  fadeout = 10
-  startnext = 8
-  ret = dict.fromkeys(range(24), {"name":"","path":"","fadeout":fadeout,"startnext":startnext})
-  for section in c._sections :
-    if c.has_option(section, 'fadeout'):
-      fadeout = c.getint(section, 'fadeout')
-    if c.has_option(section, 'startnext'):
-      startnext = c.getint(section, 'startnext')
-    if not c.has_option(section, 'path'): continue
-    Path = c.get(section, 'path')  
-    if c.has_option(section, 'weekday'):
-      if c.getint(section, 'weekday') != datetime.datetime.today().weekday(): continue
-    FirstHour = 0
-    if c.has_option(section, 'firsthour'):
-      FirstHour = c.getint(section, 'firsthour')
-    LastHour = 23
-    if c.has_option(section, 'lasthour'):
-      LastHour = c.getint(section, 'lasthour')
-    if FirstHour <= LastHour:
-      for h in range(FirstHour, LastHour+1):
-        ret[h] = {"name":section,"path":Path,"fadeout":fadeout,"startnext":startnext}
-    else: # Day overflow
-      for h in range(FirstHour, 24):
-        ret[h] = {"name":section,"path":Path,"fadeout":fadeout,"startnext":startnext}
-      for h in range(0, LastHour+1):
-        ret[h] = {"name":section,"path":Path,"fadeout":fadeout,"startnext":startnext}
-  return {"settings":dict(c.items("Settings")), "programme":ret[datetime.datetime.today().time().hour]}
+# define global variables 
+ScriptPath = os.getcwd()
+TextOutFile = "" # Default path if not defined 
+Programme = "";
+Paths = [] # Empty list for paths of songs
+FadeOut = 8
+StartNext = 6
+JinglePath = ""
+JinglePeriod = 15
+Songs = [] # Empty list for songs
+CurrentProgramme = "Not yet read in";
+SongName = "None.mp3"
+CurrentSong = False
+JingleStartNext = 1 # Overlap of jingle and following song in secs
+RecentlyPlayed = [] # Empty list for recently played songs to prevent soon repeat
+LastJingleTimestamp = 0 # Start with a jingle
 
-
-
-# Save hour for step hour detection
-prevhour = datetime.datetime.today().time().hour
-lastjingle = 0
-
-# Select current programme
-config = ReadConfig()
-CurrentPath = config["programme"]["path"];
-
-# Read jingles in
-os.chdir(config["settings"]["jinglepath"])
-jingles = glob.glob("*.mp3")
-
-# Read songs in and select first a random one
-os.chdir(CurrentPath)
-songs = glob.glob("*.mp3")
-song = songs[random.randrange(0,len(songs))]
-
-# Load first mp3
-s = AudioSegment.from_mp3(CurrentPath + "/" + song) # Load song
-s = s.fade_out(config["programme"]["fadeout"]*1000)
 
 # Start playing
 if __name__ == '__main__':
   while True: # Play forever (exit: Ctrl+C)
 
-    # if there was no jingle since jingleperiod minutes, play once before next song 
-    if (lastjingle+(60*int(config["settings"]["jingleperiod"]))) < int(time.time()):
-      sig = AudioSegment.from_mp3(config["settings"]["jinglepath"] + "/" + jingles[random.randrange(0,len(jingles))]) # Load a jingle
-      MusicPlayer(sig).start() # Play jingle in a separate thread
-      time.sleep((len(sig)/1000)-int(config["settings"]["jinglestartnext"])) # wait to finish the jingle
-      lastjingle = time.time()
-      codeexecutiontime = 0 # Is this needed?????
-
-    start = time.time() # Start code execution stopwatch
-    MusicPlayer(s).start() # Play next song in a separate thread
+    # Start code execution stopwatch
+    start = time.time() 
 
     # Put programme name here into info, because it may changed for next song
-    infotext = "Programme: " + config["programme"]["name"]
+    infotext = "Programme: " + CurrentProgramme
 
-    # Check current hour here, update songs array if needed
-    currenthour = datetime.datetime.today().time().hour
-    if prevhour != currenthour: # When hour changed
-      config = ReadConfig()
-      if CurrentPath != config["programme"]["path"]: # When programme changed
-        CurrentPath = config["programme"]["path"];
-        os.chdir(CurrentPath)
-        songs = glob.glob("*.mp3")
-      prevhour = currenthour
+    # Read config to know which programme to be played
+    c = ConfigParser()
+    c.read(ScriptPath+"/config.ini")
+    for section in c._sections :
+      if section == "settings":
+        if c.has_option(section, 'textoutfile'):
+          TextOutFile = c.get(section, 'textoutfile')
+        continue
+      if c.has_option(section, 'months'):
+        if str(datetime.datetime.today().month) not in c.get(section, 'months').split():
+          continue
+      if c.has_option(section, 'days'):
+        if str(datetime.datetime.today().day) not in c.get(section, 'days').split():
+          continue
+      if c.has_option(section, 'weekdays'):
+        if str(datetime.datetime.today().weekday()) not in c.get(section, 'weekdays').split():
+          continue
+      if c.has_option(section, 'hours'):
+        if str(datetime.datetime.today().time().hour) not in c.get(section, 'hours').split():
+          continue
+      if not c.has_option(section, 'path1' ):
+        continue
+      Programme = section;
+      del Paths[:];
+      for x in range(1,10):
+        if c.has_option(section, 'path'+str(x) ):
+          Paths.append( c.get(section, 'path'+str(x) ) )
+      if c.has_option(section, 'fadeout'):
+        FadeOut = c.getint(section, 'fadeout')
+      if c.has_option(section, 'startnext'):
+        StartNext = c.getint(section, 'startnext')
+      if c.has_option(section, 'jinglepath'):
+        JinglePath = c.get(section, 'jinglepath')
+      if c.has_option(section, 'jingleperiod'):
+        JinglePeriod = c.getint(section, 'jingleperiod')
+
+      if False: # Set True to debug programme selection
+        print "After section "+section
+        print "  Program:  "+Programme
+        print "  Paths:  "+str(Paths)
+        print "  FadeOut:  "+str(FadeOut)
+        print "  StartNext:  "+str(StartNext)
+        print "  JinglePath:  "+JinglePath
+        print "  JinglePeriod:  "+str(JinglePeriod)
+
+    if Programme != CurrentProgramme: # When programme changed
+      CurrentProgramme = Programme
+
+      # Read jingles in
+      if 0 < len(JinglePath):
+        os.chdir(JinglePath)
+        jingles = glob.glob("*.mp3")
+
+      # Clear list for songs
+      del Songs[:]
+
+      # Go through all defined Paths to parse songs 
+      for Path in Paths:
+
+        # Jump into path
+        os.chdir(Path)
+
+        # Recursive walk in folder
+        #Songs = glob.glob("**/*.mp3", recursive=True) # for <= Python 3.5
+        for cp, folders, files in os.walk(Path):
+          for fi in files:
+            if fi.endswith(".mp3"):
+              Songs.append(os.path.join(cp, fi))
+
+      # Clear recently played list
+      del RecentlyPlayed[:]
 
     # Update infotext
-    infotext += "\nNow playing: " + song[:-4]
-    song = songs[random.randrange(0,len(songs))] # Choose next song
-    infotext += "\nNext song: " + song[:-4] + "\n"
+    infotext += "\nNow playing: " + os.path.basename(SongName)[:-4]
+    RecentlyPlayed.append(os.path.basename(SongName)) # Add now playing
+    if (len(Songs)/2) < len(RecentlyPlayed): # If list is full
+      RecentlyPlayed.pop(0) # Drop oldest element
+    while True: # Search a song not in RecentlyPlayed list
+      SongName = Songs[random.randrange(0,len(Songs))]
+      if os.path.basename(SongName) not in RecentlyPlayed:
+        break
+    infotext += "\nNext song: " + os.path.basename(SongName)[:-4] + "\n"
     print("\n\n" + infotext + "\n")
 
-    try:
-      f = open(config["settings"]["textoutfile"], "w")
-      f.write(infotext)
-      f.close()
-    except OSError as err:
-      print("OS error: {0}".format(err))
-    except:
-      print("Unexpected error:", sys.exc_info()[0])
-      raise
+    # Write infotext into file
+    if 0 < len(TextOutFile):
+      with open(TextOutFile, 'w') as f:
+        f.write(infotext)
 
     # Pre-load mp3 to eliminate delay
-    currentsong = s
-    s = AudioSegment.from_mp3(CurrentPath + "/" + song) # Load song
-    s = s.fade_out(config["programme"]["fadeout"]*1000)
+    songofwait = CurrentSong
+    CurrentSong = AudioSegment.from_mp3(SongName) # Load song
+    CurrentSong = CurrentSong.fade_out(FadeOut*1000)
 
     # Wait till start of next song
-    time.sleep((len(currentsong)/1000) - config["programme"]["startnext"] - int((time.time()-start)))
+    if songofwait != False:
+      time.sleep((len(songofwait)/1000) - StartNext - int((time.time()-start)))
+
+    # if there was no jingle since jingleperiod minutes, play once before next song 
+    if 0 < len(JinglePath):
+      if (LastJingleTimestamp+(60*JinglePeriod)) < int(time.time()):
+        jin = JinglePath + "/" + jingles[random.randrange(0,len(jingles))]; # Choose a jingle
+        jin = AudioSegment.from_mp3(jin) # Load the choosen jingle
+        MusicPlayer(jin).start() # Play jingle in a separate thread
+        time.sleep((len(jin)/1000)-JingleStartNext) # wait to finish the jingle
+        LastJingleTimestamp = time.time()
+
+    MusicPlayer(CurrentSong).start() # Play next song in a separate thread
+
 
