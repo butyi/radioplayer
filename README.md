@@ -107,8 +107,7 @@ Both command saves the stout and stderr into log file to see which files are fau
   Copy some mp3 files into your home (/home/king) folder.
 - Write/update the config.ini file with your specific settings.
   A minimum config what is just enough to work is:
-  `[KingShuffle]\
-  Path1 = /home/king`
+  `[KingShuffle]<br>Path1 = /home/king`
 - Start the script by `python play.py`
 
 ## Warranty
