@@ -10,12 +10,6 @@ radio content I want. Since I haven't found easily a sufficient player,
 I decided I write exactly what I want. 
 This was easier than search one by trying and get know several players.
 
-## Warranty
-
-It does what it does, how it does. 
-It works for me. Of course not all use cases or fault cases are handled. 
-So it comes without any warranty. But feel free to improve it or fix it bugs.
-
 ## Requiremens
 
 What I need are:
@@ -40,7 +34,7 @@ The script reads config.ini file as configuration.
 In this file there are sections and parameters.
 There is one special section, the "Settings".
 This settings contains general configurations. Now it is only one. 
-- Songinfo text file path
+- Songinfo text file path. This is optional.
 
 Other sections are programmes. Name of section is name of the programme.
 The programmes are proceeded from top to down. Later has higher priority, since
@@ -106,11 +100,22 @@ Does not re-encode the mp3 files.
 
 Both command saves the stout and stderr into log file to see which files are faulty.
 
-## License
+## Usage
 
-- Ensure mp3 files are on your file system
+- Install a command line mp3 player. I use ffmpeg. Google it how to install.
+- Ensure mp3 files are on your file system. Let be your user name is "king".
+  Copy some mp3 files into your home (/home/king) folder.
 - Write/update the config.ini file with your specific settings.
+  A minimum config what is just enough to work is:
+  `[KingShuffle]`
+  `Path1 = /home/king`
+- Start the script by `python play.py`
 
+## Warranty
+
+It does what it does, how it does. 
+It works for me. Of course not all use cases or fault cases are handled. 
+So it comes without any warranty. But feel free to improve it or fix it bugs.
 
 ## License
 
