@@ -27,6 +27,7 @@ What I need are:
 - Choose random song from the defined folders.
 - Remember some amount of already played songs and do not repeat them soon.
   Amount to be half of number of all songs in the current programme.
+- Ensure similar volume for playing
   
 ## Configuration
 
@@ -91,14 +92,7 @@ once my song at the middle, because there was a silent period in that.
 
 `find . -type f -name '*.mp3' -print -exec mp3splt -r -o @f -d ./trim "{}" 2>&1 \; | tee ./trim.log`
 
-Normalize volume of songs. The next command will do it. 
-`find` is needed to not stop the batch command if an mp3 file is faulty. 
-*.mp3 solution will stop. This command just update gain property in IDv3 tag.
-Does not re-encode the mp3 files.
-
-`find . -type f -name '*.mp3' -print -exec normalize-audio "{}" 2>&1 \; | tee ./gain.log`
-
-Both command saves the stout and stderr into log file to see which files are faulty.
+Command saves the stout and stderr into log file to see which files are faulty.
 
 ## Usage
 
