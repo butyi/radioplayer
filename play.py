@@ -9,7 +9,7 @@ __author__ = "Janos BENCSIK"
 __copyright__ = "Copyright 2020, butyi.hu"
 __credits__ = "James Robert (jiaaro) for pydub (https://github.com/jiaaro/pydub)"
 __license__ = "GPL"
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 __maintainer__ = "Janos BENCSIK"
 __email__ = "radioplayer@butyi.hu"
 __status__ = "Prototype"
@@ -45,7 +45,7 @@ JinglePath = ""
 JinglePeriod = 15
 Songs = [] # Empty list for songs
 CurrentProgramme = "Not yet read in";
-SongName = "None.mp3"
+SongName = "Jingle.mp3"
 CurrentSong = False
 JingleStartNext = 1 # Overlap of jingle and following song in secs
 RecentlyPlayed = [] # Empty list for recently played songs to prevent soon repeat
@@ -154,7 +154,8 @@ if __name__ == '__main__':
     # Pre-load mp3 to eliminate delay
     songofwait = CurrentSong
     CurrentSong = AudioSegment.from_mp3(SongName) # Load song
-    CurrentSong = CurrentSong.fade_out(FadeOut*1000)
+    CurrentSong = CurrentSong.fade_out(FadeOut*1000) # Fade out at end
+    CurrentSong = CurrentSong.apply_gain(-CurrentSong.max_dBFS) # Normalize
 
     # Wait till start of next song
     if songofwait != False:
@@ -165,6 +166,7 @@ if __name__ == '__main__':
       if (LastJingleTimestamp+(60*JinglePeriod)) < int(time.time()):
         jin = JinglePath + "/" + jingles[random.randrange(0,len(jingles))]; # Choose a jingle
         jin = AudioSegment.from_mp3(jin) # Load the choosen jingle
+        jin = jin.apply_gain(-jin.max_dBFS) # Normalize
         MusicPlayer(jin).start() # Play jingle in a separate thread
         time.sleep((len(jin)/1000)-JingleStartNext) # wait to finish the jingle
         LastJingleTimestamp = time.time()
