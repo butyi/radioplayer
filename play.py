@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # Docstring
-"""Butyi's Python Auto-DJ RadioPlayer. It plays programme of my radio station."""
+"""Butyi's Python3 Auto-DJ RadioPlayer. It plays programme of my radio station."""
 
 # Authorship information
 __author__ = "Janos BENCSIK"
@@ -20,7 +20,7 @@ from pydub import AudioSegment
 from pydub.playback import play
 from threading import Thread
 from threading import Event
-from ConfigParser import ConfigParser
+import configparser
 
 # Subfunctions, classes
 class MusicPlayer(Thread):
@@ -34,9 +34,9 @@ class MusicPlayer(Thread):
   def stop(self):
     self._stopper.set()
 
-# define global variables 
+# define global variables
 ScriptPath = os.getcwd()
-TextOutFile = "" # Default path if not defined 
+TextOutFile = "" # Default path if not defined
 Programme = "";
 Paths = [] # Empty list for paths of songs
 FadeOut = 8
@@ -57,13 +57,13 @@ if __name__ == '__main__':
   while True: # Play forever (exit: Ctrl+C)
 
     # Start code execution stopwatch
-    start = time.time() 
+    start = time.time()
 
     # Put programme name here into info, because it may changed for next song
     infotext = "Programme: " + CurrentProgramme
 
     # Read config to know which programme to be played
-    c = ConfigParser()
+    c = configparser.ConfigParser(inline_comment_prefixes=';')
     c.read(ScriptPath+"/config.ini")
     for section in c._sections :
       if section == "settings":
@@ -99,13 +99,13 @@ if __name__ == '__main__':
         JinglePeriod = c.getint(section, 'jingleperiod')
 
       if False: # Set True to debug programme selection
-        print "After section "+section
-        print "  Program:  "+Programme
-        print "  Paths:  "+str(Paths)
-        print "  FadeOut:  "+str(FadeOut)
-        print "  StartNext:  "+str(StartNext)
-        print "  JinglePath:  "+JinglePath
-        print "  JinglePeriod:  "+str(JinglePeriod)
+        print("After section "+section)
+        print("  Program:  "+Programme)
+        print("  Paths:  "+str(Paths))
+        print("  FadeOut:  "+str(FadeOut))
+        print("  StartNext:  "+str(StartNext))
+        print("  JinglePath:  "+JinglePath)
+        print("  JinglePeriod:  "+str(JinglePeriod))
 
     if Programme != CurrentProgramme: # When programme changed
       CurrentProgramme = Programme
@@ -118,7 +118,7 @@ if __name__ == '__main__':
       # Clear list for songs
       del Songs[:]
 
-      # Go through all defined Paths to parse songs 
+      # Go through all defined Paths to parse songs
       for Path in Paths:
 
         # Jump into path
@@ -166,7 +166,7 @@ if __name__ == '__main__':
       if (LastJingleTimestamp+(60*JinglePeriod)) < int(time.time()):
         jin = JinglePath + "/" + jingles[random.randrange(0,len(jingles))]; # Choose a jingle
         jin = AudioSegment.from_mp3(jin) # Load the choosen jingle
-        jin = jin.apply_gain(-jin.max_dBFS) # Normalize
+        jin = jin.apply_gain(-jin.max_dBFS-3) # Normalize and a bit more quiet
         MusicPlayer(jin).start() # Play jingle in a separate thread
         time.sleep((len(jin)/1000)-JingleStartNext) # wait to finish the jingle
         LastJingleTimestamp = time.time()
