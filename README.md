@@ -94,6 +94,25 @@ once my song at the middle, because there was a silent period in that.
 
 Command saves the stout and stderr into log file to see which files are faulty.
 
+Since low pass filer of Pydub takes many time (10-20s for a song on my laptop)
+I have re-encoded the mp3 files to have only 32 kHz sample frequency.
+This ensures that there is no frequency component over 16 kHz. 
+This looks sufficient insted of low pass filter.
+
+`for f in *.mp3; do lame -V5 --vbr-new --resample 32 -q0 "$f" tmp && mv tmp "$f"; done`
+
+Command re-encodes all mp3 files in the folder with overwrite the original file.
+
+Normalize of mp3 files was done by mp3gain tool.
+MP3Gain does not just do peak normalization, as many normalizers do. 
+Instead, it does some statistical analysis to determine how loud the file actually sounds to the human ear.
+Also, the changes MP3Gain makes are completely lossless. 
+There is no quality lost in the change because the program adjusts the mp3 file directly, without decoding and re-encoding.
+
+`mp3gain -c -r -p *.mp3`
+
+Command normalizes the volume of all mp3 files in the folder.
+
 ## Usage
 
 - Install a command line mp3 player. I use ffmpeg. Google it how to install.

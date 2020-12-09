@@ -15,7 +15,7 @@ __email__ = "radioplayer@butyi.hu"
 __status__ = "Prototype"
 
 # Import section
-import time, glob, os, random, threading, datetime
+import time, glob, random, os, threading, datetime
 from pydub import AudioSegment
 from pydub.playback import play
 from threading import Thread
@@ -50,6 +50,7 @@ CurrentSong = False
 JingleStartNext = 1 # Overlap of jingle and following song in secs
 RecentlyPlayed = [] # Empty list for recently played songs to prevent soon repeat
 LastJingleTimestamp = 0 # Start with a jingle
+VolumeChange = 6 # Increase volume a bit for direct USB connection of transmitter board
 
 
 # Start playing
@@ -60,13 +61,13 @@ if __name__ == '__main__':
     start = time.time()
 
     # Put programme name here into info, because it may changed for next song
-    infotext = "Programme: " + CurrentProgramme
+    infotext = CurrentProgramme
 
     # Read config to know which programme to be played
     c = configparser.ConfigParser(inline_comment_prefixes=';')
     c.read(ScriptPath+"/config.ini")
     for section in c._sections :
-      if section == "settings":
+      if section == "Settings":
         if c.has_option(section, 'textoutfile'):
           TextOutFile = c.get(section, 'textoutfile')
         continue
@@ -135,7 +136,7 @@ if __name__ == '__main__':
       del RecentlyPlayed[:]
 
     # Update infotext
-    infotext += "\nNow playing: " + os.path.basename(SongName)[:-4]
+    infotext += "\n" + os.path.basename(SongName)[:-4]
     RecentlyPlayed.append(os.path.basename(SongName)) # Add now playing
     if (len(Songs)/2) < len(RecentlyPlayed): # If list is full
       RecentlyPlayed.pop(0) # Drop oldest element
@@ -143,7 +144,7 @@ if __name__ == '__main__':
       SongName = Songs[random.randrange(0,len(Songs))]
       if os.path.basename(SongName) not in RecentlyPlayed:
         break
-    infotext += "\nNext song: " + os.path.basename(SongName)[:-4] + "\n"
+    infotext += "\n" + os.path.basename(SongName)[:-4] + "\n"
     print("\n\n" + infotext + "\n")
 
     # Write infotext into file
@@ -155,18 +156,26 @@ if __name__ == '__main__':
     songofwait = CurrentSong
     CurrentSong = AudioSegment.from_mp3(SongName) # Load song
     CurrentSong = CurrentSong.fade_out(FadeOut*1000) # Fade out at end
-    CurrentSong = CurrentSong.apply_gain(-CurrentSong.max_dBFS) # Normalize
+
+    # Cut high frequency (from 12 kHz) to not disturb 19kHz pilot signal.
+    #   This is slow and cause high resource usage for 10-20s each song on my laptop.
+    #   I am affraid it will take more time on a smaller hardware like Raspberry Pi
+    #   So, instead I propose to prepare all mp3 files with some low pass filter.
+    # CurrentSong = CurrentSong.low_pass_filter(12000)
+
+    CurrentSong = CurrentSong.apply_gain(VolumeChange) # Constant volume adjustment
 
     # Wait till start of next song
     if songofwait != False:
       time.sleep((len(songofwait)/1000) - StartNext - int((time.time()-start)))
 
-    # if there was no jingle since jingleperiod minutes, play once before next song 
+    # if there was no jingle since jingleperiod minutes, play once before next song
     if 0 < len(JinglePath):
       if (LastJingleTimestamp+(60*JinglePeriod)) < int(time.time()):
-        jin = JinglePath + "/" + jingles[random.randrange(0,len(jingles))]; # Choose a jingle
+        rnd = int(time.time()) % len(jingles)
+        jin = JinglePath + "/" + jingles[rnd]; # Choose a jingle
         jin = AudioSegment.from_mp3(jin) # Load the choosen jingle
-        jin = jin.apply_gain(-jin.max_dBFS-3) # Normalize and a bit more quiet
+        jin = jin.apply_gain(VolumeChange-3) # Be a bit more quiet than the music
         MusicPlayer(jin).start() # Play jingle in a separate thread
         time.sleep((len(jin)/1000)-JingleStartNext) # wait to finish the jingle
         LastJingleTimestamp = time.time()
