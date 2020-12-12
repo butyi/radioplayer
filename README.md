@@ -36,6 +36,17 @@ In this file there are sections and parameters.
 There is one special section, the "Settings".
 This settings contains general configurations. Now it is only one. 
 - Songinfo text file path. This is optional.
+- GaindB is constant volume adjustment possibility during playing. This is optional.
+- LowPassFilterHz to be used when your songs are not prepared to eliminate
+  interference between song high frequencies and 19kHz pilot signal of
+  stereo FM transmission. 
+  Be carefull, this can take a long time (10-30s for a usual song).
+  This can be done in the background while the current song is playig,
+  but the problem is if your hardware is slow and the current song is
+  shorter than the length of filer algorithm. In this case, there will
+  be silent gap in the programme.
+  This is also optional.
+  Preparation is better instead of this on the fly filter.
 
 Other sections are programmes. Name of section is name of the programme.
 The programmes are proceeded from top to down. Later has higher priority, since
@@ -83,35 +94,19 @@ RadioPlayer now supports only mp3 files, since I call `AudioSegment.from_mp3`.
 
 ## Preparation
 
-I have prepared my mp3 files before using the RadioPlayer.
+I have prepared my mp3 files before using by the RadioPlayer.
+Preparation was done by `psrt.sh`. 
+I have executed this bash file in the folder where songs are.
+Preparation overwrites the original mp3 files, so be careful.
 
-Split silence from start and end of songs. The next command will do it into
-separate 'trim' subfolder. `find` is needed to not stop the batch command if
-an mp3 file is faulty. *.mp3 solution will stop. Be careful, this also slitted
-once my song at the middle, because there was a silent period in that.
+Main activities of preparation are:
+- Test file errors in song files
+- Resample to 32kHz to limit frequencies at 16kHz
+- Normalize volume
+- Apply additional low pass filter for better high frequencies
+- Trim silent and quiet part from begin and end of songs for better cross-fade
 
-`find . -type f -name '*.mp3' -print -exec mp3splt -r -o @f -d ./trim "{}" 2>&1 \; | tee ./trim.log`
-
-Command saves the stout and stderr into log file to see which files are faulty.
-
-Since low pass filer of Pydub takes many time (10-20s for a song on my laptop)
-I have re-encoded the mp3 files to have only 32 kHz sample frequency.
-This ensures that there is no frequency component over 16 kHz. 
-This looks sufficient insted of low pass filter.
-
-`for f in *.mp3; do lame -V5 --vbr-new --resample 32 -q0 "$f" tmp && mv tmp "$f"; done`
-
-Command re-encodes all mp3 files in the folder with overwrite the original file.
-
-Normalize of mp3 files was done by mp3gain tool.
-MP3Gain does not just do peak normalization, as many normalizers do. 
-Instead, it does some statistical analysis to determine how loud the file actually sounds to the human ear.
-Also, the changes MP3Gain makes are completely lossless. 
-There is no quality lost in the change because the program adjusts the mp3 file directly, without decoding and re-encoding.
-
-`mp3gain -c -r -p *.mp3`
-
-Command normalizes the volume of all mp3 files in the folder.
+For more details, see my comments in the bash file
 
 ## Usage
 
@@ -137,7 +132,7 @@ I am happy if I can give something back to the community.
 
 ## Keywords
 
-RadioPlayer, Radio Player, AutoDJ, mp3 Player, Script, Command Line, CLI,
+RadioPlayer, Radio Player, AutoDJ, mp3 Player, Script, Command Line, CLI, Bash,
 Configurable, Mixer, No GUI, Linux, Raspberry Pi.
 
 ###### 2020 Janos BENCSIK

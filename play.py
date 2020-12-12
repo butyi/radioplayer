@@ -9,7 +9,7 @@ __author__ = "Janos BENCSIK"
 __copyright__ = "Copyright 2020, butyi.hu"
 __credits__ = "James Robert (jiaaro) for pydub (https://github.com/jiaaro/pydub)"
 __license__ = "GPL"
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 __maintainer__ = "Janos BENCSIK"
 __email__ = "radioplayer@butyi.hu"
 __status__ = "Prototype"
@@ -50,8 +50,8 @@ CurrentSong = False
 JingleStartNext = 1 # Overlap of jingle and following song in secs
 RecentlyPlayed = [] # Empty list for recently played songs to prevent soon repeat
 LastJingleTimestamp = 0 # Start with a jingle
-VolumeChange = 6 # Increase volume a bit for direct USB connection of transmitter board
-
+GaindB = 0 # Increase volume a bit may needed for direct USB connection of transmitter board
+LowPassFilterHz = 0
 
 # Start playing
 if __name__ == '__main__':
@@ -70,6 +70,10 @@ if __name__ == '__main__':
       if section == "Settings":
         if c.has_option(section, 'textoutfile'):
           TextOutFile = c.get(section, 'textoutfile')
+        if c.has_option(section, 'lowpassfilterhz'):
+          LowPassFilterHz = c.getint(section, 'lowpassfilterhz')
+        if c.has_option(section, 'gaindb'):
+          GaindB = c.getint(section, 'gaindb')
         continue
       if c.has_option(section, 'months'):
         if str(datetime.datetime.today().month) not in c.get(section, 'months').split():
@@ -161,9 +165,11 @@ if __name__ == '__main__':
     #   This is slow and cause high resource usage for 10-20s each song on my laptop.
     #   I am affraid it will take more time on a smaller hardware like Raspberry Pi
     #   So, instead I propose to prepare all mp3 files with some low pass filter.
-    # CurrentSong = CurrentSong.low_pass_filter(12000)
+    if 0 < LowPassFilterHz:
+      CurrentSong = CurrentSong.low_pass_filter(LowPassFilterHz)
 
-    CurrentSong = CurrentSong.apply_gain(VolumeChange) # Constant volume adjustment
+    if 0 != GaindB:
+      CurrentSong = CurrentSong.apply_gain(GaindB) # Constant volume adjustment
 
     # Wait till start of next song
     if songofwait != False:
@@ -175,7 +181,7 @@ if __name__ == '__main__':
         rnd = int(time.time()) % len(jingles)
         jin = JinglePath + "/" + jingles[rnd]; # Choose a jingle
         jin = AudioSegment.from_mp3(jin) # Load the choosen jingle
-        jin = jin.apply_gain(VolumeChange-3) # Be a bit more quiet than the music
+        jin = jin.apply_gain(GaindB-3) # Be a bit more quiet than the music
         MusicPlayer(jin).start() # Play jingle in a separate thread
         time.sleep((len(jin)/1000)-JingleStartNext) # wait to finish the jingle
         LastJingleTimestamp = time.time()
