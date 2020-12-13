@@ -15,7 +15,7 @@ __email__ = "radioplayer@butyi.hu"
 __status__ = "Prototype"
 
 # Import section
-import time, glob, random, os, threading, datetime
+import time, glob, random, os, threading, datetime, sys
 from pydub import AudioSegment
 from pydub.playback import play
 from threading import Thread
@@ -65,7 +65,7 @@ if __name__ == '__main__':
 
     # Read config to know which programme to be played
     c = configparser.ConfigParser(inline_comment_prefixes=';')
-    c.read(ScriptPath+"/config.ini")
+    c.read(os.path.dirname(sys.argv[0])+"/config.ini")
     for section in c._sections :
       if section == "Settings":
         if c.has_option(section, 'textoutfile'):
