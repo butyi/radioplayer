@@ -52,6 +52,7 @@ RecentlyPlayed = [] # Empty list for recently played songs to prevent soon repea
 LastJingleTimestamp = 0 # Start with a jingle
 GaindB = 0 # Increase volume a bit may needed for direct USB connection of transmitter board
 LowPassFilterHz = 0
+Artists = [] # Empty list for Artists
 
 # Start playing
 if __name__ == '__main__':
@@ -147,7 +148,11 @@ if __name__ == '__main__':
     while True: # Search a song not in RecentlyPlayed list
       SongName = Songs[random.randrange(0,len(Songs))]
       if os.path.basename(SongName) not in RecentlyPlayed:
-        break
+        NewArtists = os.path.basename(SongName).split(" - ")[0].split(" Ft. ")
+        Union = set(Artists) & set(NewArtists)
+        if 0 == len(Union):
+          Artists = NewArtists
+          break
     infotext += "\n" + os.path.basename(SongName)[:-4] + "\n"
     print("\n\n" + infotext + "\n")
 
@@ -173,7 +178,9 @@ if __name__ == '__main__':
 
     # Wait till start of next song
     if songofwait != False:
-      time.sleep((len(songofwait)/1000) - StartNext - int((time.time()-start)))
+      sleeptime = (len(songofwait)/1000) - StartNext - int((time.time()-start))
+      if 0 < sleeptime:
+        time.sleep(sleeptime)
 
     # if there was no jingle since jingleperiod minutes, play once before next song
     if 0 < len(JinglePath):
