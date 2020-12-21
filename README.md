@@ -27,6 +27,7 @@ What I need are:
 - Choose random song from the defined folders.
 - Remember some amount of already played songs and do not repeat them soon.
   Amount to be half of number of all songs in the current programme.
+- Do not play same artist consecutive more than one times
 - Ensure similar volume for playing
   
 ## Configuration
@@ -108,15 +109,29 @@ Main activities of preparation are:
 
 For more details, see my comments in the bash file
 
+## Prerequisites
+
+- Install git by `sudo apt install git` if `git --version` does not show some available revision
+- Clone the script by `git clone https://github.com/butyi/radioplayer` (note this will istall the script under a radioplayer subfolder)
+- Install python3 by `sudo apt install python3` if `python3 --version` does not show some available revision
+- If you do not yet have pip, install it by `sudo apt install python3-pip`
+- You need to install pydub using pip by `pip3 install pydub`
+- Set python3 as default python by `sudo update-alternative --install /usr/bin/python python /usr/bin/python3 1`
+  and check it by `sudo update-alternative --config python`
+- Install ffmpeg by `sudo apt install ffmpeg`
+
 ## Usage
 
-- Install a command line mp3 player. I use ffmpeg. Google it how to install.
 - Ensure mp3 files are on your file system. Let be your user name is "king".
   Copy some mp3 files into your home (/home/king) folder.
 - Write/update the config.ini file with your specific settings.
   A minimum config what is just enough to work is:
   `[KingShuffle]`<br>`Path1 = /home/king`
-- Start the script by `python play.py`
+- If you use USB sound card like me, set it as default:
+  - Check card numbers by `aplay -l`
+  - Set your card ad default in file `sudo nano ~/.asoundrc`
+- Start the script by `python3 play.py`
+
 
 ## Warranty
 
