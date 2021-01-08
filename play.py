@@ -50,7 +50,9 @@ CurrentSong = False
 JingleStartNext = 1 # Overlap of jingle and following song in secs
 RecentlyPlayed = [] # Empty list for recently played songs to prevent soon repeat
 LastJingleTimestamp = 0 # Start with a jingle
-GaindB = 0 # Increase volume a bit may needed for direct USB connection of transmitter board
+GaindB = 0 # Increase (os recrease) volume a bit may needed for direct USB connection of transmitter board
+TargetGain = 0 # dynalic gain, different for each song
+Normalize = False
 LowPassFilterHz = 0
 Artists = [] # Empty list for Artists
 
@@ -75,6 +77,8 @@ if __name__ == '__main__':
           LowPassFilterHz = c.getint(section, 'lowpassfilterhz')
         if c.has_option(section, 'gaindb'):
           GaindB = c.getint(section, 'gaindb')
+        if c.has_option(section, 'normalize'):
+          Normalize = True
         continue
       if c.has_option(section, 'months'):
         if str(datetime.datetime.today().month) not in c.get(section, 'months').split():
@@ -173,8 +177,11 @@ if __name__ == '__main__':
     if 0 < LowPassFilterHz:
       CurrentSong = CurrentSong.low_pass_filter(LowPassFilterHz)
 
-    if 0 != GaindB:
-      CurrentSong = CurrentSong.apply_gain(GaindB) # Constant volume adjustment
+    TargetGain = GaindB
+    if Normalize:
+      TargetGain -= CurrentSong.dBFS;
+    if 0 != TargetGain:
+      CurrentSong = CurrentSong.apply_gain(TargetGain)
 
     # Wait till start of next song
     if songofwait != False:
@@ -188,7 +195,12 @@ if __name__ == '__main__':
         rnd = int(time.time()) % len(jingles)
         jin = JinglePath + "/" + jingles[rnd]; # Choose a jingle
         jin = AudioSegment.from_mp3(jin) # Load the choosen jingle
-        jin = jin.apply_gain(GaindB-3) # Be a bit more quiet than the music
+        TargetGain = GaindB
+        if Normalize:
+          TargetGain -= jin.dBFS;
+        TargetGain -= 3 # Be a bit less loud than the music
+        if 0 != TargetGain:
+          jin = jin.apply_gain(TargetGain)
         MusicPlayer(jin).start() # Play jingle in a separate thread
         time.sleep((len(jin)/1000)-JingleStartNext) # wait to finish the jingle
         LastJingleTimestamp = time.time()
