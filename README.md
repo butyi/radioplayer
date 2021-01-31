@@ -124,11 +124,11 @@ For more details, see my comments in the bash file
 
 ## Usage
 
-- Ensure mp3 files are on your file system. Let be your user name is "king".
-  Copy some mp3 files into your home (/home/king) folder.
+- Ensure mp3 files are on your file system. For example if your user name is "king".
+  Copy some mp3 files into your home (/home/king/songs) folder.
 - Write/update the config.ini file with your specific settings.
   A minimum config what is just enough to work is:
-  `[KingShuffle]`<br>`Path1 = /home/king`
+  `[KingShuffle]`<br>`Path1 = /home/king/songs`
 - If you use USB sound card like me, set it as default:
   - Check card numbers by `aplay -l`
   - Set your card ad default in file `sudo nano ~/.asoundrc`
@@ -139,7 +139,7 @@ For more details, see my comments in the bash file
 
 It does what it does, how it does. 
 It works for me. Of course not all use cases or fault cases are handled. 
-So it comes without any warranty. But feel free to improve it or fix it bugs.
+So it comes without any warranty. But feel free to improve it or fix its bugs.
 
 ## License
 
