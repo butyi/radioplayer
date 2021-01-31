@@ -5,6 +5,7 @@
 3 Of A Kind -> 1
 4 The Cause -> 2
 6lack -> 1
+A Magyar Radio Hangjai -> 1
 A Teens -> 4
 A.C. Jobim -> 1
 A.L.T. -> 1
@@ -14,7 +15,6 @@ Aaron Smith -> 1
 Abba -> 66
 Acdc -> 3
 Ace Of Base -> 6
-Acid Jazz -> 1
 Ad Stúdió -> 1
 Adam Faith -> 1
 Adamski -> 3
@@ -61,7 +61,7 @@ Amanda Marshall -> 1
 Ambrus Kyri -> 1
 America -> 1
 Amy MacDonald -> 1
-Amy Winehouse -> 11
+Amy Winehouse -> 10
 Ananda Shankar -> 4
 Anastacia -> 9
 Anbessa -> 1
@@ -144,6 +144,7 @@ Ben E King -> 3
 Benjamin Ingrosso -> 1
 Bergendy -> 1
 Bert Jansch -> 1
+Bery & Váci Eszter -> 1
 Bette Midler -> 7
 Betty Everett -> 1
 Beverley Craven -> 2
@@ -189,7 +190,7 @@ Bomb The Bass -> 1
 Bon Bon -> 2
 Bon Jovi -> 1
 Bonanza Banzai -> 22
-Boney M -> 24
+Boney M -> 23
 Bonnie Raitt -> 4
 Bonnie Tyler -> 1
 Bosson -> 2
@@ -205,10 +206,9 @@ Brenda Russell -> 1
 Brian Hyland -> 1
 Brian Simpson -> 7
 Brielle Von Hugel -> 1
-Bring Me The Horizon -> 1
 Briskey -> 1
 Britney Spears -> 9
-Bronski Beat -> 25
+Bronski Beat -> 24
 Bros -> 1
 Bruce & Bongo -> 8
 Bruno Mars -> 3
@@ -345,7 +345,7 @@ Delta Goodrem -> 1
 Demi Lovato -> 2
 Demjen Ferenc -> 2
 Dennis Lloyd -> 1
-Depeche Mode -> 37
+Depeche Mode -> 36
 Derek & The Dominos -> 1
 Desperado -> 1
 Dexys Midnight Runners -> 1
@@ -365,6 +365,7 @@ Disco Megamix -> 1
 Divine -> 1
 Dizzy Gillespie -> 1
 Dj Antoine -> 2
+Dj Dominique -> 1
 Dj Fresh -> 1
 Dj Khaled -> 2
 Dj Mam’s -> 1
@@ -483,6 +484,7 @@ Gabrielle -> 1
 Gala -> 1
 Galantis -> 1
 Ganxta Zolee S A Kartel -> 1
+Ganzler Ors -> 1
 Garcia -> 1
 Gary Moore -> 1
 Gene Pitney -> 1
@@ -602,6 +604,7 @@ Jim Croce -> 2
 Jim Diamond -> 1
 Jim Reeves -> 3
 Jimmy Somerville -> 2
+Jingle -> 10
 Joan Jett -> 1
 Joao -> 1
 Jocelyn Brown -> 1
@@ -614,7 +617,7 @@ John Denver -> 1
 John Legend -> 2
 John Lennon -> 1
 John Miles -> 1
-John Newman -> 3
+John Newman -> 2
 John Rowles -> 1
 Johnny Burnette -> 2
 Johnny Hates Jazz -> 2
@@ -755,7 +758,7 @@ Mabel -> 1
 Mac Band -> 1
 Madison Avenue -> 1
 Madness -> 1
-Madonna -> 165
+Madonna -> 164
 Maggie Lindemann -> 1
 Maggie Reilly -> 1
 Mahala Rai Banda -> 1
@@ -800,9 +803,8 @@ Max Graham -> 1
 Maxi Priest -> 1
 Mazzy Star -> 1
 Mc Hammer -> 1
-Mc Hawer & Tekknő -> 1
+Mc Hawer & Tekkno -> 2
 Mc Miker G -> 1
-Mc. Hawer -> 1
 Mcfadden & Whitehead -> 1
 Mecano -> 1
 Meghan Trainor -> 7
@@ -824,12 +826,12 @@ Middle Of The Road -> 1
 Mike & The Mechanics -> 7
 Mike Batt -> 1
 Mike Linney -> 1
-Mike Oldfield -> 28
+Mike Oldfield -> 25
 Mike Posner -> 1
 Mike Reno -> 1
 Miley Cyrus -> 4
 Milk & Sugar -> 1
-Mint Royale -> 2
+Mint Royale -> 1
 Misteeq -> 1
 Mo Horizons -> 2
 Modern Talking -> 19
@@ -839,6 +841,7 @@ Moloko -> 2
 Monchy & Alexandra -> 1
 Monica -> 1
 Monie Love -> 1
+Montefiori Cocktail -> 1
 Moony -> 1
 Morcheeba -> 33
 Mornington Lockett -> 1
@@ -1036,7 +1039,6 @@ Run Dmc -> 1
 Rupert Holmes -> 2
 Ruth Anne -> 1
 Rza -> 1
-S'Express -> 1
 Sade -> 23
 Safri Duo -> 1
 Sally Oldfield -> 1
@@ -1053,8 +1055,9 @@ Sambada -> 1
 Sandie Shaw -> 1
 Sandra -> 8
 Sandy Reed -> 2
+Santa Esmeralda -> 1
 Santana -> 1
-Saragossa Band -> 20
+Saragossa Band -> 15
 Sarah Brightman -> 15
 Sarah Connor -> 2
 Sash -> 1
@@ -1088,14 +1091,13 @@ Sheryl Crowe -> 1
 Shinehead -> 1
 Shirley Bassey -> 2
 Shivaree -> 1
-Sia -> 8
+Sia -> 7
 Sigala -> 2
 Sigma -> 1
 Silk City -> 1
 Simon & Garfunkel -> 1
-Simple Red -> 1
 Simply Red -> 23
-Sipos F. Tamás -> 2
+Sipos F. Tamas -> 2
 Sissel -> 1
 Sister Sledge -> 2
 Sixpence None The Richer -> 1
@@ -1150,17 +1152,18 @@ Swedish House Mafia -> 1
 Sweet -> 1
 Sweet Sensation -> 1
 Syreeta -> 1
-Szécsi Pál -> 1
-Szűcs Judith -> 1
+Szecsi Pal -> 1
+Szucs Judith -> 1
 T'pau -> 1
 T.A.T.U. -> 1
 T.I. -> 2
 TJR -> 1
+Takacs Tamas Dirty Blues Band -> 2
 Take That -> 1
-Takács Tamás Dirty Blues Band -> 2
 Talk Talk -> 1
 Tamy -> 1
 Tanita Tikaram -> 6
+Tankcsapda -> 1
 Tara Maclean -> 1
 Tarkan -> 2
 Tasmin Archer -> 1
@@ -1168,7 +1171,6 @@ Tate McRae -> 1
 Taylor Swift -> 1
 Technotronic -> 1
 Tegan & Sara -> 1
-Tekknő -> 1
 Ten Sharp -> 1
 Terence Trent Darby -> 1
 Terry Jacks -> 1
@@ -1195,7 +1197,7 @@ The Commodores -> 2
 The Communards -> 1
 The Connels -> 1
 The Corrs -> 30
-The Cranberries -> 8
+The Cranberries -> 14
 The Crystals -> 1
 The Cure -> 3
 The Darkness -> 1

@@ -16,7 +16,7 @@ $andinartistnames = array(
   "Mel & Kim",
   "Captain & Tennille",
   "Mike & The Mechanics",
-  "Mc Hawer & Tekknő",
+  "Mc Hawer & Tekkno",
   "Touch & Go",
   "Tones & I",
   "Heavy D & The Boyz",
@@ -46,13 +46,14 @@ $andinartistnames = array(
   "Lilly Wood & The Prick",
   "Redhead Kingpin & Fbi",
   "Romeo & Julia",
-  "Bart & Baker"
+  "Bart & Baker",
+  "Bery & Váci Eszter"
 );
 
 $skipsimilaritycheck = array(
   "Jean Michel Jarre - Oxygene",
   "Jean Michel Jarre - Equinoxe",
-  //"Jean Michel Jarre - Magnetic Fields",
+  "Jean Michel Jarre - Magnetic Fields",
   "Depeche Mode - A Question Of",
 );
 
@@ -64,7 +65,7 @@ $suspiciouswords = array(
   '/(remix)/i'
 );
 
-system("find ./music/ -type f -printf \"%p\n\" > ./songs.txt");
+system("find ./music/ -type f -name '*.mp3' -printf \"%p\n\" > ./songs.txt");
 
 //Trim path from songs 
 $files=file("./songs.txt");
@@ -107,6 +108,17 @@ foreach($files as $line){
 //  if(preg_match('/\s(\S+n\')\s/i',$line,$regs){//"n'"
 //    echo $line." -> (".$regs[1].")\n";
 //  }
+  if(false === strpos($line,"-")){
+    echo $line." -> missing '-'\n";
+  }
+
+  if(false === strpos($line,"(") && false !== strpos($line,")")){
+    echo $line." -> missing '('\n";
+  }
+
+  if(false !== strpos($line,"(") && false === strpos($line,")")){
+    echo $line." -> missing ')'\n";
+  }
 
   if(preg_match('/\s(With)\s.+ - /i',$line,$regs)){//search 'With' which maybe to be replaced with 'Ft.'
     echo $line." -> (".$regs[1].")\n";
