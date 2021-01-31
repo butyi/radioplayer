@@ -77,10 +77,12 @@ those are defined. These parameters have default value, so not mandatory.
 Furthermore, these are just updated when a programme matches. So, these
 can be programme specific.
 
+- DropEnd is seconds to be removed from end of song before fadeout is calculated
 - FadeOut is length of fade down the end of song in seconds.
-- StartNext is seconds of overlap of two consecutive songs.
+- Overlap is seconds of overlap of two consecutive songs.
 - JinglePath is a path where jingles are stored.
 - JinglePeriod is the minimum minutes between two jingles
+- JingleOverlap is overlap of jingle and following song in secs
 
 ## Script
 
