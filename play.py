@@ -34,20 +34,20 @@ class MusicPlayer(Thread):
   def stop(self):
     self._stopper.set()
 
+
 # define global variables
-ScriptPath = os.getcwd()
 TextOutFile = "" # Default path if not defined
 Programme = "";
 Paths = [] # Empty list for paths of songs
-FadeOut = 8
-StartNext = 6
+Jingles = [] # Empty list for jingles
 JinglePath = ""
 JinglePeriod = 15
 Songs = [] # Empty list for songs
 CurrentProgramme = "Not yet read in";
 SongName = "Jingle.mp3"
 CurrentSong = False
-JingleStartNext = 1 # Overlap of jingle and following song in secs
+NextSong = False
+JingleOverlap = 1 # Overlap of jingle and following song in secs
 RecentlyPlayed = [] # Empty list for recently played songs to prevent soon repeat
 LastJingleTimestamp = 0 # Start with a jingle
 GaindB = 0 # Increase (os recrease) volume a bit may needed for direct USB connection of transmitter board
@@ -55,21 +55,56 @@ TargetGain = 0 # dynalic gain, different for each song
 Normalize = False
 LowPassFilterHz = 0
 Artists = [] # Empty list for Artists
+DebugConfigRead = False # Set True id you want to debug read and evaluation of config.ini
+DateTime = datetime.datetime.today()
+
+CfgPath = os.path.dirname(sys.argv[0])+"/config.ini"
+if not os.path.exists(CfgPath):
+  print("ERROR! Cannot open ini file "+CfgPath)
+  exit(1)
+
+#
+# CrossFade timings:
+#
+# volume
+#  100% ^-----oldsong--\  |--newsong-----
+#       |                \|
+#       |                 |\
+#       |                 |  \
+#   0%  |                 |    \------.
+#       |--------------------------------> time
+# End of old song                     |
+# Start of new song       |
+# DropEnd                      |------|
+# FadeOut              |-------|
+# Overlap                 |-----------|
+#
+FadeOut = 8
+DropEnd = 0
+Overlap = 6
+
 
 # Start playing
 if __name__ == '__main__':
   while True: # Play forever (exit: Ctrl+C)
 
-    # Start code execution stopwatch
+    # Start stopwatch to measure below code execution
     start = time.time()
 
-    # Put programme name here into info, because it may changed for next song
+    # Put programme name here into info text, because it may changed for next song
     infotext = CurrentProgramme
+
+    # Calculate start of next song. This moment to be used to check the current programme
+    if CurrentSong != False:
+      NextSongChange = (len(CurrentSong)/1000) + DropEnd - Overlap
+      DateTime = datetime.datetime.today() + datetime.timedelta(seconds=NextSongChange)
 
     # Read config to know which programme to be played
     c = configparser.ConfigParser(inline_comment_prefixes=';')
-    c.read(os.path.dirname(sys.argv[0])+"/config.ini")
+    c.read(CfgPath)
     for section in c._sections :
+      if DebugConfigRead:
+        print("Section "+section)
       if section == "Settings":
         if c.has_option(section, 'textoutfile'):
           TextOutFile = c.get(section, 'textoutfile')
@@ -81,16 +116,16 @@ if __name__ == '__main__':
           Normalize = True
         continue
       if c.has_option(section, 'months'):
-        if str(datetime.datetime.today().month) not in c.get(section, 'months').split():
+        if str(DateTime.month) not in c.get(section, 'months').split():
           continue
       if c.has_option(section, 'days'):
-        if str(datetime.datetime.today().day) not in c.get(section, 'days').split():
+        if str(DateTime.day) not in c.get(section, 'days').split():
           continue
       if c.has_option(section, 'weekdays'):
-        if str(datetime.datetime.today().weekday()) not in c.get(section, 'weekdays').split():
+        if str(DateTime.weekday()) not in c.get(section, 'weekdays').split():
           continue
       if c.has_option(section, 'hours'):
-        if str(datetime.datetime.today().time().hour) not in c.get(section, 'hours').split():
+        if str(DateTime.time().hour) not in c.get(section, 'hours').split():
           continue
       if not c.has_option(section, 'path1' ):
         continue
@@ -101,19 +136,23 @@ if __name__ == '__main__':
           Paths.append( c.get(section, 'path'+str(x) ) )
       if c.has_option(section, 'fadeout'):
         FadeOut = c.getint(section, 'fadeout')
-      if c.has_option(section, 'startnext'):
-        StartNext = c.getint(section, 'startnext')
+      if c.has_option(section, 'dropend'):
+        DropEnd = c.getint(section, 'dropend')
+      if c.has_option(section, 'overlap'):
+        Overlap = c.getint(section, 'overlap')
       if c.has_option(section, 'jinglepath'):
         JinglePath = c.get(section, 'jinglepath')
       if c.has_option(section, 'jingleperiod'):
         JinglePeriod = c.getint(section, 'jingleperiod')
+      if c.has_option(section, 'jingleoverlap'):
+        JingleOverlap = c.getint(section, 'jingleoverlap')
 
-      if False: # Set True to debug programme selection
-        print("After section "+section)
+      if DebugConfigRead:
         print("  Program:  "+Programme)
         print("  Paths:  "+str(Paths))
+        print("  DropEnd:  "+str(DropEnd))
         print("  FadeOut:  "+str(FadeOut))
-        print("  StartNext:  "+str(StartNext))
+        print("  Overlap:  "+str(Overlap))
         print("  JinglePath:  "+JinglePath)
         print("  JinglePeriod:  "+str(JinglePeriod))
 
@@ -122,17 +161,16 @@ if __name__ == '__main__':
 
       # Read jingles in
       if 0 < len(JinglePath):
-        os.chdir(JinglePath)
-        jingles = glob.glob("*.mp3")
+        for cp, folders, files in os.walk(JinglePath):
+          for fi in files:
+            if fi.endswith(".mp3"):
+              Jingles.append(os.path.join(cp, fi))
 
       # Clear list for songs
       del Songs[:]
 
       # Go through all defined Paths to parse songs
       for Path in Paths:
-
-        # Jump into path
-        os.chdir(Path)
 
         # Recursive walk in folder
         #Songs = glob.glob("**/*.mp3", recursive=True) # for <= Python 3.5
@@ -141,8 +179,9 @@ if __name__ == '__main__':
             if fi.endswith(".mp3"):
               Songs.append(os.path.join(cp, fi))
 
-      # Clear recently played list
-      del RecentlyPlayed[:]
+      # Decrease played list when switch to a folder which contains less songs than before
+      while (len(Songs)/2) < len(RecentlyPlayed): # If list is longer than half of songs
+        RecentlyPlayed.pop(0) # Drop oldest elements
 
     # Update infotext
     infotext += "\n" + os.path.basename(SongName)[:-4]
@@ -152,11 +191,14 @@ if __name__ == '__main__':
     while True: # Search a song not in RecentlyPlayed list
       SongName = Songs[random.randrange(0,len(Songs))]
       if os.path.basename(SongName) not in RecentlyPlayed:
+        # Ensure to not play consecutive two songs from the same artists
         NewArtists = os.path.basename(SongName).split(" - ")[0].split(" Ft. ")
         Union = set(Artists) & set(NewArtists)
-        if 0 == len(Union):
-          Artists = NewArtists
-          break
+        if 0 == len(Union): # If artist is different
+          Artists = NewArtists # Save this artist(s) for next check
+          break # Fount the next song
+
+    # Continue to prepare info text
     infotext += "\n" + os.path.basename(SongName)[:-4] + "\n"
     print("\n\n" + infotext + "\n")
 
@@ -166,34 +208,36 @@ if __name__ == '__main__':
         f.write(infotext)
 
     # Pre-load mp3 to eliminate delay
-    songofwait = CurrentSong
-    CurrentSong = AudioSegment.from_mp3(SongName) # Load song
-    CurrentSong = CurrentSong.fade_out(FadeOut*1000) # Fade out at end
+    CurrentSong = NextSong
+    NextSong = AudioSegment.from_mp3(SongName) # Load song
+    if 0 < DropEnd:
+      NextSong = NextSong[:(len(NextSong)-(DropEnd*1000))] # drop end of song
+    NextSong = NextSong.fade_out(FadeOut*1000) # Fade out at end
 
     # Cut high frequency (from 12 kHz) to not disturb 19kHz pilot signal.
     #   This is slow and cause high resource usage for 10-20s each song on my laptop.
     #   I am affraid it will take more time on a smaller hardware like Raspberry Pi
     #   So, instead I propose to prepare all mp3 files with some low pass filter.
     if 0 < LowPassFilterHz:
-      CurrentSong = CurrentSong.low_pass_filter(LowPassFilterHz)
+      NextSong = NextSong.low_pass_filter(LowPassFilterHz)
 
     TargetGain = GaindB
     if Normalize:
-      TargetGain -= CurrentSong.dBFS;
+      TargetGain -= NextSong.dBFS;
     if 0 != TargetGain:
-      CurrentSong = CurrentSong.apply_gain(TargetGain)
+      NextSong = NextSong.apply_gain(TargetGain)
 
     # Wait till start of next song
-    if songofwait != False:
-      sleeptime = (len(songofwait)/1000) - StartNext - int((time.time()-start))
-      if 0 < sleeptime:
-        time.sleep(sleeptime)
+    if CurrentSong != False:
+      SleepTime = (len(CurrentSong)/1000) - Overlap - int((time.time()-start))
+      if 0 < SleepTime:
+        time.sleep(SleepTime)
 
     # if there was no jingle since jingleperiod minutes, play once before next song
     if 0 < len(JinglePath):
       if (LastJingleTimestamp+(60*JinglePeriod)) < int(time.time()):
-        rnd = int(time.time()) % len(jingles)
-        jin = JinglePath + "/" + jingles[rnd]; # Choose a jingle
+        rnd = int(time.time()) % len(Jingles)
+        jin = Jingles[rnd]; # Choose a jingle
         jin = AudioSegment.from_mp3(jin) # Load the choosen jingle
         TargetGain = GaindB
         if Normalize:
@@ -202,9 +246,9 @@ if __name__ == '__main__':
         if 0 != TargetGain:
           jin = jin.apply_gain(TargetGain)
         MusicPlayer(jin).start() # Play jingle in a separate thread
-        time.sleep((len(jin)/1000)-JingleStartNext) # wait to finish the jingle
+        time.sleep((len(jin)/1000)-JingleOverlap) # wait to finish the jingle
         LastJingleTimestamp = time.time()
 
-    MusicPlayer(CurrentSong).start() # Play next song in a separate thread
+    MusicPlayer(NextSong).start() # Play next song in a separate thread
 
 
