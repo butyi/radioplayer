@@ -56,7 +56,7 @@ Normalize = False
 LowPassFilterHz = 0
 Artists = [] # Empty list for Artists
 DebugConfigRead = False # Set True id you want to debug read and evaluation of config.ini
-DateTime = datetime.datetime.today()
+ProgrammeCheckDateTime = datetime.datetime.today()
 
 CfgPath = os.path.dirname(sys.argv[0])+"/config.ini"
 if not os.path.exists(CfgPath):
@@ -96,8 +96,8 @@ if __name__ == '__main__':
 
     # Calculate start of next song. This moment to be used to check the current programme
     if CurrentSong != False:
-      NextSongChange = (len(CurrentSong)/1000) + DropEnd - Overlap
-      DateTime = datetime.datetime.today() + datetime.timedelta(seconds=NextSongChange)
+      CurrentSongLength = (len(CurrentSong)/1000) + DropEnd - Overlap
+      ProgrammeCheckDateTime = datetime.datetime.today() + datetime.timedelta(seconds=CurrentSongLength)
 
     # Read config to know which programme to be played
     c = configparser.ConfigParser(inline_comment_prefixes=';')
@@ -116,16 +116,16 @@ if __name__ == '__main__':
           Normalize = True
         continue
       if c.has_option(section, 'months'):
-        if str(DateTime.month) not in c.get(section, 'months').split():
+        if str(ProgrammeCheckDateTime.month) not in c.get(section, 'months').split():
           continue
       if c.has_option(section, 'days'):
-        if str(DateTime.day) not in c.get(section, 'days').split():
+        if str(ProgrammeCheckDateTime.day) not in c.get(section, 'days').split():
           continue
       if c.has_option(section, 'weekdays'):
-        if str(DateTime.weekday()) not in c.get(section, 'weekdays').split():
+        if str(ProgrammeCheckDateTime.weekday()) not in c.get(section, 'weekdays').split():
           continue
       if c.has_option(section, 'hours'):
-        if str(DateTime.time().hour) not in c.get(section, 'hours').split():
+        if str(ProgrammeCheckDateTime.time().hour) not in c.get(section, 'hours').split():
           continue
       if not c.has_option(section, 'path1' ):
         continue
@@ -208,7 +208,6 @@ if __name__ == '__main__':
         f.write(infotext)
 
     # Pre-load mp3 to eliminate delay
-    CurrentSong = NextSong
     NextSong = AudioSegment.from_mp3(SongName) # Load song
     if 0 < DropEnd:
       NextSong = NextSong[:(len(NextSong)-(DropEnd*1000))] # drop end of song
@@ -249,6 +248,7 @@ if __name__ == '__main__':
         time.sleep((len(jin)/1000)-JingleOverlap) # wait to finish the jingle
         LastJingleTimestamp = time.time()
 
-    MusicPlayer(NextSong).start() # Play next song in a separate thread
+    CurrentSong = NextSong
+    MusicPlayer(CurrentSong).start() # Play next song in a separate thread
 
 
