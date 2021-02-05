@@ -95,7 +95,7 @@ This will be played and deleted automatic after play has been finished.
 
 RadioPlayer now supports only mp3 files, since I call `AudioSegment.from_mp3`. 
 
-## Preparation
+## Preparation of songs
 
 I have prepared my mp3 files before using by the RadioPlayer.
 Preparation was done by `psrt.sh`. 
@@ -120,7 +120,7 @@ For more details, see my comments in the bash file
 - You need to install pydub using pip by `pip3 install pydub`
 - Set python3 as default python by `sudo update-alternative --install /usr/bin/python python /usr/bin/python3 1`
   and check it by `sudo update-alternative --config python`
-- Install ffmpeg by `sudo apt install ffmpeg`
+- Install at least ffmpeg by `sudo apt install ffmpeg` to be a player on the system
 
 ## Usage
 
@@ -134,6 +134,38 @@ For more details, see my comments in the bash file
   - Set your card ad default in file `sudo nano ~/.asoundrc`
 - Start the script by `python3 play.py`
 
+## Radio station
+Of course I have installed the player on a Raspberry Pi. Now I have RPi 4 with 4GB RAM.
+The following steps I have made to get it work:
+- Steps in Prerequisites paragraph
+- Copy (or update) songs to RPi through SSH
+  `sync -luvrt --delete -e ssh /home/butyi/repos/radioplayer/music pi@192.168.0.136:/home/pi/repos/radioplayer`
+- Test the player manually by steps in Usage paragraph
+- Unfortunately music mixing is not working if transmitter is used as USB sound card with RPi. See
+  [this topic][1].
+  This is not yet solved issue. Workaround is to connect transmitter by 3.5mm Jack cable to on-board audio of RPi.
+- Volume setting (this was finally sufficient) 
+  - `amixer set Headphone -- 96%` called at boot
+  - minus 10 dB in config.ini
+  - Step 28 on FM Transmitter Card (Step 30 is the max)
+- So, create the bash file which will be called at boot
+  - `cd`
+  - `nano boot.sh`
+  - Add these lines:
+  - `#!/bin/bash`
+    - `sleep 30` to be time to have everything initialized, especially the audio device.
+    - `amixer set Headphone -- 96%` to set system volume
+    - `python /home/pi/repos/radioplayer/play.py` start the player
+  - `chmod +x boot.sh` to set it as executable
+- Try `boot.sh` script by call it: `./boot.sh`
+- To start `boot.sh` script at boot as a demon, add this line `@reboot ./home/pi/boot.sh > /dev/null 2>&1 &` to crontab.
+  Last & is to run the script in the background, so that the Pi will boot as normal.
+- Try it by reboot RPi
+- Finally set feature to not write memory card by `sudo raspi-config` and `4. Performance options` -> `P3 Overlay File System`
+  This feature ensures to be memory card as boot device in secure against data corruption due to interrupted write due to power supply
+  disappeared. Remember that while this feature is active, all changes are only done in RAM, and will lost at power off. If you want to
+  change anything in memory card, first switch this off.
+- From now on just power up RPi and enjoy the music.
 
 ## Warranty
 
@@ -151,6 +183,10 @@ I am happy if I can give something back to the community.
 
 RadioPlayer, Radio Player, AutoDJ, mp3 Player, Script, Command Line, CLI, Bash,
 Configurable, Mixer, No GUI, Linux, Raspberry Pi.
+
+## Links
+
+[1]: https://raspberrypi.stackexchange.com/questions/28248/raspberry-pi-usb-soundcard-outputting-from-multiple-programs
 
 ###### 2020 Janos BENCSIK
 
