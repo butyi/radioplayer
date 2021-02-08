@@ -114,6 +114,9 @@ For more details, see my comments in the bash file
 ## Prerequisites
 
 - Install git by `sudo apt install git` if `git --version` does not show some available revision
+- `cd` to go to home folder
+- `mkdir repos` to create repos subfolder
+- `cd repos` to go into repos subfolder
 - Clone the script by `git clone https://github.com/butyi/radioplayer` (note this will istall the script under a radioplayer subfolder)
 - Install python3 by `sudo apt install python3` if `python3 --version` does not show some available revision
 - If you do not yet have pip, install it by `sudo apt install python3-pip`
@@ -125,45 +128,46 @@ For more details, see my comments in the bash file
 ## Usage
 
 - Ensure mp3 files are on your file system. For example if your user name is "king".
-  Copy some mp3 files into your home (/home/king/songs) folder.
+  Copy some mp3 files into a foled in your home (e.g. /home/king/repos/radioplayer/music).
 - Write/update the config.ini file with your specific settings.
   A minimum config what is just enough to work is:
-  `[KingShuffle]`<br>`Path1 = /home/king/songs`
-- If you use USB sound card like me, set it as default:
-  - Check card numbers by `aplay -l`
-  - Set your card ad default in file `sudo nano ~/.asoundrc`
+  `[KingShuffle]`<br>`Path1 = /home/king/repos/radioplayer/music`
 - Start the script by `python3 play.py`
 
 ## Radio station
 Of course I have installed the player on a Raspberry Pi. Now I have RPi 4 with 4GB RAM.
 The following steps I have made to get it work:
 - Steps in Prerequisites paragraph
+- If you use USB sound card, you can set it as default this way:
+  - Check card numbers by `aplay -l`
+  - Set your card ad default in file `sudo nano ~/.asoundrc`
+  - Important, On Raspberry Pi USB audio devices do not support to be open device more times, therefore cross-mix does not work.
+    In this case, to prevent "cannot open, device busy" error, set Overlap parameters to zero in config. See [this topic][1].
+- Set device audio output to 3.5mm jack by select 'Headphone' in raspi-config.
+  Check it by `amixer` to see which is the current output. In my case `Simple mixer control 'Headphone',0`.
+- Volume setting 
+  - `amixer set Headphone -- 96%`
+  - minus 10 dB in config.ini 
+  are sufficient for me.
 - Copy (or update) songs to RPi through SSH
-  `sync -luvrt --delete -e ssh /home/butyi/repos/radioplayer/music pi@192.168.0.136:/home/pi/repos/radioplayer`
+  `rsync -luvrt --delete -e ssh /home/butyi/repos/radioplayer/music pi@192.168.0.136:/home/pi/repos/radioplayer`
 - Test the player manually by steps in Usage paragraph
-- Unfortunately music mixing is not working if transmitter is used as USB sound card with RPi. See
-  [this topic][1].
-  This is not yet solved issue. Workaround is to connect transmitter by 3.5mm Jack cable to on-board audio of RPi.
-- Volume setting (this was finally sufficient) 
-  - `amixer set Headphone -- 96%` called at boot
-  - minus 10 dB in config.ini
-  - Step 28 on FM Transmitter Card (Step 30 is the max)
-- So, create the bash file which will be called at boot
+- Now, create the bash file which will be called at boot
   - `cd`
   - `nano boot.sh`
   - Add these lines:
   - `#!/bin/bash`
-    - `sleep 30` to be time to have everything initialized, especially the audio device.
+    - `sleep 15` to be time to have everything initialized, especially the audio device.
     - `amixer set Headphone -- 96%` to set system volume
     - `python /home/pi/repos/radioplayer/play.py` start the player
   - `chmod +x boot.sh` to set it as executable
 - Try `boot.sh` script by call it: `./boot.sh`
-- To start `boot.sh` script at boot as a demon, add this line `@reboot ./home/pi/boot.sh > /dev/null 2>&1 &` to crontab.
+- To start `boot.sh` script at boot as a demon, add this line `@reboot ./home/pi/boot.sh > /dev/null 2>&1 &` to crontab (`crontab -e`).
   Last & is to run the script in the background, so that the Pi will boot as normal.
-- Try it by reboot RPi
-- Finally set feature to not write memory card by `sudo raspi-config` and `4. Performance options` -> `P3 Overlay File System`
-  This feature ensures to be memory card as boot device in secure against data corruption due to interrupted write due to power supply
-  disappeared. Remember that while this feature is active, all changes are only done in RAM, and will lost at power off. If you want to
+- Try it by reboot RPi `sudo reboot now`.
+- Finally set only read memory card feature by `sudo raspi-config` and `4. Performance options` -> `P3 Overlay File System`
+  This feature ensures to be memory card (as boot device) in secure against data corruption due to interrupted write due to power supply
+  cut. Remember that while this feature is active, all changes are only done in RAM, and will lost at power off. If you want to
   change anything in memory card, first switch this off.
 - From now on just power up RPi and enjoy the music.
 
