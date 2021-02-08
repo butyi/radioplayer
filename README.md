@@ -86,7 +86,7 @@ can be programme specific.
 - FadeOut is length of fade down the end of song in seconds.
 - Overlap is seconds of overlap of two consecutive songs.
 - JinglePath is a path where jingles are stored.
-- JinglePeriod is the minimum minutes between two jingles
+- JinglePeriod is the minimum minutes between two jingles. If JinglePeriod = 0, jingle will never be played.
 - JingleOverlap is overlap of jingle and following song in secs
 
 ## Script

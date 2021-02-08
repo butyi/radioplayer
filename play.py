@@ -257,7 +257,7 @@ if __name__ == '__main__':
         time.sleep(SleepTime)
 
     # if there was no jingle since jingleperiod minutes, play once before next song
-    if 0 < len(JinglePath):
+    if 0 < len(Jingles) and 0 < JinglePeriod:
       if (LastJingleTimestamp+(60*JinglePeriod)) < int(time.time()):
         rnd = int(time.time()) % len(Jingles)
         jin = Jingles[rnd]; # Choose a jingle
