@@ -9,7 +9,7 @@ __author__ = "Janos BENCSIK"
 __copyright__ = "Copyright 2020, butyi.hu"
 __credits__ = "James Robert (jiaaro) for pydub (https://github.com/jiaaro/pydub)"
 __license__ = "GPL"
-__version__ = "0.0.4"
+__version__ = "0.0.5"
 __maintainer__ = "Janos BENCSIK"
 __email__ = "radioplayer@butyi.hu"
 __status__ = "Prototype"
@@ -39,6 +39,8 @@ class MusicPlayer(Thread):
 # define global variables
 TextOutFile = "" # Default path if not defined
 TextOutFTPhost = ""
+TextOutFTPport = 21
+TextOutFTPpath = ""
 TextOutFTPuser = ""
 TextOutFTPpass = ""
 Programme = "";
@@ -113,6 +115,10 @@ if __name__ == '__main__':
           TextOutFile = c.get(section, 'textoutfile')
         if c.has_option(section, 'textoutftphost'):
           TextOutFTPhost = c.get(section, 'textoutftphost')
+        if c.has_option(section, 'textoutftpport'):
+          TextOutFTPport = c.getint(section, 'textoutftpport')
+        if c.has_option(section, 'textoutftppath'):
+          TextOutFTPpath = c.get(section, 'textoutftppath')
         if c.has_option(section, 'textoutftpuser'):
           TextOutFTPuser = c.get(section, 'textoutftpuser')
         if c.has_option(section, 'textoutftppass'):
@@ -214,7 +220,11 @@ if __name__ == '__main__':
     # Write infotext into file
     if 0 < len(TextOutFile): # If song info is configured to write into a file too
       if 0 < len(TextOutFTPhost) and 0 < len(TextOutFTPuser) and 0 < len(TextOutFTPpass): # FTP write is configured
-        ftpsession = ftplib.FTP(TextOutFTPhost,TextOutFTPuser,TextOutFTPpass) # Open FTP
+        ftpsession = ftplib.FTP()
+        ftpsession.connect(TextOutFTPhost,TextOutFTPport)
+        ftpsession.login(TextOutFTPuser,TextOutFTPpass)
+        if 0 < len(TextOutFTPpath):
+          ftpsession.cwd(TextOutFTPpath)
         ftpsession.storbinary('STOR '+TextOutFile,io.BytesIO(bytearray(infotext,'utf-8'))) # Update file content
         ftpsession.quit() # Close FTP
       else: # Simple local filesystem write
