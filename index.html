@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Private Radio Station</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script>
+  function print_songs(){
+    $.ajax(
+      {
+        url: "http://your.webpage.radio/songinfo.txt",
+        cache: false,
+        success: function(result){
+          if(result.length < 500){//there is file
+            result = result.split("\n");
+            $("#programme").html(result[0]);
+            $("#currentsong").html(result[1]);
+            $("#nextsong").html(result[2]);
+          } else { //no file (large search result is returned)
+            $("#programme").html("Info is missing");
+            $("#currentsong").html("-");
+            $("#nextsong").html("-");
+          }
+        },
+        statusCode: {
+          404: function() {
+            $("#programme").html("404");
+          }
+        },        
+        fail: function(){
+          $("#programme").html("Ajax request failed");
+          $("#currentsong").html("-");
+          $("#nextsong").html("-");
+        },
+        complete: function(){
+          setTimeout(print_songs, 10000);
+        }
+      }  
+    );
+  }
+  $(document).ready(print_songs);
+  </script>
+</head>
+<body>
+  <h1>Private Radio Station</h1>
+  <p>
+    This html file is an example how to create webpage which always shows
+    up to date and auto updated information about your radio station
+    which programme is currently active and
+    which song is currently playing and which will be the next song. 
+  </p>  
+  <div>
+  <br><strong>Programme: <span id="programme">-</span></strong>
+  <br><strong>Now playing:</strong> <span id="currentsong">-</span>
+  <br><strong>Next song:</strong> <span id="nextsong">-</span>
+  </div>
+  <p>
+    Just do not forget to update url of your webpage and file above in line 10.
+    Try the link first by simple paste it into a browser and the text file must
+    be visible in the browser. If it can be opened and visible, link will also
+    work in AJAX request above.
+  </p>  
+  <p>
+    You can change update period in line 35 which is now 10s,
+    if you need faster reaction or less data transfer. 
+  </p>  
+</body>
+</html>
