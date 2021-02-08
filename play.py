@@ -9,7 +9,7 @@ __author__ = "Janos BENCSIK"
 __copyright__ = "Copyright 2020, butyi.hu"
 __credits__ = "James Robert (jiaaro) for pydub (https://github.com/jiaaro/pydub)"
 __license__ = "GPL"
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 __maintainer__ = "Janos BENCSIK"
 __email__ = "radioplayer@butyi.hu"
 __status__ = "Prototype"
@@ -21,6 +21,7 @@ from pydub.playback import play
 from threading import Thread
 from threading import Event
 import configparser
+import ftplib, io
 
 # Subfunctions, classes
 class MusicPlayer(Thread):
@@ -37,6 +38,9 @@ class MusicPlayer(Thread):
 
 # define global variables
 TextOutFile = "" # Default path if not defined
+TextOutFTPhost = ""
+TextOutFTPuser = ""
+TextOutFTPpass = ""
 Programme = "";
 Paths = [] # Empty list for paths of songs
 Jingles = [] # Empty list for jingles
@@ -83,7 +87,6 @@ FadeOut = 8
 DropEnd = 0
 Overlap = 6
 
-
 # Start playing
 if __name__ == '__main__':
   while True: # Play forever (exit: Ctrl+C)
@@ -108,6 +111,12 @@ if __name__ == '__main__':
       if section == "Settings":
         if c.has_option(section, 'textoutfile'):
           TextOutFile = c.get(section, 'textoutfile')
+        if c.has_option(section, 'textoutftphost'):
+          TextOutFTPhost = c.get(section, 'textoutftphost')
+        if c.has_option(section, 'textoutftpuser'):
+          TextOutFTPuser = c.get(section, 'textoutftpuser')
+        if c.has_option(section, 'textoutftppass'):
+          TextOutFTPpass = c.get(section, 'textoutftppass')
         if c.has_option(section, 'lowpassfilterhz'):
           LowPassFilterHz = c.getint(section, 'lowpassfilterhz')
         if c.has_option(section, 'gaindb'):
@@ -203,9 +212,14 @@ if __name__ == '__main__':
     print("\n\n" + infotext + "\n")
 
     # Write infotext into file
-    if 0 < len(TextOutFile):
-      with open(TextOutFile, 'w') as f:
-        f.write(infotext)
+    if 0 < len(TextOutFile): # If song info is configured to write into a file too
+      if 0 < len(TextOutFTPhost) and 0 < len(TextOutFTPuser) and 0 < len(TextOutFTPpass): # FTP write is configured
+        ftpsession = ftplib.FTP(TextOutFTPhost,TextOutFTPuser,TextOutFTPpass) # Open FTP
+        ftpsession.storbinary('STOR '+TextOutFile,io.BytesIO(bytearray(infotext,'utf-8'))) # Update file content
+        ftpsession.quit() # Close FTP
+      else: # Simple local filesystem write
+        with open(TextOutFile, 'w') as f:
+          f.write(infotext)
 
     # Pre-load mp3 to eliminate delay
     NextSong = AudioSegment.from_mp3(SongName) # Load song
