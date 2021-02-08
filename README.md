@@ -38,9 +38,9 @@ There is one special section, the "Settings".
 This settings contains general configurations. Now it is only one. 
 - Songinfo text file path. This is optional.
   - Script also optionally supports to upload Songinfo text file into some webpage by FTP.
-    By this feature your webpage can show tu to date info which song is playing currently and which will be the next one.
+    By this feature your webpage can show up to date info which song is playing currently and which will be the next one.
     To use FTP upload feature simple define at least TextOutFTPhost, TextOutFTPuser, TextOutFTPpass.
-    If your FTP port is not the defined 21, you van define other by TextOutFTPport.
+    If your FTP port is not the defined 21, you can define other by TextOutFTPport.
     If your file to be uploaded not the root folder of FTP, you can define path by TextOutFTPpath.
 - GaindB is constant volume adjustment possibility during playing. This is optional.
 - LowPassFilterHz to be used when your songs are not prepared to eliminate
