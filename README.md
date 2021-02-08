@@ -22,7 +22,7 @@ What I need are:
 - Different type of songs to be played in different part of the day (programmes)
 - Sometime jingle must be played also cross mixed with songs
 - Write fresh info into a file about programme name, current song and next song
-  for radio homepage.
+  for radio homepage by FTP upload.
 - Scan the configured folders recursively.
 - Choose random song from the defined folders.
 - Remember some amount of already played songs and do not repeat them soon.
@@ -37,6 +37,11 @@ In this file there are sections and parameters.
 There is one special section, the "Settings".
 This settings contains general configurations. Now it is only one. 
 - Songinfo text file path. This is optional.
+  - Script also optionally supports to upload Songinfo text file into some webpage by FTP.
+    By this feature your webpage can show tu to date info which song is playing currently and which will be the next one.
+    To use FTP upload feature simple define at least TextOutFTPhost, TextOutFTPuser, TextOutFTPpass.
+    If your FTP port is not the defined 21, you van define other by TextOutFTPport.
+    If your file to be uploaded not the root folder of FTP, you can define path by TextOutFTPpath.
 - GaindB is constant volume adjustment possibility during playing. This is optional.
 - LowPassFilterHz to be used when your songs are not prepared to eliminate
   interference between song high frequencies and 19kHz pilot signal of
@@ -134,7 +139,7 @@ For more details, see my comments in the bash file
   `[KingShuffle]`<br>`Path1 = /home/king/repos/radioplayer/music`
 - Start the script by `python3 play.py`
 
-## Radio station
+## Radio station on Raspberry Pi
 Of course I have installed the player on a Raspberry Pi. Now I have RPi 4 with 4GB RAM.
 The following steps I have made to get it work:
 - Steps in Prerequisites paragraph
