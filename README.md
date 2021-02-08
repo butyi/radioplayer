@@ -161,7 +161,7 @@ The following steps I have made to get it work:
   - `cd`
   - `nano boot.sh`
   - Add these lines:
-  - `#!/bin/bash`
+    - `#!/bin/bash`
     - `sleep 15` to be time to have everything initialized, especially the audio device.
     - `amixer set Headphone -- 96%` to set system volume
     - `python /home/pi/repos/radioplayer/play.py` start the player
