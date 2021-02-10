@@ -89,12 +89,14 @@ FadeOut = 8
 DropEnd = 0
 Overlap = 6
 
+
 # Start playing
 if __name__ == '__main__':
-  while True: # Play forever (exit: Ctrl+C)
 
-    # Start stopwatch to measure below code execution
-    start = time.time()
+  # Start stopwatch to measure below code execution
+  start = time.time()
+
+  while True: # Play forever (exit: Ctrl+C)
 
     # Put programme name here into info text, because it may changed for next song
     infotext = CurrentProgramme
@@ -113,8 +115,7 @@ if __name__ == '__main__':
       if section == "Settings":
         if c.has_option(section, 'textoutfile'):
           TextOutFile = c.get(section, 'textoutfile')
-        if c.has_option(section, 'textoutftphost'):
-          TextOutFTPhost = c.get(section, 'textoutftphost')
+        if c.has_option(section, 'textoutftphost'):          TextOutFTPhost = c.get(section, 'textoutftphost')
         if c.has_option(section, 'textoutftpport'):
           TextOutFTPport = c.getint(section, 'textoutftpport')
         if c.has_option(section, 'textoutftppath'):
@@ -215,21 +216,24 @@ if __name__ == '__main__':
 
     # Continue to prepare info text
     infotext += "\n" + os.path.basename(SongName)[:-4] + "\n"
-    print("\n\n" + infotext + "\n")
 
-    # Write infotext into file
-    if 0 < len(TextOutFile): # If song info is configured to write into a file too
-      if 0 < len(TextOutFTPhost) and 0 < len(TextOutFTPuser) and 0 < len(TextOutFTPpass): # FTP write is configured
-        ftpsession = ftplib.FTP()
-        ftpsession.connect(TextOutFTPhost,TextOutFTPport)
-        ftpsession.login(TextOutFTPuser,TextOutFTPpass)
-        if 0 < len(TextOutFTPpath):
-          ftpsession.cwd(TextOutFTPpath)
-        ftpsession.storbinary('STOR '+TextOutFile,io.BytesIO(bytearray(infotext,'utf-8'))) # Update file content
-        ftpsession.quit() # Close FTP
-      else: # Simple local filesystem write
-        with open(TextOutFile, 'w') as f:
-          f.write(infotext)
+    if CurrentSong != False:
+      # Write infotext to stdout
+      print("\n\n" + infotext + "\n")
+
+      # Write infotext into file
+      if 0 < len(TextOutFile): # If song info is configured to write into a file too
+        if 0 < len(TextOutFTPhost) and 0 < len(TextOutFTPuser) and 0 < len(TextOutFTPpass): # FTP write is configured
+          ftpsession = ftplib.FTP()
+          ftpsession.connect(TextOutFTPhost,TextOutFTPport)
+          ftpsession.login(TextOutFTPuser,TextOutFTPpass)
+          if 0 < len(TextOutFTPpath):
+            ftpsession.cwd(TextOutFTPpath)
+          ftpsession.storbinary('STOR '+TextOutFile,io.BytesIO(bytearray(infotext,'utf-8'))) # Update file content
+          ftpsession.quit() # Close FTP
+        else: # Simple local filesystem write
+          with open(TextOutFile, 'w') as f:
+            f.write(infotext)
 
     # Pre-load mp3 to eliminate delay
     NextSong = AudioSegment.from_mp3(SongName) # Load song
@@ -272,7 +276,11 @@ if __name__ == '__main__':
         time.sleep((len(jin)/1000)-JingleOverlap) # wait to finish the jingle
         LastJingleTimestamp = time.time()
 
+    # Start stopwatch to measure below code execution
+    start = time.time()
+
+    # Start playing the next song in a separate thread
     CurrentSong = NextSong
-    MusicPlayer(CurrentSong).start() # Play next song in a separate thread
+    MusicPlayer(CurrentSong).start()
 
 

@@ -4,17 +4,24 @@
   <title>Private Radio Station</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <script>
+  var oldcontent = "";
   function print_songs(){
     $.ajax(
       {
-        url: "http://your.webpage.radio/songinfo.txt",
+        url: "http://your.webpage.radio/songinfo.php",
+        method: "GET",
+        data: {
+          oldcontent: oldcontent
+        },
         cache: false,
+        timeout: 70000, // Set a bit longer than max delay of songinfo.php
         success: function(result){
           if(result.length < 500){//there is file
             result = result.split("\n");
             $("#programme").html(result[0]);
             $("#currentsong").html(result[1]);
             $("#nextsong").html(result[2]);
+            oldcontent = result;
           } else { //no file (large search result is returned)
             $("#programme").html("Info is missing");
             $("#currentsong").html("-");
@@ -31,8 +38,13 @@
           $("#currentsong").html("-");
           $("#nextsong").html("-");
         },
+        error: function(){
+          $("#programme").html("Ajax request timeout");
+          $("#currentsong").html("-");
+          $("#nextsong").html("-");
+        },
         complete: function(){
-          setTimeout(print_songs, 10000);
+          setTimeout(print_songs, 100);
         }
       }  
     );
@@ -54,14 +66,26 @@
   <br><strong>Next song:</strong> <span id="nextsong">-</span>
   </div>
   <p>
-    Just do not forget to update url of your webpage and file above in line 10.
-    Try the link first by simple paste it into a browser and the text file must
-    be visible in the browser. If it can be opened and visible, link will also
-    work in AJAX request above.
+    This solution has very less delay and is always in synchron.
+    Furthermore uses small amout of data transfer and resource.
+  </p>
+  <p>
+    This is ensured by a server side PHP script (songinfo.php).
+    Javascript sends an AJAX request to server, and the current
+    songs are in the parameter. Server side is waiting maximum
+    one minute for the songs are updated by player script.
+    It checks the songs (songinfo.txt) every half seconds.
+    If songs read from songinfo.txt is different from the currently
+    displayed songs, songinfo.php returns immediately with the
+    new songs, and webpage shows the new songs also immediately.
+    If there is no song update, songinfo.php waits half sec and
+    read songs again and check for change.
+    If there was no update through one minute, songinfo.php
+    returns with the same songs, and new AJAX request is started
+    again.
   </p>  
   <p>
-    You can change update period in line 35 which is now 10s,
-    if you need faster reaction or less data transfer. 
+    Just do not forget to update url of your webpage and file above in line 11.
   </p>  
 </body>
 </html>
