@@ -176,6 +176,19 @@ The following steps I have made to get it work:
   change anything in memory card, first switch this off.
 - From now on just power up RPi and enjoy the music.
 
+## Radio webpage
+
+There are files (songinfo.txt, songinfo.php, index.html) which to be used for create a webpage which always
+shows fresh info about radio station, like programme, currently playing song, next song and remaining time
+of current song. There steps are needed to get is use.
+- Configure the script to upload up to date songinfo.txt file to your webpage host by FTP
+- Upload once songinfo.php and index.html files to your webpage host.
+- Execute the player script
+- Open directly songinfo.txt on your webpage to see if it really uploaded by player script
+- Update link of your webpage in index.html in JavaScript
+- Open index.html by a Browser. It shows the songs and updated automatic without reload the complete page (AJAX technic)
+For more details see content of index.html
+
 ## Warranty
 
 It does what it does, how it does. 
