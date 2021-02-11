@@ -63,6 +63,7 @@ LowPassFilterHz = 0
 Artists = [] # Empty list for Artists
 DebugConfigRead = False # Set True id you want to debug read and evaluation of config.ini
 ProgrammeCheckDateTime = datetime.datetime.today()
+CurrentSongLength = 0
 
 CfgPath = os.path.dirname(sys.argv[0])+"/config.ini"
 if not os.path.exists(CfgPath):
@@ -83,7 +84,7 @@ if not os.path.exists(CfgPath):
 # Start of new song       |
 # DropEnd                      |------|
 # FadeOut              |-------|
-# Overlap                 |-----------|
+# Overlap                 |----|
 #
 FadeOut = 8
 DropEnd = 0
@@ -103,7 +104,7 @@ if __name__ == '__main__':
 
     # Calculate start of next song. This moment to be used to check the current programme
     if CurrentSong != False:
-      CurrentSongLength = (len(CurrentSong)/1000) + DropEnd - Overlap
+      CurrentSongLength = (len(CurrentSong)/1000) - Overlap
       ProgrammeCheckDateTime = datetime.datetime.today() + datetime.timedelta(seconds=CurrentSongLength)
 
     # Read config to know which programme to be played
@@ -215,7 +216,8 @@ if __name__ == '__main__':
           break # Fount the next song
 
     # Continue to prepare info text
-    infotext += "\n" + os.path.basename(SongName)[:-4] + "\n"
+    infotext += "\n" + os.path.basename(SongName)[:-4]
+    infotext += "\n" + str(CurrentSongLength) + "\n"
 
     if CurrentSong != False:
       # Write infotext to stdout

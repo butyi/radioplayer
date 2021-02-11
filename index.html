@@ -1,10 +1,15 @@
 <!DOCTYPE html>
+<!-- http://your.webpage.radio/songinfo.php -->
 <html>
 <head>
   <title>Private Radio Station</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <script>
-  var oldcontent = "";
+  var oldcontent = ""; 
+  var currentsong = ""; 
+  var cdt; // Count Down Timer
+  var cds = 0; // Count Down Seconds
+  const zeroPad = (num, places) => String(num).padStart(places, '0');
   function print_songs(){
     $.ajax(
       {
@@ -14,14 +19,26 @@
           oldcontent: oldcontent
         },
         cache: false,
-        timeout: 70000, // Set a bit longer than max delay of songinfo.php
+        timeout: 120000, // Set longer than max delay of songinfo.php
         success: function(result){
           if(result.length < 500){//there is file
-            result = result.split("\n");
-            $("#programme").html(result[0]);
-            $("#currentsong").html(result[1]);
-            $("#nextsong").html(result[2]);
-            oldcontent = result;
+            result_arr = result.split("\n");
+            if(result != oldcontent){ // If songs changed
+              $("#programme").html(result_arr[0]);
+
+              cds = parseInt(result_arr[3]); // Set length of current song
+              currentsong = result_arr[1];
+              if(oldcontent != ""){ // Do not do for first update
+                updatecurrentsong();
+                clearInterval(cdt); // Stop the timer if it is still running
+                cdt = setInterval(countdown, 1000); // Start countdown timer
+              } else {
+                $("#currentsong").html(currentsong);
+              }
+              
+              $("#nextsong").html(result_arr[2]);
+              oldcontent = result;
+            }
           } else { //no file (large search result is returned)
             $("#programme").html("Info is missing");
             $("#currentsong").html("-");
@@ -50,15 +67,35 @@
     );
   }
   $(document).ready(print_songs);
+
+  function updatecurrentsong() {
+    $("#currentsong").html(currentsong + " (" + zeroPad(Math.floor(cds / 60),2) + ":" + zeroPad(Math.floor(cds % 60),2) + ")");
+  }
+
+  // Update the count down every 1 second
+  function countdown() {
+    if(0 < cds){
+      cds--;
+      updatecurrentsong();
+    } else {
+      clearInterval(cdt);
+      $("#currentsong").html(currentsong);
+    }
+  }
+  
   </script>
 </head>
 <body>
   <h1>Private Radio Station</h1>
   <p>
-    This html file is an example how to create webpage which always shows
-    up to date and auto updated information about your radio station
-    which programme is currently active and
-    which song is currently playing and which will be the next song. 
+    This html file is an example how to create webpage, which always shows
+    up to date information about your radio station
+    <ul>
+    <li>which programme is currently active
+    <li>which song is currently playing
+    <li>which will be the next song
+    </ul>
+    Also shows the remaining time of current song. 
   </p>  
   <div>
   <br><strong>Programme: <span id="programme">-</span></strong>
@@ -67,25 +104,34 @@
   </div>
   <p>
     This solution has very less delay and is always in synchron.
-    Furthermore uses small amout of data transfer and resource.
+    Furthermore it uses small amout of data transfer and resource.
   </p>
   <p>
     This is ensured by a server side PHP script (songinfo.php).
     Javascript sends an AJAX request to server, and the current
     songs are in the parameter. Server side is waiting maximum
-    one minute for the songs are updated by player script.
-    It checks the songs (songinfo.txt) every half seconds.
+    half minute for the songs are updated by player script.
+    It checks the songs (songinfo.txt) in every seconds.
     If songs read from songinfo.txt is different from the currently
     displayed songs, songinfo.php returns immediately with the
     new songs, and webpage shows the new songs also immediately.
-    If there is no song update, songinfo.php waits half sec and
-    read songs again and check for change.
-    If there was no update through one minute, songinfo.php
+    If there is no song update, songinfo.php waits one sec and
+    read songs again and check for change further.
+    If there was no update in the last half minute, songinfo.php
     returns with the same songs, and new AJAX request is started
     again.
+  </p>
+  <p>
+    Since the change is known by JavaScript very fast, and the
+    length of current song is reported also in the AJAX response,
+    JavaScript can count down locally to show the remaining time
+    of current song. My experiance it is enough accurate and looks
+    more professional.
   </p>  
   <p>
-    Just do not forget to update url of your webpage and file above in line 11.
+    Just do not forget to update url of your webpage and file above
+    in line 16 when you get it use on your webpage.
   </p>  
 </body>
 </html>
+

@@ -3,8 +3,8 @@
 // Get currently displayed songs from request parameter
 $oldcontent = $_GET['oldcontent'];
 
-// Do it 120 times (two time a sec through 60s)
-for($i=0;$i<120;$i++){
+// Do it 30 times
+for($i=0;$i<30;$i++){
 
   // Read the content of currently playing songs
   $newcontent = file_get_contents("songinfo.txt");
@@ -17,8 +17,8 @@ for($i=0;$i<120;$i++){
     exit;
   }
 
-  // Wait half sec for any update may happen by player script meantime
-  usleep(500);
+  // Wait one sec for any update may happen by player script meantime
+  sleep(1);
 }
 
 // There was no change in the last minute, so
