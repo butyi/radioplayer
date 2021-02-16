@@ -35,9 +35,31 @@ class MusicPlayer(Thread):
   def stop(self):
     self._stopper.set()
 
+def UpdateSongInfo():
+  print("\n\n" + infotext + "\n")
+  # Write infotext into file
+  if 0 < len(TextOutFile): # If song info is configured to write into a file too
+    if 0 < len(TextOutFTPhost) and 0 < len(TextOutFTPuser) and 0 < len(TextOutFTPpass): # FTP write is configured
+      try:
+        ftpsession = ftplib.FTP()
+        ftpsession.connect(TextOutFTPhost,TextOutFTPport)
+        ftpsession.login(TextOutFTPuser,TextOutFTPpass)
+        if 0 < len(TextOutFTPpath):
+          ftpsession.cwd(TextOutFTPpath)
+        ftpsession.storbinary('STOR '+TextOutFile,io.BytesIO(bytearray(infotext,'utf-8'))) # Update file content
+        ftpsession.quit() # Close FTP
+      except ftplib.all_errors as e:
+        if 0 < len(ErrLogFile): # Log file into history
+          with open(ErrLogFile, 'a+') as f:
+            f.write(str(datetime.datetime.today())+" -> ERROR! FTP update failed: "+str(e)+"\r\n")
+    else: # Simple local filesystem write
+      with open(TextOutFile, 'w') as f:
+        f.write(infotext)
 
 # define global variables
 TextOutFile = "" # Default path if not defined
+HistoryFile = "" # Default path if not defined
+ErrLogFile = "" # Default path if not defined
 TextOutFTPhost = ""
 TextOutFTPport = 21
 TextOutFTPpath = ""
@@ -116,6 +138,10 @@ if __name__ == '__main__':
       if section == "Settings":
         if c.has_option(section, 'textoutfile'):
           TextOutFile = c.get(section, 'textoutfile')
+        if c.has_option(section, 'historyfile'):
+          HistoryFile = c.get(section, 'historyfile')
+        if c.has_option(section, 'errlogfile'):
+          ErrLogFile = c.get(section, 'errlogfile')
         if c.has_option(section, 'textoutftphost'):          TextOutFTPhost = c.get(section, 'textoutftphost')
         if c.has_option(section, 'textoutftpport'):
           TextOutFTPport = c.getint(section, 'textoutftpport')
@@ -202,6 +228,10 @@ if __name__ == '__main__':
 
     # Update infotext
     infotext += "\n" + os.path.basename(SongName)[:-4]
+    if CurrentSong != False:
+      if 0 < len(HistoryFile) and SongName != "": # Log file into history
+        with open(HistoryFile, 'a+') as f:
+          f.write(str(datetime.datetime.today())+" -> "+os.path.basename(SongName)[:-4]+"\r\n")
     RecentlyPlayed.append(os.path.basename(SongName)) # Add now playing
     if (len(Songs)/2) < len(RecentlyPlayed): # If list is full
       RecentlyPlayed.pop(0) # Drop oldest element
@@ -217,28 +247,21 @@ if __name__ == '__main__':
 
     # Continue to prepare info text
     infotext += "\n" + os.path.basename(SongName)[:-4]
-    infotext += "\n" + str(CurrentSongLength) + "\n"
+    infotext += "\n" + str(int(CurrentSongLength)) + "\n"
 
     if CurrentSong != False:
-      # Write infotext to stdout
-      print("\n\n" + infotext + "\n")
-
-      # Write infotext into file
-      if 0 < len(TextOutFile): # If song info is configured to write into a file too
-        if 0 < len(TextOutFTPhost) and 0 < len(TextOutFTPuser) and 0 < len(TextOutFTPpass): # FTP write is configured
-          ftpsession = ftplib.FTP()
-          ftpsession.connect(TextOutFTPhost,TextOutFTPport)
-          ftpsession.login(TextOutFTPuser,TextOutFTPpass)
-          if 0 < len(TextOutFTPpath):
-            ftpsession.cwd(TextOutFTPpath)
-          ftpsession.storbinary('STOR '+TextOutFile,io.BytesIO(bytearray(infotext,'utf-8'))) # Update file content
-          ftpsession.quit() # Close FTP
-        else: # Simple local filesystem write
-          with open(TextOutFile, 'w') as f:
-            f.write(infotext)
+      # Write infotext to stdout or FTP
+      UpdateSongInfo()
 
     # Pre-load mp3 to eliminate delay
-    NextSong = AudioSegment.from_mp3(SongName) # Load song
+    try:
+      NextSong = AudioSegment.from_mp3(SongName) # Load song
+    except:
+      if 0 < len(ErrLogFile): # Log file into history
+        with open(ErrLogFile, 'a+') as f:
+          f.write(str(datetime.datetime.today())+" -> ERROR! Cannot open file: '"+SongName+"'\r\n")
+          time.sleep(10); # To prevent the log file become large too fast
+          continue
     if 0 < DropEnd:
       NextSong = NextSong[:(len(NextSong)-(DropEnd*1000))] # drop end of song
     NextSong = NextSong.fade_out(FadeOut*1000) # Fade out at end
@@ -267,16 +290,32 @@ if __name__ == '__main__':
       if (LastJingleTimestamp+(60*JinglePeriod)) < int(time.time()):
         rnd = int(time.time()) % len(Jingles)
         jin = Jingles[rnd]; # Choose a jingle
-        jin = AudioSegment.from_mp3(jin) # Load the choosen jingle
-        TargetGain = GaindB
-        if Normalize:
-          TargetGain -= jin.dBFS;
-        TargetGain -= 3 # Be a bit less loud than the music
-        if 0 != TargetGain:
-          jin = jin.apply_gain(TargetGain)
-        MusicPlayer(jin).start() # Play jingle in a separate thread
-        time.sleep((len(jin)/1000)-JingleOverlap) # wait to finish the jingle
-        LastJingleTimestamp = time.time()
+        if 0 < len(HistoryFile): # Log file into history
+          with open(HistoryFile, 'a+') as f:
+            f.write(str(datetime.datetime.today())+" -> "+os.path.basename(jin)[:-4]+"\r\n")
+        infotext = CurrentProgramme
+        infotext += "\n" + os.path.basename(jin)[:-4]
+        infotext += "\n" + os.path.basename(SongName)[:-4]
+        try:
+          jin = AudioSegment.from_mp3(jin) # Load the choosen jingle
+        except:
+          if 0 < len(ErrLogFile): # Log file into history
+            with open(ErrLogFile, 'a+') as f:
+              f.write(str(datetime.datetime.today())+" -> ERROR! Cannot open file: '"+jin+"'\r\n")
+              time.sleep(10); # To prevent the log file become large too fast
+              jin = False
+        if False != jin:
+          infotext += "\n" + str(int(len(jin)/1000)) + "\n"
+          UpdateSongInfo()
+          TargetGain = GaindB
+          if Normalize:
+            TargetGain -= jin.dBFS;
+          TargetGain -= 3 # Be a bit less loud than the music
+          if 0 != TargetGain:
+            jin = jin.apply_gain(TargetGain)
+          MusicPlayer(jin).start() # Play jingle in a separate thread
+          time.sleep((len(jin)/1000)-JingleOverlap) # wait to finish the jingle
+          LastJingleTimestamp = time.time()
 
     # Start stopwatch to measure below code execution
     start = time.time()

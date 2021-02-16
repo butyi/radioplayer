@@ -36,12 +36,15 @@ The script reads config.ini file as configuration.
 In this file there are sections and parameters.
 There is one special section, the "Settings".
 This settings contains general configurations. Now it is only one. 
-- Songinfo text file path. This is optional.
+- TextOutFile is songinfo text file path. This is optional.
   - Script also optionally supports to upload Songinfo text file into some webpage by FTP.
     By this feature your webpage can show up to date info which song is playing currently and which will be the next one.
     To use FTP upload feature simple define at least TextOutFTPhost, TextOutFTPuser, TextOutFTPpass.
     If your FTP port is not the defined 21, you can define other by TextOutFTPport.
     If your file to be uploaded not the root folder of FTP, you can define path by TextOutFTPpath.
+- HistoryFile is an optional text file path for logging played songs with timestamp.
+- ErrLogFile is an optional log file for already handled errors. Even though the error is handled
+  make sense to know to fix the root cause later if possible.
 - GaindB is constant volume adjustment possibility during playing. This is optional.
 - LowPassFilterHz to be used when your songs are not prepared to eliminate
   interference between song high frequencies and 19kHz pilot signal of
@@ -164,7 +167,7 @@ The following steps I have made to get it work:
     - `#!/bin/bash`
     - `sleep 15` to be time to have everything initialized, especially the audio device.
     - `amixer set Headphone -- 96%` to set system volume
-    - `python /home/pi/repos/radioplayer/play.py` start the player
+    - `python /home/pi/repos/radioplayer/play.py 2> /home/pi/play.log` start the player with logging for debug purpose
   - `chmod +x boot.sh` to set it as executable
 - Try `boot.sh` script by call it: `./boot.sh`
 - To start `boot.sh` script at boot as a demon, add this line `@reboot ./home/pi/boot.sh > /dev/null 2>&1 &` to crontab (`crontab -e`).
