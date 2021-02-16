@@ -3,6 +3,7 @@
 ./music/analogue/Caro Emerald - That Man.mp3
 ./music/analogue/Modern Talking - Juliet.mp3
 ./music/analogue/Spandau Ballet - Highly Strung.mp3
+./music/analogue/Soft Cell - Where Did Our Love Go?.mp3
 ./music/analogue/Apollo Four Forty - Heart Go Boom.mp3
 ./music/analogue/Depeche Mode - Strangelove.mp3
 ./music/analogue/Tom Jones - Kiss.mp3
@@ -40,7 +41,6 @@
 ./music/analogue/Peter Gabriel - Steam.mp3
 ./music/analogue/Gloria Estefan - Conga.mp3
 ./music/analogue/Rick Astley - She Wants To Dance With Me.mp3
-./music/analogue/Samantha Fox - Naughty Girls (Need Love To).mp3
 ./music/analogue/Suzi Quatro - She's In Love With You.mp3
 ./music/analogue/U2 - The Refugee.mp3
 ./music/analogue/Sarah Brightman - The Fly.mp3
@@ -81,6 +81,7 @@
 ./music/analogue/Celine Dion - Taking Chances.mp3
 ./music/analogue/Black - Leave Yourself Alone.mp3
 ./music/analogue/Dee Lite - Heart Be Still.mp3
+./music/analogue/Kim Wilde - You Keep Me Hangin On.mp3
 ./music/analogue/Dee Lite - Pussycat Meow.mp3
 ./music/analogue/Abba - Dance (While The Music Still Goes On).mp3
 ./music/analogue/Yello - Domingo.mp3
@@ -92,6 +93,7 @@
 ./music/analogue/Aha - Did Anyone Approach You.mp3
 ./music/analogue/Shakatak - Time Of My Life.mp3
 ./music/analogue/George Michael - Amazing.mp3
+./music/analogue/Wise Hand - Timeless.mp3
 ./music/analogue/Roxette - The Big.mp3
 ./music/analogue/Dawn Penn - You Don't Love Me.mp3
 ./music/analogue/Depeche Mode - The Meaning Of Love.mp3
@@ -197,7 +199,6 @@
 ./music/analogue/Black - Finder.mp3
 ./music/analogue/Matt Bianco - Yeh Yeh.mp3
 ./music/analogue/Mezzoforte - Berlin Boogie.mp3
-./music/analogue/Jamiroquai - Corner Of The Earth.mp3
 ./music/analogue/Camille Bazbaz - Papa Tango Charly.mp3
 ./music/analogue/Frankely - Si No Saliera La Luna.mp3
 ./music/analogue/Bob Marley - Could You Be Loved.mp3
@@ -240,6 +241,7 @@
 ./music/analogue/House Of Pain - Top O The Morning To Ya.mp3
 ./music/analogue/Cher - Love One Another.mp3
 ./music/analogue/A Teens - Morning Light.mp3
+./music/analogue/Kaoma - Lambada.mp3
 ./music/analogue/Seal Ft. Jakatta - My Vision.mp3
 ./music/analogue/Shakatak - Watching You.mp3
 ./music/analogue/Tom Jones - Mama Told Me Not To Come.mp3
@@ -249,7 +251,6 @@
 ./music/analogue/Lenny Kravitz - It Ain't Over Till It's Over.mp3
 ./music/analogue/Bad Boys Blue - I Totally Miss You.mp3
 ./music/analogue/Mac Band - Roses Are Red.mp3
-./music/analogue/Dido - Everything To Lose.mp3
 ./music/analogue/Gloria Estefan - La Parranda.mp3
 ./music/analogue/Brian Simpson - It Could Happen.mp3
 ./music/analogue/Rem - Shiny Happy People.mp3
@@ -261,6 +262,7 @@
 ./music/analogue/Simply Red - To Be Free.mp3
 ./music/analogue/U2 - I'll Go Crazy If I Don't Go Crazy Tonight.mp3
 ./music/analogue/Kool & The Gang - Take It To The Top.mp3
+./music/analogue/Samantha Fox - I Wanna Have Some Fun.mp3
 ./music/analogue/Elvis Presley - Jailhouse Rock.mp3
 ./music/analogue/Roxette - Sleeping In My Car.mp3
 ./music/analogue/Jamiroquai - Where Do We Go From Here.mp3
@@ -270,7 +272,9 @@
 ./music/analogue/Michael Jackson - Man In The Mirror.mp3
 ./music/analogue/Mike Oldfield - Moonlight Shadow.mp3
 ./music/analogue/Shakatak - If You Could See Me Now.mp3
+./music/analogue/The Romantics - Talking In Your Sleep.mp3
 ./music/analogue/U2 - The Fly.mp3
+./music/analogue/Samantha Fox - Naughty Girls (Need Love Too).mp3
 ./music/analogue/Orishas - Llego.mp3
 ./music/analogue/Amanda Lear - I Need A Man.mp3
 ./music/analogue/Tina Winson - Pacific Dream.mp3
@@ -282,6 +286,7 @@
 ./music/analogue/Spandau Ballet - True.mp3
 ./music/analogue/Abba - Dancing Queen.mp3
 ./music/analogue/Lynyrd Skynyrd - Sweet Home Alabama.mp3
+./music/analogue/Supertramp - It's Raining Again.mp3
 ./music/analogue/Ricchi E Poveri - Sara Perche Ti Amo.mp3
 ./music/analogue/Vaya Con Dios - Johnny.mp3
 ./music/analogue/Kate Bush - Running Up That Hill (A Deal With God).mp3
@@ -329,6 +334,7 @@
 ./music/analogue/Jean Michel Jarre - Equinoxe 5.mp3
 ./music/analogue/Ofra Haza - Wish Me Luck.mp3
 ./music/analogue/The Shadows - Wonderful Land.mp3
+./music/analogue/B.G. The Prince Of Rap - The Color Of My Dreams.mp3
 ./music/analogue/Ub40 - Music So Nice.mp3
 ./music/analogue/Abba - So Long.mp3
 ./music/analogue/The Fantastic Oceans - Movin Cruisin.mp3
@@ -348,6 +354,7 @@
 ./music/analogue/Ace Of Base - Life Is A Flower.mp3
 ./music/analogue/The Corrs - Say.mp3
 ./music/analogue/Jazzy Jeff & The Fresh Prince - Summertime.mp3
+./music/analogue/Bananarama - Venus.mp3
 ./music/analogue/Robin Gibb - Someone To Beleive In.mp3
 ./music/analogue/Jamiroquai - Seven Days In Sunny June.mp3
 ./music/analogue/Jean Michel Jarre - Oxygene 2.mp3
@@ -360,7 +367,6 @@
 ./music/analogue/Mike & The Mechanics - Over My Shoulder.mp3
 ./music/analogue/Goombay Dance Band - My Bonnie.mp3
 ./music/analogue/Black - Everything's Coming Up Roses.mp3
-./music/analogue/Saragossa Band - Azzuro.mp3
 ./music/analogue/Bad Boys Blue - Pretty Young Girl.mp3
 ./music/analogue/Mick Jagger - Sweet Thing.mp3
 ./music/analogue/Amanda Lear - Mother Look What Theyve Done To Me.mp3
@@ -376,6 +382,7 @@
 ./music/analogue/The Corrs - Breathless.mp3
 ./music/analogue/Us3 - Let My Dreams Come True.mp3
 ./music/analogue/David Lee Roth - Just A Gigolo.mp3
+./music/analogue/James Blunt - 1973.mp3
 ./music/analogue/Earth Wind & Fire - September.mp3
 ./music/analogue/Chris Rea - Julia.mp3
 ./music/analogue/Aha - How Sweet It Was.mp3
@@ -411,6 +418,7 @@
 ./music/analogue/Pet Shop Boys - That's The Way Life Is.mp3
 ./music/analogue/Apollo Four Forty - Krupa.mp3
 ./music/analogue/Bad Boys Blue - Back To The Future.mp3
+./music/analogue/The Farm - All Together Now.mp3
 ./music/analogue/Jocelyn Brown - Somebody Else's Guy.mp3
 ./music/analogue/Bad Boys Blue - I Wanna Hear Your Heartbeat (Sunday Girl).mp3
 ./music/analogue/Robin Gibb - You Don't Say Us Anymore.mp3
@@ -435,6 +443,7 @@
 ./music/analogue/U2 - One Tree Hill.mp3
 ./music/analogue/Suzi Quatro - Can The Can.mp3
 ./music/analogue/Robin Gibb - Do You Love Her.mp3
+./music/analogue/Bingoboys - How To Dance.mp3
 ./music/analogue/U2 - Who's Gonna Ride Your Wild Horses.mp3
 ./music/analogue/Ottawan - Hands Up (Give Me Your Heart).mp3
 ./music/analogue/Goombay Dance Band - Yellow Bird.mp3
@@ -463,6 +472,7 @@
 ./music/analogue/Kylie Minogue - Disco Down.mp3
 ./music/analogue/Blondie - The Tide Is High.mp3
 ./music/analogue/Mel & Kim - Respectable.mp3
+./music/analogue/The Bangles - Walk Like An Egyptian.mp3
 ./music/analogue/Amanda Lear - Queen Of Chinatown.mp3
 ./music/analogue/Heavy D & The Boyz - This Is Your Night.mp3
 ./music/analogue/The Corrs - So Young.mp3
@@ -470,6 +480,7 @@
 ./music/analogue/Gloria Estefan - Rhythm Is Gonna Get You.mp3
 ./music/analogue/Michael Jackson - Leave Me Alone.mp3
 ./music/analogue/Depeche Mode - Love In Itself.mp3
+./music/analogue/Madonna - You Can Dance.mp3
 ./music/analogue/Quincy Jones - Cool Joe Mean Joe.mp3
 ./music/analogue/Modern Talking - Cherry Cherry Lady.mp3
 ./music/analogue/The Blue Boy - Remember Me.mp3
@@ -485,7 +496,6 @@
 ./music/analogue/Mike & The Mechanics - Now That You've Gone.mp3
 ./music/analogue/Dire Straits - Walk Of Life.mp3
 ./music/analogue/Rick James - Super Freak.mp3
-./music/analogue/Depeche Mode - Leave In Silence.mp3
 ./music/analogue/Dee Lite - Bittersweet Loving.mp3
 ./music/analogue/Sandra - Stop For A Minute.mp3
 ./music/analogue/Gotan Project - Epoca.mp3
@@ -543,6 +553,7 @@
 ./music/analogue/Bee Gees - You Should Be Dancing.mp3
 ./music/analogue/Abba - Ring Ring.mp3
 ./music/analogue/Kool & The Gang - Hi De Hi Hi De Ho.mp3
+./music/analogue/Abba - Me & Bobby & Bobby's Brother.mp3
 ./music/analogue/Brian Simpson - It's All Good.mp3
 ./music/analogue/Rem - So Fast So Numb.mp3
 ./music/analogue/Tom Waits - Hang On St. Christopher.mp3
@@ -562,7 +573,6 @@
 ./music/analogue/Goombay Dance Band - Caribbean Girl.mp3
 ./music/analogue/U2 - When Love Comes To Town.mp3
 ./music/analogue/Elo - Hold On Tight.mp3
-./music/analogue/Carpenters - Yesterday Once More.mp3
 ./music/analogue/Rem - The Sidewinder Sleeps Tonite.mp3
 ./music/analogue/Craig David - Last Night.mp3
 ./music/analogue/Simply Red - Thrill Me.mp3
@@ -584,16 +594,19 @@
 ./music/analogue/Bruce & Bongo - Monkey Dance.mp3
 ./music/analogue/Morcheeba Ft. Manda - Flowers.mp3
 ./music/analogue/Saragossa Band - Hang On Sloopy.mp3
+./music/analogue/Steve Miller Band - Abracadabra.mp3
 ./music/analogue/Depeche Mode - Personal Jesus.mp3
 ./music/analogue/Cock Robin - Just Around The Corner.mp3
 ./music/analogue/Goombay Dance Band - Santorini Goodbye.mp3
 ./music/analogue/Bronski Beat - Heat Wave.mp3
+./music/analogue/Dire Straits - What It Is.mp3
 ./music/analogue/Roxette - You Can't Put Your Arm.mp3
 ./music/analogue/Madonna - I Know It.mp3
 ./music/analogue/Dido - Take My Hand.mp3
 ./music/analogue/The Police - Roxanne.mp3
 ./music/analogue/Shakin Stevens - A Love Worth Waiting For.mp3
 ./music/analogue/The Corrs - Heaven Knows.mp3
+./music/analogue/Lenny Kravitz - Fly Away.mp3
 ./music/analogue/U2 - With Or Without You.mp3
 ./music/analogue/Mezzoforte - Tribute.mp3
 ./music/analogue/France Gall - Ella Elle La.mp3
@@ -639,6 +652,7 @@
 ./music/analogue/Madonna - Lucky Star.mp3
 ./music/analogue/Sister Sledge - Hes The Greatest Dancer.mp3
 ./music/analogue/Depeche Mode - Walking In My Shoes.mp3
+./music/analogue/Safri Duo - Baya Baya.mp3
 ./music/analogue/Foreigner - That Was Yesterday.mp3
 ./music/analogue/Madonna - Stay.mp3
 ./music/analogue/Morcheeba - Good Girl Down.mp3
@@ -681,6 +695,7 @@
 ./music/analogue/Morcheeba Ft. Slick Rick - Women Lose Weight.mp3
 ./music/analogue/Bryan Adams - Cloud Number Nine.mp3
 ./music/analogue/Michael Jackson - Give In To Me.mp3
+./music/analogue/Robin Cook - I Won't Let The Sun Go Down.mp3
 ./music/analogue/Abba - Gimme Gimme Gimme.mp3
 ./music/analogue/Yello - Angel No.mp3
 ./music/analogue/Simply Red - Aint That A Lot Of Love.mp3
@@ -723,6 +738,7 @@
 ./music/analogue/Shakatak - Summer Sky.mp3
 ./music/analogue/Paul Simon - The Boy In The Bubble.mp3
 ./music/analogue/Matt Bianco - Don't Blame It On That Girl.mp3
+./music/analogue/Ottawan - Hands Up.mp3
 ./music/analogue/Bob Marley - One Love.mp3
 ./music/analogue/Earth Wind & Fire - Getaway.mp3
 ./music/analogue/Dido - It Comes And It Goes.mp3
@@ -741,6 +757,7 @@
 ./music/analogue/Shakatak - Dark Is The Night.mp3
 ./music/analogue/Abba - As Good As New.mp3
 ./music/analogue/Boney M - Baby Do You Wanna Bump.mp3
+./music/analogue/Milli Vanilli - Keep On Running.mp3
 ./music/analogue/Bad Boys Blue - Kisses And Tears (My One And Only).mp3
 ./music/analogue/Alphaville - Big In Japan.mp3
 ./music/analogue/Modern Talking - Don't Take Away My Heart.mp3
@@ -906,6 +923,7 @@
 ./music/analogue/Kool & The Gang - Celebration.mp3
 ./music/analogue/Mezzoforte - New Rock.mp3
 ./music/analogue/Ub40 - Rat In Mi Kitchen.mp3
+./music/analogue/Phil Collins - Don't Lose My Number.mp3
 ./music/analogue/Amanda Lear - Muscle Man.mp3
 ./music/analogue/U2 - Sweetest Thing.mp3
 ./music/analogue/Yello - Oh Yeah.mp3
@@ -915,7 +933,6 @@
 ./music/analogue/U2 - Magnificent.mp3
 ./music/analogue/Michael Jackson - Jam.mp3
 ./music/analogue/The Corrs - The Right Time.mp3
-./music/analogue/Saragossa Band - Born To Be Alive.mp3
 ./music/analogue/Amanda Lear - Black Holes.mp3
 ./music/analogue/Bronski Beat - I Feel Love.mp3
 ./music/analogue/Eurythmics - You Have Placed A Chill In My Heart.mp3
@@ -1023,12 +1040,10 @@
 ./music/analogue/Quincy Jones - Soul Bossa Nova.mp3
 ./music/analogue/Ub40 - Dance With The Devil.mp3
 ./music/analogue/James Taylor Quartet Ft. Alison Limerick - Love Will Keep Us Together.mp3
-./music/analogue/Samantha Fox - I Only Wanna Be Whit You.mp3
 ./music/analogue/Modern Talking - Tv Makes The Superstar.mp3
 ./music/analogue/Sandra - In The Heat Of The Night.mp3
 ./music/analogue/Simply Red - Money's Too Tight To Mention.mp3
 ./music/analogue/Bronski Beat - I Love The Nightlife.mp3
-./music/analogue/Saragossa Band - Brasil.mp3
 ./music/analogue/Sandra - Little Girl.mp3
 ./music/analogue/Dido - Hell After This.mp3
 ./music/analogue/Salt N Pepa - Shoop.mp3
@@ -1042,7 +1057,6 @@
 ./music/analogue/Aha - I Won't Forget Her.mp3
 ./music/analogue/Jamiroquai - Planet Home.mp3
 ./music/analogue/Orishas - Represent.mp3
-./music/analogue/Saragossa Band - Ginger Red.mp3
 ./music/analogue/The Jacksons - Things I Do For You.mp3
 ./music/analogue/Madonna - Dress You Up.mp3
 ./music/analogue/Carpenters - Sweet Sweet Smile.mp3
@@ -1084,6 +1098,7 @@
 ./music/analogue/Madonna - Papa Don't Preach.mp3
 ./music/analogue/Goombay Dance Band - Monkey.mp3
 ./music/analogue/Adele - I'll Be Waiting.mp3
+./music/analogue/Madonna - You Can Dance .mp3
 ./music/analogue/Shakatak - Night Birds.mp3
 ./music/analogue/Bruce & Bongo - Secret Service.mp3
 ./music/analogue/Baltimora - Woody Boogie.mp3
@@ -1094,15 +1109,16 @@
 ./music/analogue/Ricchi E Poveri - Voulez Vous Danser.mp3
 ./music/analogue/Bad Boys Blue - Come Back And Stay.mp3
 ./music/analogue/Madonna - Cherish.mp3
-./music/analogue/Saragossa Band - Paloma Blanca.mp3
 ./music/analogue/Talk Talk - Such A Shame.mp3
 ./music/analogue/Vaya Con Dios - Lonely Feeling.mp3
 ./music/analogue/U2 - Spanish Eyes.mp3
 ./music/analogue/Ofra Haza - Im Nin Alu.mp3
+./music/analogue/Aswad - Don't Turn Around.mp3
 ./music/analogue/Depeche Mode - Policy Of Truth.mp3
 ./music/analogue/Mel & Kim - Who's Gonna Catch You.mp3
 ./music/analogue/Digital Emotion - Go Go Yellow Screen.mp3
 ./music/analogue/Madonna - Keep It Together.mp3
+./music/analogue/Samantha Fox - I Only Want To Be With You.mp3
 ./music/analogue/Pebbles - Girlfriend.mp3
 ./music/analogue/Abba - Honey Honey.mp3
 ./music/analogue/C. C. Catch - I Can Loose My Heart Tonight.mp3
@@ -1118,6 +1134,7 @@
 ./music/analogue/Cher - Love So High.mp3
 ./music/analogue/Bronski Beat - Close To The Edge.mp3
 ./music/analogue/Depeche Mode - Just Can't Get Enough.mp3
+./music/analogue/Fleetwood Mac - Oh Diane.mp3
 ./music/analogue/Boney M - Brown Girl In The Ring.mp3
 ./music/analogue/Shakin Stevens - You Drive Me Crazy.mp3
 ./music/analogue/Take That - Relight My Fire.mp3
@@ -1226,6 +1243,7 @@
 ./music/night/Peaches & Herb - Reuited.mp3
 ./music/night/Sade - I Never Thought I'd See The Day.mp3
 ./music/night/The Shadows - Red River Rock.mp3
+./music/night/Bruno Mars - When I Was Your Man.mp3
 ./music/night/The Corrs - Somebody For Someone.mp3
 ./music/night/Paul Simon - Diamonds On The Soles Of Her Shoes.mp3
 ./music/night/Robyn Adele Anderson Ft. Von Smith - Little Mermaid Part Of Your World.mp3
@@ -1410,6 +1428,7 @@
 ./music/night/Anastacia - You'll Never Be Alone.mp3
 ./music/night/Chris Isaak - Wicked Games.mp3
 ./music/night/Cardigans - Higher.mp3
+./music/night/Jamiroquai - Corner Of The Earth.mp3
 ./music/night/Morcheeba Ft. Judy Tzuke - Enjoy The Ride.mp3
 ./music/night/Enya - Portrait (Out Of The Blue).mp3
 ./music/night/James Last & Orchestra - Love Is All Around.mp3
@@ -1464,6 +1483,7 @@
 ./music/night/Morcheeba - A Well Deserved Break.mp3
 ./music/night/Jennifer Lopez - Baby I Love You.mp3
 ./music/night/The Cranberries - Zombie.mp3
+./music/night/Tracy Chapman - Fast Car.mp3
 ./music/night/Robin Gibb - Another Lonely Night In New York.mp3
 ./music/night/Carpenters - Only Yesterday.mp3
 ./music/night/No Doubt - Don't Speak.mp3
@@ -1537,6 +1557,7 @@
 ./music/night/Madonna - Is This Love.mp3
 ./music/night/Lou Rawls - Lady Love.mp3
 ./music/night/Tom Waits - I'll Be Gone.mp3
+./music/night/Shawn Mendes - Imagination.mp3
 ./music/night/Sade - Is It A Crime.mp3
 ./music/night/Mariah Carey - Without You.mp3
 ./music/night/Caro Emerald - Riviera Life.mp3
@@ -1688,6 +1709,7 @@
 ./music/night/Kool & The Gang - Bad Woman.mp3
 ./music/night/Carpenters - We've Only Just Begun.mp3
 ./music/night/Ub40 - I Would Do For You.mp3
+./music/night/Rene Klijn - Mister Blue.mp3
 ./music/night/Madonna - Love Tried To Welcome Me.mp3
 ./music/night/Diana Krall - Come Dance With Me.mp3
 ./music/night/Yello - Sweet Thunder.mp3
@@ -1856,7 +1878,7 @@
 ./music/night/Nancy Sinatra - Call Me.mp3
 ./music/night/Andreas Vollenweider - Eolian Minstrel.mp3
 ./music/night/Jennifer Lopez - Again.mp3
-./music/night/Abba - Me & Bobby & Bobby's Brother.mp3
+./music/night/Madonna - Deeper And Deeper (instrumental).mp3
 ./music/night/PMJ - Thrift Shop (Vintage Grandpa Style Macklemore Cover).mp3
 ./music/night/Andreas Vollenweider - Mandragora.mp3
 ./music/night/Michael Jackson - Stranger In Moscow.mp3
@@ -1868,6 +1890,7 @@
 ./music/night/Loreena McKennitt - Blacksmith.mp3
 ./music/night/Jon Anderson - I'll Find My Way Home.mp3
 ./music/night/PMJ - Ocean Avenue - Yellowcard (60s Style Cover) Ft. Lauren Tyler Scott.mp3
+./music/night/Crowded House - Don't Dream It's Over.mp3
 ./music/night/The Corrs - Queen Of Hollywood.mp3
 ./music/night/Don McLean - American Pie.mp3
 ./music/night/Brenda Lee - All Alone Am I.mp3
@@ -1883,6 +1906,7 @@
 ./music/night/PMJ - Dark Horse - Gothic RB James Bond- Style Katy Perry Cover Ft. Ashley Stroud.mp3
 ./music/night/George Michael - Cowboys And Angels.mp3
 ./music/night/Camille Bazbaz - Dune Balle.mp3
+./music/night/Carpenters - Yesterday Once More.mp3
 ./music/night/Astrud Gilberto - Bossa Na Praia Beach Samba.mp3
 ./music/night/Tom Jones - Help Yourself.mp3
 ./music/night/Alex Ubago - A Gritos De Esperanza.mp3
@@ -1945,7 +1969,6 @@
 ./music/night/Billy Paul - Me And Mrs Jones.mp3
 ./music/night/PMJ - Just Dance - Vintage 1940s Tap Dance Jazz Lady Gaga Cover.mp3
 ./music/night/Andreas Vollenweider - See My Love.mp3
-./music/night/Madonna - Deeper And Deeper.mp3
 ./music/night/James Last & Orchestra - A Stranger In Paradise.mp3
 ./music/night/Shivaree - Goodnight Moon.mp3
 ./music/night/America - A Horse With No Name.mp3
@@ -2073,6 +2096,7 @@
 ./music/night/Zucchero - Diamante.mp3
 ./music/night/James Last & Orchestra - Weekend Torn.mp3
 ./music/night/Jennifer Lopez - Dear Ben.mp3
+./music/night/Eric Carmen - All By Myself.mp3
 ./music/night/PMJ - Juice - Vintage 1920s Gatsby Style Lizzo Cover Ft. Mario Jose.mp3
 ./music/night/Abba - Our Last Summer.mp3
 ./music/night/Loreena McKennitt - The Old Ways.mp3
@@ -2269,6 +2293,7 @@
 ./music/night/Nilsson - Without You.mp3
 ./music/night/PMJ - Radioactive - Vintage Jazz Beatbox Imagine Dragons Cover Ft. Blake Lewis.mp3
 ./music/night/Joe Cocker Ft. Jennifer Warnes - Up Where We Belong.mp3
+./music/night/Minnie Riperton - Lovin You.mp3
 ./music/night/Brian Simpson - Waiting.mp3
 ./music/night/Red Hot Chili Peppers - Under The Bridge.mp3
 ./music/night/Amy Winehouse - Just Friends [Explicit].mp3
@@ -2385,6 +2410,7 @@
 ./music/night/U2 - Sweetest Thing.mp3
 ./music/night/PMJ - Problem - Vintage 50s Doo-Wop Ariana Grande Cover Ft. The Tee - Tones.mp3
 ./music/night/Madonna - Pretender.mp3
+./music/night/Elton John - Nikita.mp3
 ./music/night/Enya - Angeles.mp3
 ./music/night/PMJ - You Give Love A Bad Name - Vintage Blues - Style Bon Jovi Cover Ft. Jennie Lena.mp3
 ./music/night/Adriano Celentano - Soli.mp3
@@ -2422,7 +2448,6 @@
 ./music/night/John Lennon - Woman.mp3
 ./music/night/Kid Loco - Relaxing With Cheery.mp3
 ./music/night/Morcheeba - Gimme Your Love.mp3
-./music/night/Madonna - What It Feels Like For A Girl.mp3
 ./music/night/Yello - Swing.mp3
 ./music/night/The Righteous Brothers - Unchained Melody.mp3
 ./music/night/James Last & Orchestra - Empty Glasses.mp3
@@ -2480,12 +2505,12 @@
 ./music/night/Black - Wonderful Life.mp3
 ./music/night/Abba - Arrival.mp3
 ./music/night/Le Ann Rimes - How Do I Live.mp3
-./music/night/Joyce Sims - Come Into My Life.mp3
 ./music/night/U2 - Stuck In A Moment You Can't Get Out Of.mp3
 ./music/night/Andreas Vollenweider - Sena Stanjena.mp3
 ./music/night/Bobby Vinton - Blue Velvet.mp3
 ./music/night/The Corrs - Rain.mp3
 ./music/night/Camille Bazbaz - Dans Ma Nature.mp3
+./music/night/Billy Idol - Sweet Sixteen.mp3
 ./music/night/PMJ Ft. Dani Armstrong - Chandelier.mp3
 ./music/night/Anne Murray - Snowbird.mp3
 ./music/night/Anastacia - I Dreamed You.mp3
@@ -2501,7 +2526,6 @@
 ./music/night/PMJ - It Aint Me - New Orleans Brass Band-Style Kygo Selena Gomez Cover Ft. Emily Braden.mp3
 ./music/night/PMJ - Love Yourself - Vintage 1920s New Orleans Justin Bieber Cover Ft. Sara Niemietz.mp3
 ./music/night/Dalida Ft. Alain Delon - Paroles Paroles.mp3
-./music/night/Bruce & Bongo - Hiyappa Diyiappa.mp3
 ./music/night/Mariah Carey - Everything Fades Away.mp3
 ./music/night/Gabrielle - Rise.mp3
 ./music/night/PMJ - Im Not The Only One - Vintage New Orleans - Style Sam Smith Cover Ft. Casey Abrams.mp3
@@ -2636,6 +2660,7 @@
 ./music/night/Boys Town Gang - Can't Take My Eyes.mp3
 ./music/night/George Michael - Jesus To A Child.mp3
 ./music/night/Bee Gees - Lonely Days.mp3
+./music/night/Billy Joel - Honesty.mp3
 ./music/night/Madonna - Take A Bow.mp3
 ./music/night/Enya - Watermark.mp3
 ./music/night/PMJ - Straight Up - Paula Abdul Vintage Jazz Cover Ft. Olivia, Sara, Vonzell, Anissa.mp3
@@ -2749,13 +2774,16 @@
 ./music/night/Enya - The Sun In The Stream.mp3
 ./music/night/Simply Red - Say You Love Me.mp3
 ./music/night/PMJ - Happy - Pharrell Williams (on 10 Different Musical Instruments Cover) (ft. Gunhild Carling).mp3
+./music/night/Marillion - Kayleigh.mp3
 ./music/night/Cathy Dennis - Too Many Walls.mp3
+./music/night/Afterlife Ft. Dannii Minogue - Take Me Inside.mp3
 ./music/night/The Commodores - Three Times A Lady.mp3
 ./music/night/Robbie Williams - Feel.mp3
 ./music/night/Mariah Carey - Underneath The Stars.mp3
 ./music/night/Chris Rea - Tell Me There's A Heaven.mp3
 ./music/night/Vaya Con Dios - Puerto Rico.mp3
 ./music/digital/Far Out Ft. Emilia Ali - Wrong.mp3
+./music/digital/Taylor Swift - Shake It Off.mp3
 ./music/digital/4 The Cause - Ain't No Sunshine.mp3
 ./music/digital/Camille Bazbaz - Generique.mp3
 ./music/digital/Calvin Harris - One Kiss.mp3
@@ -2803,6 +2831,7 @@
 ./music/digital/Dj Snake Ft. Lil Jon - Turn Down For What.mp3
 ./music/digital/Amy Winehouse - Back To Black.mp3
 ./music/digital/Madonna - Triggering.mp3
+./music/digital/Blue - All Rise.mp3
 ./music/digital/Gnarls Barkley - Crazy.mp3
 ./music/digital/Atb - Hold You.mp3
 ./music/digital/Train - Drive By.mp3
@@ -2839,6 +2868,7 @@
 ./music/digital/Pink Ft. Lily Allen - True Love.mp3
 ./music/digital/AronChupa - I M An Albatraoz.mp3
 ./music/digital/Alvaro Soler - Sofia.mp3
+./music/digital/Dj Mam's Ft. Houssdjo Ft. Luis Guisao - Tranquilo.mp3
 ./music/digital/Martin Solveig Ft. Alma - All Stars.mp3
 ./music/digital/Jakatta - American Dream.mp3
 ./music/digital/Wyclef Jean Ft. Claudette Ortiz - Dance Like This.mp3
@@ -2849,18 +2879,21 @@
 ./music/digital/Dante Thomas - Miss California.mp3
 ./music/digital/Madonna - Holy Water.mp3
 ./music/digital/Britney Spears - Toxic.mp3
+./music/digital/Mint Royale - From Rusholme With Love.mp3
 ./music/digital/Martin Garrix Ft. Bebe Rexha - In The Name Of Love.mp3
 ./music/digital/Estelle Ft. Kanye West - American Boy.mp3
 ./music/digital/Twenty One Pilots - Stressed Out.mp3
 ./music/digital/Lady Gaga - Bad Romance.mp3
 ./music/digital/Eminem Ft. Rihanna - The Monster.mp3
 ./music/digital/Liam Payne Ft. Quavo - Strip That Down.mp3
+./music/digital/Dido - Everything To Lose.mp3
 ./music/digital/Madonna - Fighting Spirit.mp3
 ./music/digital/Jason Derulo Ft. Jawsh 685 - Savage Love.mp3
 ./music/digital/Kevin Lyttle - Slow Motion.mp3
 ./music/digital/Madonna - Dance 2Night.mp3
 ./music/digital/Rock Mafia Ft. Miley Cyrus - The Big Bang.mp3
 ./music/digital/Kungs Ft. Olly Murs Ft. Coely - More Mess.mp3
+./music/digital/Dj Hamida Ft. Lartiste - Cest Une Frappe.mp3
 ./music/digital/Bebe Rexha - I Got You.mp3
 ./music/digital/Andy Fortuna - As If.mp3
 ./music/digital/Alesso - We Could Be Heroes.mp3
@@ -2874,7 +2907,6 @@
 ./music/digital/Halsey - Still Learning.mp3
 ./music/digital/Calvin Harris Ft. Pharrell Williams Ft. Katy Perry Ft. Big Sean - Feels.mp3
 ./music/digital/Robbie Williams - Rock Dj.mp3
-./music/digital/Shawn Mendes - Imagination.mp3
 ./music/digital/Robin Schulz - This Is Your Life.mp3
 ./music/digital/Amy Winehouse - You Know I'm No Good.mp3
 ./music/digital/Mabel - Boyfriend.mp3
@@ -2885,6 +2917,7 @@
 ./music/digital/Clean Bandit Ft. Zara Larsson - Symphony.mp3
 ./music/digital/Nelly Furtado - Say It Right.mp3
 ./music/digital/Alan Walker - Alone.mp3
+./music/digital/Bruno Mars - Chunky.mp3
 ./music/digital/Maroon 5 - Misery.mp3
 ./music/digital/Fifth Harmony Ft. Fetty Wap - All In My Head Flex.mp3
 ./music/digital/Jessie J - Sexy Lady.mp3
@@ -2895,6 +2928,7 @@
 ./music/digital/Fifth Harmony Ft. Kid Ink - Worth It.mp3
 ./music/digital/Lutricia McNeal - My Side Of Town.mp3
 ./music/digital/Madonna - Mother And Father.mp3
+./music/digital/Bruno Mars - Thats What I Like.mp3
 ./music/digital/Maroon 5 - Animals.mp3
 ./music/digital/David Guetta Ft. Sam Martin - Lovers On The Sun.mp3
 ./music/digital/Robin Schulz Ft. Nico Santos - More Than A Friend.mp3
@@ -2908,6 +2942,7 @@
 ./music/digital/Selena Gomez Ft. The Scene - Love You Like A Love Song.mp3
 ./music/digital/Aaliyah - Got To Give It Up.mp3
 ./music/digital/Madonna - She's Not Me.mp3
+./music/digital/John Newman - Love Me Again.mp3
 ./music/digital/Mary J Blige - Family Affair.mp3
 ./music/digital/Rihanna - SandM.mp3
 ./music/digital/Jesse & Joy Ft. Gente De Zona - 3 A.M.mp3
@@ -2952,6 +2987,7 @@
 ./music/digital/The Chainsmokers Ft. Daya - Don't Let Me Down.mp3
 ./music/digital/Madonna - Erotica.mp3
 ./music/digital/Sam Feldt - Fade Away.mp3
+./music/digital/Bruno Mars - Finesse.mp3
 ./music/digital/Mo Horizons - Hit The Road Jack.mp3
 ./music/digital/Selena Gomez Ft. Asap Rocky - Good For You.mp3
 ./music/digital/Britney Spears - What It's Like To Be Me.mp3
@@ -2964,6 +3000,7 @@
 ./music/digital/Aaron Smith - Dancin.mp3
 ./music/digital/Schiller - Rune.mp3
 ./music/digital/Madonna - Rebel Heart.mp3
+./music/digital/Bruno Mars - Treasure.mp3
 ./music/digital/Meghan Trainor Ft. Nicki Minaj - Nice To Meet Ya.mp3
 ./music/digital/Anastacia - Sick And Tired.mp3
 ./music/digital/Avicii Ft. Rita Ora - Lonely Together.mp3
@@ -2988,6 +3025,7 @@
 ./music/digital/Rui Da Silva Ft. Cassandra - Touch Me.mp3
 ./music/digital/Dj Khaled Ft. Justin Bieber Ft. Chance The Rapper Ft. Lil Wayne - Im The One.mp3
 ./music/digital/Portugal The Man - Feel It Still.mp3
+./music/digital/Liion - Don't You.mp3
 ./music/digital/Imagine Dragons - Believer.mp3
 ./music/digital/Cover Drive - Twilight.mp3
 ./music/digital/Becky G - Shower.mp3
@@ -3046,6 +3084,7 @@
 ./music/digital/Christina Aguilera - Get Mine Get Yours.mp3
 ./music/digital/Edward Maya - Stereo Love.mp3
 ./music/digital/Lady Gaga Ft. Colby O Donis - Just Dance.mp3
+./music/digital/R. City Ft. Adam Levine - Locked Away.mp3
 ./music/digital/Calvin Harris - My Way.mp3
 ./music/digital/Quinn Xcii - Candle.mp3
 ./music/digital/Dennis Lloyd - Nevermind.mp3
@@ -3082,7 +3121,6 @@
 ./music/digital/Britney Spears - Cinderella.mp3
 ./music/digital/Mariah Carey - Dreamlover.mp3
 ./music/digital/Corina - Roata Se Intoarce.mp3
-./music/digital/Liion - Don’t You.mp3
 ./music/digital/Justin Timberlake - Can't Stop The Feeling.mp3
 ./music/digital/Nicki Minaj - Va Va Voom.mp3
 ./music/digital/Artful Dodger - Movin Too Fast.mp3
@@ -3178,6 +3216,7 @@
 ./music/digital/One Direction - Perfect.mp3
 ./music/digital/Madonna - History.mp3
 ./music/digital/Bruno Mars - 24K Magic.mp3
+./music/digital/Bruno Mars - 24k Magic.mp3
 ./music/digital/Topic - Breaking Me.mp3
 ./music/digital/Katy Perry - This Is How We Do.mp3
 ./music/digital/Sheryl Crowe - All I Wanna Do.mp3
@@ -3189,15 +3228,18 @@
 ./music/digital/Ariana Grande - Focus.mp3
 ./music/digital/Madonna - Devil Pray.mp3
 ./music/digital/Spin - Ploaia.mp3
+./music/digital/Sia - Chandelier.mp3
 ./music/digital/Burak Yeter Ft. Danelle Sandoval - Tuesday.mp3
 ./music/digital/Austin Ally - A Billion Hits.mp3
 ./music/digital/Madonna - Intervention.mp3
 ./music/digital/Robin Thicke Ft. T.I. Ft. Pharrell Williams - Blurred Lines.mp3
+./music/digital/Rihanna Ft. Drake - Work.mp3
 ./music/digital/Ajr - Weak.mp3
 ./music/digital/Kesha - Your Love Is My Drug.mp3
 ./music/digital/Robin Schulz Ft. Aleesia - Love Me Loud.mp3
 ./music/digital/Charlie Puth Ft. Meghan Trainor - Marvin Gaye.mp3
 ./music/digital/Sophie Ellis Bextor - If You Go.mp3
+./music/digital/Bruno Mars - Locked Out Of Heaven.mp3
 ./music/digital/Enrique Iglesias Ft. Wisin - Duele El Corazon.mp3
 ./music/digital/Andra - What About Us.mp3
 ./music/digital/Amy Winehouse - Monkey Man.mp3
@@ -3212,7 +3254,7 @@
 ./music/digital/Britney Spears - That's Where You Take Me.mp3
 ./music/digital/Justin Bieber - What Do You Mean.mp3
 ./music/digital/Adele - Rolling In The Deep.mp3
-./music/digital/Dj Mam’s Ft. Houssdjo Ft. Luis Guisao - Tranquilo.mp3
+./music/digital/Bruno Mars - Moonshine.mp3
 ./music/digital/Meghan Trainor - No.mp3
 ./music/digital/Selena Gomez - Slow Down.mp3
 ./music/digital/Gotan Project - Lunático.mp3
@@ -3233,6 +3275,7 @@
 ./music/digital/OneRepublic - Counting Stars.mp3
 ./music/digital/Madonna - Don't Tell Me.mp3
 ./music/digital/Coldplay - Hymn For The Weekend.mp3
+./music/digital/Elle King - Ex's & Oh's.mp3
 ./music/digital/One Direction - History.mp3
 ./music/digital/Sophie Ellis Bextor - If I Can't Dance.mp3
 ./music/digital/Madonna - Liquid Love.mp3
@@ -3316,7 +3359,6 @@
 ./music/christmas/Dickie Valentine - Christmas Alphabet.mp3
 ./music/christmas/Jim Reeves - Christmas.mp3
 ./music/christmas/Mike Oldfield - In Dulci Jubilo.mp3
-./music/christmas/Peggy Lee - It’s Christmas Time Again.mp3
 ./music/christmas/Jona Lewie - Stop The Cavalry.mp3
 ./music/christmas/Abba - Happy New Year.mp3
 ./music/christmas/Stevie Wonder - What Christmas Means To Me.mp3
@@ -3332,6 +3374,7 @@
 ./music/christmas/Perry Como - O Come All Ye Faithful.mp3
 ./music/christmas/Wizzard - I Wish It Could Be Christmas Everyday.mp3
 ./music/christmas/Nat King Cole - The Christmas Song.mp3
+./music/christmas/Peggy Lee - It's Christmas Time Again.mp3
 ./music/christmas/Bing Crosby - Peace On Earth _ Little Drummer Boy.mp3
 ./music/christmas/The Ronettes - I Saw Mommy Kissing Santa Claus.mp3
 ./music/christmas/Luther Vandross - Please Come Home For Christmas.mp3
@@ -3407,7 +3450,6 @@
 ./music/party/K7 - Come Baby Come.mp3
 ./music/party/Shaggy - It Wasn't Me.mp3
 ./music/party/Estelle Ft. Kanye West - American Boy.mp3
-./music/party/Kaoma - Lambada.mp3
 ./music/party/Avicii - Wake Me Up.mp3
 ./music/party/M.A.R.S.S. - Pump Up The Volume.mp3
 ./music/party/Gypsy Kings - La Bamba.mp3
@@ -3421,7 +3463,6 @@
 ./music/party/U2 - Mysterious Ways.mp3
 ./music/party/Room 5 - Make Luv.mp3
 ./music/party/Jax Jones - Breathe.mp3
-./music/party/B.G. The Prince Of Rap - The Color Of My Dreams.mp3
 ./music/party/Ofenbach Ft. Benjamin Ingrosso - Paradise.mp3
 ./music/party/Rozalla - Everybody's Free (To Feel Good).mp3
 ./music/party/Fly Project - Musica.mp3
@@ -3446,7 +3487,6 @@
 ./music/party/Robin Cook - Comanchero.mp3
 ./music/party/Professor Green Ft. Ruth Anne - Remedy.mp3
 ./music/party/Las Ketchup - The Ketchup Song.mp3
-./music/party/Bingoboys - How To Dance.mp3
 ./music/party/Acdc - Thunderstruck.mp3
 ./music/party/Rock & Roll Mix - Sing The Moon.mp3
 ./music/party/Big Fun - Blame It On The Boogie.mp3
@@ -3479,8 +3519,6 @@
 ./music/party/Ottawan - D.I.S.C.O.mp3
 ./music/party/Crystal Waters - 100% Pure Love.mp3
 ./music/party/Snap - The Power.mp3
-./music/party/Lenny Kravitz - Fly Away.mp3
-./music/party/Madonna - Deeper And Deeper.mp3
 ./music/party/Run Dmc Ft. Aerosmith - Walk This Way.mp3
 ./music/party/Briskey - Kosmo Yahoodi.mp3
 ./music/party/Reel 2 Reel Ft. The Mad Stuntman - I Like To Move It.mp3
@@ -3510,7 +3548,6 @@
 ./music/party/Madison Avenue - Don't Call Me Baby.mp3
 ./music/party/Boney M - Bahamamama.mp3
 ./music/party/Elvis Presley - A Little Less Conversation.mp3
-./music/party/Robin Cook - I Won't Let The Sun Go Down.mp3
 ./music/party/Haddaway - Life.mp3
 ./music/party/Nicki Minaj - Starships.mp3
 ./music/party/Mc Hammer - U Cant Touch This.mp3
@@ -3575,6 +3612,7 @@
 ./music/party/Bellini - Samba De Janeiro.mp3
 ./music/party/Pitbull Ft. Chris Brown - International Love.mp3
 ./music/party/Joey B. Ellis - Go For It!.mp3
+./music/party/Samantha Fox - Megamix.mp3
 ./music/party/Rednex - Cotton Eye Joe.mp3
 ./music/party/Captain Jack Ft. Gipsy Kings - Get Up.mp3
 ./music/party/N Trance - Set You Free.mp3
@@ -3671,16 +3709,18 @@
 ./music/hungarian/analogue/Bonanza Banzai - Ujra Elsz.mp3
 ./music/hungarian/analogue/Akos - Helo.mp3
 ./music/hungarian/analogue/Bikini - Ezt Nem Tudom Maskepp Mondani.mp3
+./music/hungarian/analogue/Bonanza Banzai - Nezz Ram.mp3
 ./music/hungarian/analogue/Nox - Tuztanc.mp3
 ./music/hungarian/analogue/Zoran - Kolo.mp3
 ./music/hungarian/analogue/Elso Emelet - Kozepkori Hazibuli.mp3
 ./music/hungarian/analogue/Bonanza Banzai - Persze Hajnal Van Megint.mp3
 ./music/hungarian/analogue/Lart Pour Lart Tarsulat - A Harom Testor Es A Jeti.mp3
 ./music/hungarian/analogue/Elso Emelet - A Lany Korbejar.mp3
+./music/hungarian/analogue/Bonanza Banzai - A Sziv Hideg Marad.mp3
 ./music/hungarian/analogue/Akos - Olelj Meg Ujra.mp3
+./music/hungarian/analogue/Bonanza Banzai - Tanc.mp3
 ./music/hungarian/analogue/Bikini - Indokolatlan Jokedv.mp3
 ./music/hungarian/analogue/Csinibaba - Csinibaba.mp3
-./music/hungarian/analogue/Bonanza Banzai - Nzz Rm.mp3
 ./music/hungarian/analogue/Bonanza Banzai - Terj Vissza.mp3
 ./music/hungarian/analogue/Elso Emelet - A La Carte.mp3
 ./music/hungarian/analogue/Elso Emelet - Kis Generacio.mp3
@@ -3694,7 +3734,6 @@
 ./music/hungarian/analogue/Bonanza Banzai - Elmondatott.mp3
 ./music/hungarian/analogue/Emil Rulez - Veled Utazik Zazie.mp3
 ./music/hungarian/analogue/Akos - Virraszto.mp3
-./music/hungarian/analogue/Bonanza Banzai - Tnc.mp3
 ./music/hungarian/analogue/Elso Emelet - Beno.mp3
 ./music/hungarian/analogue/Elso Emelet - Madame Pompadour.mp3
 ./music/hungarian/analogue/Sub Bass Monster - Nincs No Nincs Siras.mp3
@@ -3702,6 +3741,7 @@
 ./music/hungarian/analogue/Irie Maffia - Hands In The Air.mp3
 ./music/hungarian/analogue/Bonanza Banzai - Erints Meg.mp3
 ./music/hungarian/analogue/Elso Emelet - Amerika.mp3
+./music/hungarian/analogue/Sub Bass Monster - Gyulafiratot.mp3
 ./music/hungarian/analogue/Emil Rulez - Csakacipo.mp3
 ./music/hungarian/analogue/Elso Emelet - Csakazertis Szerelem.mp3
 ./music/hungarian/analogue/Bonanza Banzai - Csak A Dal.mp3
@@ -3714,7 +3754,6 @@
 ./music/hungarian/analogue/Venus - Kockahas.mp3
 ./music/hungarian/analogue/Bonanza Banzai - Kihalt Minden.mp3
 ./music/hungarian/analogue/Bikini - Adj Helyet.mp3
-./music/hungarian/analogue/Bonanza Banzai - Induljon A Banzj.mp3
 ./music/hungarian/analogue/Elso Emelet - Nezelodunk.mp3
 ./music/hungarian/analogue/Elso Emelet - A Film Forog Tovabb.mp3
 ./music/hungarian/analogue/Bikini - Nehez A Dolga.mp3
@@ -3722,26 +3761,24 @@
 ./music/hungarian/analogue/Bikini - Ha Volna Meg Idom.mp3
 ./music/hungarian/analogue/Bonanza Banzai - Bucsudal.mp3
 ./music/hungarian/analogue/Bikini - Ne Legyek Arulo.mp3
+./music/hungarian/analogue/Bonanza Banzai - Induljon A Banzaj.mp3
 ./music/hungarian/analogue/Bikini - Legyek Jo.mp3
 ./music/hungarian/analogue/Bikini - Mielott Elmegyek.mp3
 ./music/hungarian/analogue/Akos - Az Utolso Level.mp3
 ./music/hungarian/analogue/Belga - Kirlyok A Hzban.mp3
 ./music/hungarian/analogue/Bonanza Banzai - A Hall Dalol.mp3
 ./music/hungarian/analogue/Marot Viki Es A Nova Kulturzenekar - Dalolj Dalolj Jazz Gitar.mp3
-./music/hungarian/analogue/Elso Emelet - Allj Vagy Lovok.mp3
 ./music/hungarian/analogue/Akos - Vegre.mp3
 ./music/hungarian/analogue/Bonanza Banzai - Osi Lang.mp3
 ./music/hungarian/analogue/Elso Emelet - Szepek Szepe Balladaja.mp3
 ./music/hungarian/analogue/Bikini - Ne Ebressz Fel.mp3
 ./music/hungarian/analogue/Akos - Indiantanc.mp3
-./music/hungarian/analogue/Bonanza Banzai - A Szv Hideg Marad.mp3
+./music/hungarian/Demjen Ferenc - Hogyan Tudnek Elni Nelkuled.mp3
 ./music/hungarian/night/Bikini - Adj Helyet Magad Mellett.mp3
 ./music/hungarian/night/Metro - Citromizu Banan.mp3
 ./music/hungarian/night/Illes - Oh Kisleany.mp3
 ./music/hungarian/night/Voith Agi Ft. Bodrogi Gyula - Jamaikai Trombitas.mp3
 ./music/hungarian/night/Apostol - Nem Tudok Elni Nelkuled.mp3
-./music/hungarian/night/Lgt - Mindenki Mskpp Csinlja.mp3
-./music/hungarian/night/Demjen Ferenc - Hogyan Tudnek Elni Nelkuled.mp3
 ./music/hungarian/night/Ambrus Kyri Ft. Aradszky Laszlo - Allatkerti Seta.mp3
 ./music/hungarian/night/Demjen Ferenc - Szerelem Elso Verig.mp3
 ./music/hungarian/night/Harangozo Teri - Azok A Szep Napok.mp3
@@ -3775,22 +3812,24 @@
 ./music/hungarian/night/Emil Rulez - Rabolono.mp3
 ./music/hungarian/night/V'moto Rock - Gyertyak.mp3
 ./music/hungarian/night/Bodrogi Gyula - Szomoru Vasarnap.mp3
+./music/hungarian/Kerozin - Kismalac.mp3
 ./music/hungarian/party/Komar Laszlo - Mondd Kis Kocos.mp3
 ./music/hungarian/party/Fekete Pako - Add Ide A Didit.mp3
 ./music/hungarian/party/Mate Peter - Zene Nelkul Mit Erek En.mp3
 ./music/hungarian/party/Takacs Tamas Dirty Blues Band - Zakatol A Vonat.mp3
+./music/hungarian/party/Flm - Miert Nincs Nyaron Ho.mp3
 ./music/hungarian/party/Bery & Váci Eszter - Egyedul.mp3
 ./music/hungarian/party/Illes - Little Richard.mp3
 ./music/hungarian/party/Matyi Es A Hegedus - Hejj Rigo Rigo.mp3
 ./music/hungarian/party/Fenyo Miklos - Csokkiraly.mp3
 ./music/hungarian/party/Desperado - Rajtad Mulik.mp3
+./music/hungarian/party/Kft - Balatoni Nyar.mp3
 ./music/hungarian/party/Padodo - Faj A Fejem.mp3
 ./music/hungarian/party/Kft - Afrika.mp3
 ./music/hungarian/party/Padodo - Bye Bye Szasa.mp3
 ./music/hungarian/party/Ad Stúdió - Álmaimban Amerika.mp3
 ./music/hungarian/party/Up - Nap.mp3
 ./music/hungarian/party/Hofi Geza - Probalj Meg Lazitani.mp3
-./music/hungarian/party/Kerozin - Kismalac.mp3
 ./music/hungarian/party/Takacs Tamas Dirty Blues Band - Pocsolyaba Leptem.mp3
 ./music/hungarian/party/Mc Hawer & Tekkno - Mikor A Vodka A Fejembe Szall.mp3
 ./music/hungarian/party/Fenyo Miklos - Rock And Roll Party.mp3
@@ -3805,17 +3844,17 @@
 ./music/hungarian/party/Omega - Petroleum Lampa.mp3
 ./music/hungarian/party/Cairo - Birthday Megamix.mp3
 ./music/hungarian/party/Sipos F. Tamas - Nincs Baj Baby.mp3
-./music/hungarian/party/Kft - Balatoni Nyár.mp3
 ./music/hungarian/party/Komar Laszlo - Tancolo Fekete Lakkcipok.mp3
 ./music/hungarian/party/Marot Viki Es A Nova Kulturzenekar - Csak Cha Cha Cha.mp3
 ./music/hungarian/party/Hevesi Tamas - Szolj Ram Ha Hangosan Enekelek.mp3
 ./music/hungarian/party/Neoton - Nyar Van.mp3
 ./music/hungarian/party/A Magyar Radio Hangjai Ft. Dj Dominique Ft. Ganzler Ors - Olimpiai Project.mp3
 ./music/hungarian/party/Szucs Judith - Gyere Tancolj Meg.mp3
-./music/hungarian/party/Flm - Miért Nincs Nyáron Hó.mp3
 ./music/hungarian/party/R-Go - Letezem.mp3
 ./music/hungarian/party/Mr Rick - Zárjon Be A Gyár.mp3
 ./music/hungarian/party/Mc Hawer & Tekkno - Sargan Viragzik A Tok.mp3
 ./music/hungarian/party/Marot Viki Es A Nova Kulturzenekar - Kaman Bebi Lesz Rock End Roll.mp3
 ./music/hungarian/party/Szecsi Pal - Gedeon Bacsi.mp3
 ./music/hungarian/party/Fekete Pako - Kislany Vigyazz.mp3
+./music/hungarian/Lgt - Mindenki Maskepp Csinalja.mp3
+./music/hungarian/Elso Emelet - Allj Vagy Lovok.mp3
