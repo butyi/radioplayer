@@ -167,7 +167,7 @@ The following steps I have made to get it work:
     - `#!/bin/bash`
     - `sleep 15` to be time to have everything initialized, especially the audio device.
     - `amixer set Headphone -- 96%` to set system volume
-    - `python /home/pi/repos/radioplayer/play.py 2> /home/pi/play.log` start the player with logging for debug purpose
+    - `python /home/pi/repos/radioplayer/play.py` start the player
   - `chmod +x boot.sh` to set it as executable
 - Try `boot.sh` script by call it: `./boot.sh`
 - To start `boot.sh` script at boot as a demon, add this line `@reboot ./home/pi/boot.sh > /dev/null 2>&1 &` to crontab (`crontab -e`).
