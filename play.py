@@ -86,6 +86,7 @@ Artists = [] # Empty list for Artists
 DebugConfigRead = False # Set True id you want to debug read and evaluation of config.ini
 ProgrammeCheckDateTime = datetime.datetime.today()
 CurrentSongLength = 0
+ProgrammeStartJingleRequested = False
 
 CfgPath = os.path.dirname(sys.argv[0])+"/config.ini"
 if not os.path.exists(CfgPath):
@@ -201,6 +202,8 @@ if __name__ == '__main__':
 
     if Programme != CurrentProgramme: # When programme changed
       CurrentProgramme = Programme
+      if JinglePeriod == 1:
+        ProgrammeStartJingleRequested = True
 
       # Read jingles in
       if 0 < len(JinglePath):
@@ -286,8 +289,9 @@ if __name__ == '__main__':
         time.sleep(SleepTime)
 
     # if there was no jingle since jingleperiod minutes, play once before next song
-    if 0 < len(Jingles) and 0 < JinglePeriod:
-      if (LastJingleTimestamp+(60*JinglePeriod)) < int(time.time()):
+    if 0 < len(Jingles):
+      if (1 < JinglePeriod and (LastJingleTimestamp+(60*JinglePeriod)) < int(time.time())) or ProgrammeStartJingleRequested:
+        ProgrammeStartJingleRequested = False
         rnd = int(time.time()) % len(Jingles)
         jin = Jingles[rnd]; # Choose a jingle
         if 0 < len(HistoryFile): # Log file into history

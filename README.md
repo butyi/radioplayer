@@ -121,6 +121,7 @@ For more details, see my comments in the bash file
 
 ## Prerequisites
 
+- Install raspbian lite image to SD card
 - Install git by `sudo apt install git` if `git --version` does not show some available revision
 - `cd` to go to home folder
 - `mkdir repos` to create repos subfolder
@@ -129,8 +130,8 @@ For more details, see my comments in the bash file
 - Install python3 by `sudo apt install python3` if `python3 --version` does not show some available revision
 - If you do not yet have pip, install it by `sudo apt install python3-pip`
 - You need to install pydub using pip by `pip3 install pydub`
-- Set python3 as default python by `sudo update-alternative --install /usr/bin/python python /usr/bin/python3 1`
-  and check it by `sudo update-alternative --config python`
+- Set python3 as default python by `sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1`
+  and check it by `sudo update-alternatives --config python`
 - Install at least ffmpeg by `sudo apt install ffmpeg` to be a player on the system
 
 ## Usage
@@ -157,6 +158,12 @@ The following steps I have made to get it work:
   - `amixer set Headphone -- 96%`
   - minus 10 dB in config.ini 
   are sufficient for me.
+- Enable SSH in raspi-config interface settings.
+- Get know RPi IP address
+  `hostname -I`
+- Connect to rpi from PC
+  - `ssh pi@192.168.0.136`
+  - Most likely you need to create/update RSA key for SSH
 - Copy (or update) songs to RPi through SSH
   `rsync -luvrt --delete -e ssh /home/butyi/repos/radioplayer/music pi@192.168.0.136:/home/pi/repos/radioplayer`
 - Test the player manually by steps in Usage paragraph

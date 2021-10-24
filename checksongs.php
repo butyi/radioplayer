@@ -47,7 +47,8 @@ $andinartistnames = array(
   "Redhead Kingpin & Fbi",
   "Romeo & Julia",
   "Bart & Baker",
-  "Bery & Váci Eszter"
+  "Bery & Váci Eszter",
+  "Grace Potter & The Nocturnals",
 );
 
 $skipsimilaritycheck = array(
@@ -57,17 +58,22 @@ $skipsimilaritycheck = array(
   "Depeche Mode - A Question Of",
 );
 
+$allowedmultiplecapitals = array(
+  "GM", //GM 49
+  "EZ", //EZ Rollers
+);
+
 $suspiciouswords = array(
   '/(feat)\s/i',
-  '/(video)/i',
-  '/(lyric)/i',
-  '/(official)/i',
-  '/(remix)/i'
+  '/(video)\s/i',
+  '/(lyric)\s/i',
+  '/(official)\s/i',
+  '/(remix)\s/i'
 );
 
 system("find ./music/ -type f -name '*.mp3' -printf \"%p\n\" > ./songs.txt");
 
-//Trim path from songs 
+//Trim path from songs
 $files=file("./songs.txt");
 foreach($files as $key => $line){
   $line=trim($line);
@@ -79,14 +85,14 @@ foreach($files as $key => $line){
   $path = implode("/",$a);
   //echo "path = '$path', song = '$song'\n";
   //exit;
-  
+
   $files[$key]=$song;
 }
 
 //Check all song filenames
 $artists=array();
 foreach($files as $line){
-  
+
   //Add artist(s) to array
   $a = explode(" - ",$line);
   if(2 == count($a)){
@@ -99,12 +105,12 @@ foreach($files as $line){
       }
     }
   }
-  
+
   //PMJs filenames are not yet formated, skip from check
   if(false!==strpos($line,"PMJ ")){
     continue;
   }
-  
+
 //  if(preg_match('/\s(\S+n\')\s/i',$line,$regs){//"n'"
 //    echo $line." -> (".$regs[1].")\n";
 //  }
@@ -132,7 +138,7 @@ foreach($files as $line){
       if(false !== strpos($line,$i)){
         $found=true;
         break;
-      }  
+      }
     }
     if($found)continue;
     echo $line." -> (".$regs[1].")\n";
@@ -157,7 +163,9 @@ foreach($files as $line){
     echo $line." -> (".$regs[1].")\n";
   }
   if(preg_match('/([A-Z]{2}\S*)/',$line,$regs)){//Second or futher capital letter 
-    echo $line." -> (".$regs[1].")\n";
+    if(!in_array($regs[1],$allowedmultiplecapitals)){
+      echo $line." -> (".$regs[1].")\n";
+    }
   }
   foreach($suspiciouswords as $i){//suspicious words
     if(preg_match($i,$line,$regs)){
@@ -182,15 +190,15 @@ foreach($files as $line){
   if(preg_match('/(,)/',$line,$regs)){//','
     echo $line." -> (".$regs[1].")\n";
   }
-  
+
   if($checksimilarity){
-    //Find similar songs which maybe duplicated due to file name typo 
+    //Find similar songs which maybe duplicated due to file name typo
     $found=false;
     foreach($skipsimilaritycheck as $i){//skip those which are reported but not failure 
       if(false !== strpos($line,$i)){
         $found=true;
         break;
-      }  
+      }
     }
     if(!$found){//If not to be skipped
       foreach($files as $line2){
@@ -203,7 +211,7 @@ foreach($files as $line){
       }
     }
   }
-  
+
 }
 
 //Formated print of artists
