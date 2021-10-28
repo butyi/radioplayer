@@ -122,6 +122,7 @@ For more details, see my comments in the bash file
 ## Prerequisites
 
 - Install raspbian lite image to SD card
+- By `sudo raspi-config` change password, set time zone, set keyboard layout, enable SSH, disable other interfaces
 - Install git by `sudo apt install git` if `git --version` does not show some available revision
 - `cd` to go to home folder
 - `mkdir repos` to create repos subfolder
@@ -154,6 +155,8 @@ The following steps I have made to get it work:
     In this case, to prevent "cannot open, device busy" error, set Overlap parameters to zero in config. See [this topic][1].
 - Set device audio output to 3.5mm jack by select 'Headphone' in raspi-config.
   Check it by `amixer` to see which is the current output. In my case `Simple mixer control 'Headphone',0`.
+  Note that while there is connected HDMI monitor with integrated sound, Raspberry Pi may put music to monitor and not to 3.5mm jack.
+  But when I removed the monitor (stand-alone operation), music came out on 3.5mm jack.
 - Volume setting 
   - `amixer set Headphone -- 96%`
   - minus 10 dB in config.ini 
