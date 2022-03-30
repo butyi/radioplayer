@@ -9,7 +9,7 @@ __author__ = "Janos BENCSIK"
 __copyright__ = "Copyright 2020, butyi.hu"
 __credits__ = "James Robert (jiaaro) for pydub (https://github.com/jiaaro/pydub)"
 __license__ = "GPL"
-__version__ = "0.0.5"
+__version__ = "0.0.6"
 __maintainer__ = "Janos BENCSIK"
 __email__ = "radioplayer@butyi.hu"
 __status__ = "Prototype"
@@ -73,6 +73,7 @@ JinglePeriod = 15
 Songs = [] # Empty list for songs
 CurrentProgramme = "Not yet read in";
 SongName = "Jingle.mp3"
+PrevSong = False
 CurrentSong = False
 NextSong = False
 JingleOverlap = 1 # Overlap of jingle and following song in secs
@@ -229,16 +230,31 @@ if __name__ == '__main__':
       while (len(Songs)/2) < len(RecentlyPlayed): # If list is longer than half of songs
         RecentlyPlayed.pop(0) # Drop oldest elements
 
-    # Update infotext
+    # Update infotext with previous song
+    if PrevSong != False:
+      infotext += "\n" + os.path.basename(PrevSong)[:-4]
+    else:
+      infotext += "\n-"
+
+    # Update infotext with current song
     infotext += "\n" + os.path.basename(SongName)[:-4]
+
+    # Log Current Song into history
     if CurrentSong != False:
-      if 0 < len(HistoryFile) and SongName != "": # Log file into history
+      if 0 < len(HistoryFile) and SongName != "":
         with open(HistoryFile, 'a+') as f:
           f.write(str(datetime.datetime.today())+" -> "+os.path.basename(SongName)[:-4]+"\r\n")
+
+    # Manage RecentlyPlayed list to
     RecentlyPlayed.append(os.path.basename(SongName)) # Add now playing
     if (len(Songs)/2) < len(RecentlyPlayed): # If list is full
       RecentlyPlayed.pop(0) # Drop oldest element
-    while True: # Search a song not in RecentlyPlayed list
+
+    # Search a song not in RecentlyPlayed list and by different atrist
+    while True:
+      if 0 == len(Songs):
+        print("ERROR! There is no any song in array. Please check path.\r\n")
+      PrevSong = SongName;
       SongName = Songs[random.randrange(0,len(Songs))]
       if os.path.basename(SongName) not in RecentlyPlayed:
         # Ensure to not play consecutive two songs from the same artists
@@ -248,7 +264,7 @@ if __name__ == '__main__':
           Artists = NewArtists # Save this artist(s) for next check
           break # Fount the next song
 
-    # Continue to prepare info text
+    # Update infotext with next song
     infotext += "\n" + os.path.basename(SongName)[:-4]
     infotext += "\n" + str(int(CurrentSongLength)) + "\n"
 
