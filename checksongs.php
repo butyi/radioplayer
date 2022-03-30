@@ -49,6 +49,8 @@ $andinartistnames = array(
   "Bart & Baker",
   "Bery & Váci Eszter",
   "Grace Potter & The Nocturnals",
+  "Ashford & Simpson",
+  "Marnik & Smack"
 );
 
 $skipsimilaritycheck = array(
@@ -61,6 +63,7 @@ $skipsimilaritycheck = array(
 $allowedmultiplecapitals = array(
   "GM", //GM 49
   "EZ", //EZ Rollers
+  "BTS",
 );
 
 $suspiciouswords = array(
