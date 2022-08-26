@@ -1,6 +1,12 @@
 <?php
 
-$command="find ~/synas/music/radio/ -type f -exec md5sum {} + | sort -k 2 > ./music_md5.txt";
+if($argc<2){
+  echo "ERROR! Missing parameter. First parameter is mandatory and shall be the path of MP3 files.\n";
+  exit;
+}
+$musicpath=trim($argv[1]);
+
+$command="find $musicpath -type f -exec md5sum {} + | sort -k 2 > ./music_md5.txt";
 echo "Execution of ".$command." (it takes minutes)\n";
 system($command);
 
