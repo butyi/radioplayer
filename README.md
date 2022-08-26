@@ -105,6 +105,13 @@ RadioPlayer now supports only mp3 files, since I call `AudioSegment.from_mp3`.
 
 ## Preparation of songs
 
+First you may need to install below tools, if you haven't installed before
+- `sudo apt install exiftool`
+- `sudo apt install pcregrep`
+- `sudo apt install lame`
+- `sudo apt install mp3splt`
+- `sudo snap install mp3gain`
+
 I have prepared my mp3 files before using by the RadioPlayer.
 Preparation was done by `psrt.sh`. 
 I have executed this bash file in the folder where songs are.
@@ -127,6 +134,7 @@ For more details, see my comments in the bash file
 - `cd` to go to home folder
 - `mkdir repos` to create repos subfolder
 - `cd repos` to go into repos subfolder
+- `sudo apt install git`
 - Clone the script by `git clone https://github.com/butyi/radioplayer` (note this will istall the script under a radioplayer subfolder)
 - Install python3 by `sudo apt install python3` if `python3 --version` does not show some available revision
 - If you do not yet have pip, install it by `sudo apt install python3-pip`
@@ -165,10 +173,10 @@ The following steps I have made to get it work:
 - Get know RPi IP address
   `hostname -I`
 - Connect to rpi from PC
-  - `ssh pi@192.168.0.136`
+  - `ssh pi@192.168.0.137`
   - Most likely you need to create/update RSA key for SSH
 - Copy (or update) songs to RPi through SSH
-  `rsync -luvrt --delete -e ssh /home/butyi/repos/radioplayer/music pi@192.168.0.136:/home/pi/repos/radioplayer`
+  `rsync -luvrt --delete -e ssh /home/butyi/synas/music/radio/* pi@192.168.0.137:/home/pi/repos/radioplayer/music`
 - Test the player manually by steps in Usage paragraph
 - Now, create the bash file which will be called at boot
   - `cd`
