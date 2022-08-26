@@ -74,23 +74,25 @@ $suspiciouswords = array(
   '/(remix)\s/i'
 );
 
-system("find ./music/ -type f -name '*.mp3' -printf \"%p\n\" > ./songs.txt");
+system("find ~/synas/music/radio/ -type f -name '*.mp3' -printf \"%P\n\" > ./songs.txt");
 
 //Trim path from songs
 $files=file("./songs.txt");
+
 foreach($files as $key => $line){
   $line=trim($line);
 
   $a = explode("/",$line);
   $song = array_pop($a);
-  array_shift($a);//drop '.'
-  array_shift($a);//drop 'music'
+  //array_shift($a);//drop '.'
+  //array_shift($a);//drop 'music'
   $path = implode("/",$a);
   //echo "path = '$path', song = '$song'\n";
   //exit;
 
   $files[$key]=$song;
 }
+
 
 //Check all song filenames
 $artists=array();
