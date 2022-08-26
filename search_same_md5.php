@@ -1,6 +1,6 @@
 <?php
 
-$command="find music/ -type f -exec md5sum {} + | sort -k 2 > ./music_md5.txt";
+$command="find ~/synas/music/radio/ -type f -exec md5sum {} + | sort -k 2 > ./music_md5.txt";
 echo "Execution of ".$command." (it takes minutes)\n";
 system($command);
 
