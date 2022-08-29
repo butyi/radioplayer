@@ -106,10 +106,7 @@ RadioPlayer now supports only mp3 files, since I call `AudioSegment.from_mp3`.
 ## Preparation of songs
 
 First you may need to install below tools, if you haven't installed before
-- `sudo apt install exiftool`
-- `sudo apt install pcregrep`
-- `sudo apt install lame`
-- `sudo apt install mp3splt`
+- `sudo apt install exiftool pcregrep lame mp3splt`
 - `sudo snap install mp3gain`
 
 I have prepared my mp3 files before using by the RadioPlayer.
