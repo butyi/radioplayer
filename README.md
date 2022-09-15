@@ -107,10 +107,7 @@ RadioPlayer now supports only mp3 files, since I call `AudioSegment.from_mp3`.
 ## Preparation of songs
 
 First you may need to install below tools, if you haven't installed before
-- `sudo apt install exiftool`
-- `sudo apt install pcregrep`
-- `sudo apt install lame`
-- `sudo apt install mp3splt`
+- `sudo apt install exiftool pcregrep lame mp3splt`
 - `sudo snap install mp3gain`
 
 I have prepared my mp3 files before using by the RadioPlayer.
@@ -126,6 +123,17 @@ Main activities of preparation are:
 - Trim silent and quiet part from begin and end of songs for better cross-fade
 
 For more details, see my comments in the bash file
+
+There are naming and other rules and restrictions regarding MP3 files:
+- Only mp3 format is supported
+- Each words shall be started by capital letters 
+- Each contributors (actors) shall be separated by "Ft."
+- Hungarian or other accents are not allowed, only English letters are allowed
+- ".mp3" file extension shall be lowercase
+
+Naming convention can be checked by calling script `php checksongs.php ~/synas/music/radio/`.
+Same content mp3 files with different names can be searched by script `php search_same_md5.php ~/synas/music/radio/`.
+Of course, this path of music files is only valid for me. Change it according to your environment. 
 
 ## Prerequisites
 

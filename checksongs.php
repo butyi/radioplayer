@@ -1,8 +1,14 @@
 <?php
 
+if($argc<2){
+  echo "ERROR! Missing parameter. First parameter is mandatory and shall be the path of MP3 files.\n";
+  exit;
+}
+$musicpath=trim($argv[1]);
+
+
 //Config
 $checksimilarity = false;
-
 
 //Accepted '&' in artists
 $andinartistnames = array(
@@ -74,7 +80,7 @@ $suspiciouswords = array(
   '/(remix)\s/i'
 );
 
-system("find ~/synas/music/radio/ -type f -name '*.mp3' -printf \"%P\n\" > ./songs.txt");
+system("find $musicpath -type f -name '*.mp3' -printf \"%P\n\" > ./songs.txt");
 
 //Trim path from songs
 $files=file("./songs.txt");
