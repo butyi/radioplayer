@@ -27,7 +27,7 @@ What I need are:
 - Choose random song from the defined folders.
 - Remember some amount of already played songs and do not repeat them soon.
   Amount to be half of number of all songs in the current programme.
-- Do not play same artist consecutive more than one times
+- Do not repeat the last 10 artists
 - Ensure similar volume for playing
   
 ## Configuration
