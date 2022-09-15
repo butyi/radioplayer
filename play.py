@@ -93,7 +93,7 @@ ProgrammeStartJingleRequested = False
 CfgPath = os.path.dirname(sys.argv[0])+"/config.ini"
 if not os.path.exists(CfgPath):
   print("ERROR! Cannot open ini file "+CfgPath)
-  exit(1)
+  sys.exit(1)
 
 #
 # CrossFade timings:
