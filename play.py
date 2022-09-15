@@ -49,9 +49,9 @@ def UpdateSongInfo():
         ftpsession.storbinary('STOR '+TextOutFile,io.BytesIO(bytearray(infotext,'utf-8'))) # Update file content
         ftpsession.quit() # Close FTP
       except ftplib.all_errors as e:
-        if 0 < len(ErrLogFile): # Log file into history
+        if 0 < len(ErrLogFile): # Log error
           with open(ErrLogFile, 'a+') as f:
-            f.write(str(datetime.datetime.today())+" -> ERROR! FTP update failed: "+str(e)+"\r\n")
+            f.write(str(datetime.datetime.today()) + " -> ERROR! FTP update failed: " + str(e) + "\r\n")
     else: # Simple local filesystem write
       with open(TextOutFile, 'w') as f:
         f.write(infotext)
@@ -242,7 +242,7 @@ if __name__ == '__main__':
 
     # Log Current Song into history
     if CurrentSong != False:
-      if 0 < len(HistoryFile) and SongName != "":
+      if 0 < len(HistoryFile) and SongName != "": # Log song file into history
         with open(HistoryFile, 'a+') as f:
           f.write(str(datetime.datetime.today())+" -> "+os.path.basename(SongName)[:-4]+"\r\n")
 
@@ -279,9 +279,9 @@ if __name__ == '__main__':
     try:
       NextSong = AudioSegment.from_mp3(SongName) # Load song
     except:
-      if 0 < len(ErrLogFile): # Log file into history
+      if 0 < len(ErrLogFile): # Log error
         with open(ErrLogFile, 'a+') as f:
-          f.write(str(datetime.datetime.today())+" -> ERROR! Cannot open file: '"+SongName+"'\r\n")
+          f.write(str(datetime.datetime.today()) + " -> ERROR! Cannot open file: '" + SongName + "'\r\n")
           time.sleep(10); # To prevent the log file become large too fast
           continue
     if 0 < DropEnd:
@@ -313,7 +313,7 @@ if __name__ == '__main__':
         ProgrammeStartJingleRequested = False
         rnd = int(time.time()) % len(Jingles)
         jin = Jingles[rnd]; # Choose a jingle
-        if 0 < len(HistoryFile): # Log file into history
+        if 0 < len(HistoryFile): # Log song file into history
           with open(HistoryFile, 'a+') as f:
             f.write(str(datetime.datetime.today())+" -> "+os.path.basename(jin)[:-4]+"\r\n")
         infotext = CurrentProgramme
@@ -322,9 +322,9 @@ if __name__ == '__main__':
         try:
           jin = AudioSegment.from_mp3(jin) # Load the choosen jingle
         except:
-          if 0 < len(ErrLogFile): # Log file into history
+          if 0 < len(ErrLogFile): # Log error
             with open(ErrLogFile, 'a+') as f:
-              f.write(str(datetime.datetime.today())+" -> ERROR! Cannot open file: '"+jin+"'\r\n")
+              f.write(str(datetime.datetime.today()) + " -> ERROR! Cannot open file: '" + jin + "'\r\n")
               time.sleep(10); # To prevent the log file become large too fast
               jin = False
         if False != jin:
