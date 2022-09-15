@@ -9,7 +9,7 @@ __author__ = "Janos BENCSIK"
 __copyright__ = "Copyright 2020, butyi.hu"
 __credits__ = "James Robert (jiaaro) for pydub (https://github.com/jiaaro/pydub)"
 __license__ = "GPL"
-__version__ = "0.0.6"
+__version__ = "0.0.7"
 __maintainer__ = "Janos BENCSIK"
 __email__ = "radioplayer@butyi.hu"
 __status__ = "Prototype"
@@ -84,6 +84,7 @@ TargetGain = 0 # dynalic gain, different for each song
 Normalize = False
 LowPassFilterHz = 0
 Artists = [] # Empty list for Artists
+ArtistRepeatLimit = 10
 DebugConfigRead = False # Set True id you want to debug read and evaluation of config.ini
 ProgrammeCheckDateTime = datetime.datetime.today()
 CurrentSongLength = 0
@@ -257,11 +258,13 @@ if __name__ == '__main__':
       PrevSong = SongName;
       SongName = Songs[random.randrange(0,len(Songs))]
       if os.path.basename(SongName) not in RecentlyPlayed:
-        # Ensure to not play consecutive two songs from the same artists
-        NewArtists = os.path.basename(SongName).split(" - ")[0].split(" Ft. ")
-        Union = set(Artists) & set(NewArtists)
-        if 0 == len(Union): # If artist is different
-          Artists = NewArtists # Save this artist(s) for next check
+        # Ensure to not play too often from the same artists
+        NewArtists = os.path.basename(SongName).split(" - ")[0].split(" Ft. ") # Prepare artist list of random selected song
+        Union = set(Artists) & set(NewArtists) # Prepare list with artists which were recently played and also in the random selected song
+        if 0 == len(Union): # If there is no any artist in the recently played artist list
+          Artists.extend(NewArtists) # Append artist list of new song to Artist list
+          while ArtistRepeatLimit < len(Artists): # Limit number of elements in Artist list
+            Artists.pop(0) # Drop oldest element
           break # Fount the next song
 
     # Update infotext with next song
