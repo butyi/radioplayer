@@ -237,6 +237,14 @@ if __name__ == '__main__':
             if fi.endswith(".mp3"):
               Songs.append(os.path.join(cp, fi))
 
+      if 0 == len(Songs):
+        ErrStr = "ERROR! There is no any song to be played. Please check path of programme " + CurrentProgramme + "."
+        print(ErrStr)
+        if 0 < len(ErrLogFile): # Log error
+          with open(ErrLogFile, 'a+') as f:
+            f.write(str(datetime.datetime.today())+" -> " + ErrStr + "\r\n")
+        sys.exit(2)
+
       # Decrease played list when switch to a folder which contains less songs than before
       while (len(Songs)/2) < len(RecentlyPlayed): # If list is longer than half of songs
         RecentlyPlayed.pop(0) # Drop oldest elements
