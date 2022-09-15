@@ -145,7 +145,8 @@ if __name__ == '__main__':
           HistoryFile = c.get(section, 'historyfile')
         if c.has_option(section, 'errlogfile'):
           ErrLogFile = c.get(section, 'errlogfile')
-        if c.has_option(section, 'textoutftphost'):          TextOutFTPhost = c.get(section, 'textoutftphost')
+        if c.has_option(section, 'textoutftphost'):
+          TextOutFTPhost = c.get(section, 'textoutftphost')
         if c.has_option(section, 'textoutftpport'):
           TextOutFTPport = c.getint(section, 'textoutftpport')
         if c.has_option(section, 'textoutftppath'):
@@ -219,6 +220,15 @@ if __name__ == '__main__':
 
       # Go through all defined Paths to parse songs
       for Path in Paths:
+
+        # Path check
+        if not os.path.isdir(Path):
+          ErrStr = "ERROR! Path '" + Path + "' does not exists. Please check config of programme " + CurrentProgramme + "."
+          print(ErrStr)
+          if 0 < len(ErrLogFile): # Log error
+            with open(ErrLogFile, 'a+') as f:
+              f.write(str(datetime.datetime.today())+" -> " + ErrStr + "\r\n")
+          continue
 
         # Recursive walk in folder
         #Songs = glob.glob("**/*.mp3", recursive=True) # for <= Python 3.5
