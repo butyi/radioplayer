@@ -89,6 +89,7 @@ DebugConfigRead = False # Set True id you want to debug read and evaluation of c
 ProgrammeCheckDateTime = datetime.datetime.today()
 CurrentSongLength = 0
 ProgrammeStartJingleRequested = False
+RootPath = ""
 
 CfgPath = os.path.dirname(sys.argv[0])+"/config.ini"
 if not os.path.exists(CfgPath):
@@ -161,6 +162,8 @@ if __name__ == '__main__':
           GaindB = c.getint(section, 'gaindb')
         if c.has_option(section, 'normalize'):
           Normalize = True
+        if c.has_option(section, 'rootpath'):
+          RootPath = c.get(section, 'rootpath')
         continue
       if c.has_option(section, 'months'):
         if str(ProgrammeCheckDateTime.month) not in c.get(section, 'months').split():
@@ -180,7 +183,9 @@ if __name__ == '__main__':
       del Paths[:];
       for x in range(1,10):
         if c.has_option(section, 'path'+str(x) ):
-          Paths.append( c.get(section, 'path'+str(x) ) )
+          Path = RootPath + "/" + c.get(section, 'path'+str(x) )
+          Path = Path.replace("~",os.getenv('HOME')) # Support for home dir marked by '~'
+          Paths.append( Path )
       if c.has_option(section, 'fadeout'):
         FadeOut = c.getint(section, 'fadeout')
       if c.has_option(section, 'dropend'):
@@ -188,7 +193,8 @@ if __name__ == '__main__':
       if c.has_option(section, 'overlap'):
         Overlap = c.getint(section, 'overlap')
       if c.has_option(section, 'jinglepath'):
-        JinglePath = c.get(section, 'jinglepath')
+        JinglePath = RootPath + "/" + c.get(section, 'jinglepath')
+        JinglePath = JinglePath.replace("~",os.getenv('HOME')) # Support for home dir marked by '~'
       if c.has_option(section, 'jingleperiod'):
         JinglePeriod = c.getint(section, 'jingleperiod')
       if c.has_option(section, 'jingleoverlap'):
