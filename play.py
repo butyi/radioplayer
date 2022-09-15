@@ -252,9 +252,9 @@ if __name__ == '__main__':
       RecentlyPlayed.pop(0) # Drop oldest element
 
     # Search a song not in RecentlyPlayed list and by different atrist
-    while True:
-      if 0 == len(Songs):
-        print("ERROR! There is no any song in array. Please check path.\r\n")
+    SearchCounter = 0 # Loop limit. If 100 trials were not enough to find a sufficient song, do not search more, use the 100th insufficient
+    while SearchCounter < 100:
+      SearchCounter = SearchCounter + 1
       PrevSong = SongName;
       SongName = Songs[random.randrange(0,len(Songs))]
       if os.path.basename(SongName) not in RecentlyPlayed:
