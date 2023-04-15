@@ -27,7 +27,7 @@ What I need are:
 - Choose random song from the defined folders.
 - Remember some amount of already played songs and do not repeat them soon.
   Amount to be half of number of all songs in the current programme.
-- Do not play same artist consecutive more than one times
+- Do not repeat the last 10 artists
 - Ensure similar volume for playing
   
 ## Configuration
@@ -56,6 +56,7 @@ This settings contains general configurations. Now it is only one.
   be silent gap in the programme.
   This is also optional.
   Preparation is better instead of this on the fly filter.
+- RootPath is an optional path for common part of path of songs of programmes
 
 Other sections are programmes. Name of section is name of the programme.
 The programmes are proceeded from top to down. Later has higher priority, since
@@ -78,7 +79,7 @@ Programme sections have these sepection parameters
   Optional. If not defined, programme will be played on all months.
 - Folder path(s) of songs to be played. 9 path parameters are supported.
   Path1 - Path9. At least the first (Path1) definition is mandatory. Otherwise
-  programme is not matched, so skipped.
+  programme is not matched, so skipped. RootPath is considered for each paths.
 
 When the above selection matches a programme, below parameters are updated if
 those are defined. These parameters have default value, so not mandatory.
@@ -184,7 +185,7 @@ The following steps I have made to get it work:
   - `ssh pi@192.168.0.137`
   - Most likely you need to create/update RSA key for SSH
 - Copy (or update) songs to RPi through SSH
-  `rsync -luvrt --delete -e ssh /home/butyi/synas/music/radio/* pi@192.168.0.137:/home/pi/repos/radioplayer/music`
+  `rsync -luvrt --delete -e ssh /home/butyi/synas/music/radio/* pi@192.168.0.137:/home/pi/synas/music/radio`
 - Test the player manually by steps in Usage paragraph
 - Now, create the bash file which will be called at boot
   - `cd`

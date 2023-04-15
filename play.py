@@ -9,7 +9,7 @@ __author__ = "Janos BENCSIK"
 __copyright__ = "Copyright 2020, butyi.hu"
 __credits__ = "James Robert (jiaaro) for pydub (https://github.com/jiaaro/pydub)"
 __license__ = "GPL"
-__version__ = "0.0.6"
+__version__ = "0.0.7"
 __maintainer__ = "Janos BENCSIK"
 __email__ = "radioplayer@butyi.hu"
 __status__ = "Prototype"
@@ -49,9 +49,9 @@ def UpdateSongInfo():
         ftpsession.storbinary('STOR '+TextOutFile,io.BytesIO(bytearray(infotext,'utf-8'))) # Update file content
         ftpsession.quit() # Close FTP
       except ftplib.all_errors as e:
-        if 0 < len(ErrLogFile): # Log file into history
+        if 0 < len(ErrLogFile): # Log error
           with open(ErrLogFile, 'a+') as f:
-            f.write(str(datetime.datetime.today())+" -> ERROR! FTP update failed: "+str(e)+"\r\n")
+            f.write(str(datetime.datetime.today()) + " -> ERROR! FTP update failed: " + str(e) + "\r\n")
     else: # Simple local filesystem write
       with open(TextOutFile, 'w') as f:
         f.write(infotext)
@@ -84,15 +84,17 @@ TargetGain = 0 # dynalic gain, different for each song
 Normalize = False
 LowPassFilterHz = 0
 Artists = [] # Empty list for Artists
+ArtistRepeatLimit = 10
 DebugConfigRead = False # Set True id you want to debug read and evaluation of config.ini
 ProgrammeCheckDateTime = datetime.datetime.today()
 CurrentSongLength = 0
 ProgrammeStartJingleRequested = False
+RootPath = ""
 
 CfgPath = os.path.dirname(sys.argv[0])+"/config.ini"
 if not os.path.exists(CfgPath):
   print("ERROR! Cannot open ini file "+CfgPath)
-  exit(1)
+  sys.exit(1)
 
 #
 # CrossFade timings:
@@ -144,7 +146,8 @@ if __name__ == '__main__':
           HistoryFile = c.get(section, 'historyfile')
         if c.has_option(section, 'errlogfile'):
           ErrLogFile = c.get(section, 'errlogfile')
-        if c.has_option(section, 'textoutftphost'):          TextOutFTPhost = c.get(section, 'textoutftphost')
+        if c.has_option(section, 'textoutftphost'):
+          TextOutFTPhost = c.get(section, 'textoutftphost')
         if c.has_option(section, 'textoutftpport'):
           TextOutFTPport = c.getint(section, 'textoutftpport')
         if c.has_option(section, 'textoutftppath'):
@@ -159,6 +162,8 @@ if __name__ == '__main__':
           GaindB = c.getint(section, 'gaindb')
         if c.has_option(section, 'normalize'):
           Normalize = True
+        if c.has_option(section, 'rootpath'):
+          RootPath = c.get(section, 'rootpath')
         continue
       if c.has_option(section, 'months'):
         if str(ProgrammeCheckDateTime.month) not in c.get(section, 'months').split():
@@ -178,7 +183,9 @@ if __name__ == '__main__':
       del Paths[:];
       for x in range(1,10):
         if c.has_option(section, 'path'+str(x) ):
-          Paths.append( c.get(section, 'path'+str(x) ) )
+          Path = RootPath + "/" + c.get(section, 'path'+str(x) )
+          Path = Path.replace("~",os.getenv('HOME')) # Support for home dir marked by '~'
+          Paths.append( Path )
       if c.has_option(section, 'fadeout'):
         FadeOut = c.getint(section, 'fadeout')
       if c.has_option(section, 'dropend'):
@@ -186,7 +193,8 @@ if __name__ == '__main__':
       if c.has_option(section, 'overlap'):
         Overlap = c.getint(section, 'overlap')
       if c.has_option(section, 'jinglepath'):
-        JinglePath = c.get(section, 'jinglepath')
+        JinglePath = RootPath + "/" + c.get(section, 'jinglepath')
+        JinglePath = JinglePath.replace("~",os.getenv('HOME')) # Support for home dir marked by '~'
       if c.has_option(section, 'jingleperiod'):
         JinglePeriod = c.getint(section, 'jingleperiod')
       if c.has_option(section, 'jingleoverlap'):
@@ -219,12 +227,29 @@ if __name__ == '__main__':
       # Go through all defined Paths to parse songs
       for Path in Paths:
 
+        # Path check
+        if not os.path.isdir(Path):
+          ErrStr = "ERROR! Path '" + Path + "' does not exists. Please check config of programme " + CurrentProgramme + "."
+          print(ErrStr)
+          if 0 < len(ErrLogFile): # Log error
+            with open(ErrLogFile, 'a+') as f:
+              f.write(str(datetime.datetime.today())+" -> " + ErrStr + "\r\n")
+          continue
+
         # Recursive walk in folder
         #Songs = glob.glob("**/*.mp3", recursive=True) # for <= Python 3.5
         for cp, folders, files in os.walk(Path):
           for fi in files:
             if fi.endswith(".mp3"):
               Songs.append(os.path.join(cp, fi))
+
+      if 0 == len(Songs):
+        ErrStr = "ERROR! There is no any song to be played. Please check path of programme " + CurrentProgramme + "."
+        print(ErrStr)
+        if 0 < len(ErrLogFile): # Log error
+          with open(ErrLogFile, 'a+') as f:
+            f.write(str(datetime.datetime.today())+" -> " + ErrStr + "\r\n")
+        sys.exit(2)
 
       # Decrease played list when switch to a folder which contains less songs than before
       while (len(Songs)/2) < len(RecentlyPlayed): # If list is longer than half of songs
@@ -241,7 +266,7 @@ if __name__ == '__main__':
 
     # Log Current Song into history
     if CurrentSong != False:
-      if 0 < len(HistoryFile) and SongName != "":
+      if 0 < len(HistoryFile) and SongName != "": # Log song file into history
         with open(HistoryFile, 'a+') as f:
           f.write(str(datetime.datetime.today())+" -> "+os.path.basename(SongName)[:-4]+"\r\n")
 
@@ -251,17 +276,19 @@ if __name__ == '__main__':
       RecentlyPlayed.pop(0) # Drop oldest element
 
     # Search a song not in RecentlyPlayed list and by different atrist
-    while True:
-      if 0 == len(Songs):
-        print("ERROR! There is no any song in array. Please check path.\r\n")
+    SearchCounter = 0 # Loop limit. If 100 trials were not enough to find a sufficient song, do not search more, use the 100th insufficient
+    while SearchCounter < 100:
+      SearchCounter = SearchCounter + 1
       PrevSong = SongName;
       SongName = Songs[random.randrange(0,len(Songs))]
       if os.path.basename(SongName) not in RecentlyPlayed:
-        # Ensure to not play consecutive two songs from the same artists
-        NewArtists = os.path.basename(SongName).split(" - ")[0].split(" Ft. ")
-        Union = set(Artists) & set(NewArtists)
-        if 0 == len(Union): # If artist is different
-          Artists = NewArtists # Save this artist(s) for next check
+        # Ensure to not play too often from the same artists
+        NewArtists = os.path.basename(SongName).split(" - ")[0].split(" Ft. ") # Prepare artist list of random selected song
+        Union = set(Artists) & set(NewArtists) # Prepare list with artists which were recently played and also in the random selected song
+        if 0 == len(Union): # If there is no any artist in the recently played artist list
+          Artists.extend(NewArtists) # Append artist list of new song to Artist list
+          while ArtistRepeatLimit < len(Artists): # Limit number of elements in Artist list
+            Artists.pop(0) # Drop oldest element
           break # Fount the next song
 
     # Update infotext with next song
@@ -276,9 +303,9 @@ if __name__ == '__main__':
     try:
       NextSong = AudioSegment.from_mp3(SongName) # Load song
     except:
-      if 0 < len(ErrLogFile): # Log file into history
+      if 0 < len(ErrLogFile): # Log error
         with open(ErrLogFile, 'a+') as f:
-          f.write(str(datetime.datetime.today())+" -> ERROR! Cannot open file: '"+SongName+"'\r\n")
+          f.write(str(datetime.datetime.today()) + " -> ERROR! Cannot open file: '" + SongName + "'\r\n")
           time.sleep(10); # To prevent the log file become large too fast
           continue
     if 0 < DropEnd:
@@ -310,7 +337,7 @@ if __name__ == '__main__':
         ProgrammeStartJingleRequested = False
         rnd = int(time.time()) % len(Jingles)
         jin = Jingles[rnd]; # Choose a jingle
-        if 0 < len(HistoryFile): # Log file into history
+        if 0 < len(HistoryFile): # Log song file into history
           with open(HistoryFile, 'a+') as f:
             f.write(str(datetime.datetime.today())+" -> "+os.path.basename(jin)[:-4]+"\r\n")
         infotext = CurrentProgramme
@@ -319,9 +346,9 @@ if __name__ == '__main__':
         try:
           jin = AudioSegment.from_mp3(jin) # Load the choosen jingle
         except:
-          if 0 < len(ErrLogFile): # Log file into history
+          if 0 < len(ErrLogFile): # Log error
             with open(ErrLogFile, 'a+') as f:
-              f.write(str(datetime.datetime.today())+" -> ERROR! Cannot open file: '"+jin+"'\r\n")
+              f.write(str(datetime.datetime.today()) + " -> ERROR! Cannot open file: '" + jin + "'\r\n")
               time.sleep(10); # To prevent the log file become large too fast
               jin = False
         if False != jin:
