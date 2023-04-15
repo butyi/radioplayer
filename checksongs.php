@@ -6,9 +6,16 @@ if($argc<2){
 }
 $musicpath=trim($argv[1]);
 
+$renames = "";
 
 //Config
-$checksimilarity = false;
+$checksimilarity = true;
+$similarity_exclude = array(
+  "I Have A Dream",
+  "Best Of My Love",
+  "Ennio Morricone - A Fistful Of"
+);
+
 
 //Accepted '&' in artists
 $andinartistnames = array(
@@ -56,7 +63,10 @@ $andinartistnames = array(
   "Bery & Váci Eszter",
   "Grace Potter & The Nocturnals",
   "Ashford & Simpson",
-  "Marnik & Smack"
+  "Marnik & Smack",
+  "Lisa Lisa & Cult Jam",
+  "Sly & The Family Stone",
+  "Zager & Evans"
 );
 
 $skipsimilaritycheck = array(
@@ -83,9 +93,9 @@ $suspiciouswords = array(
 system("find $musicpath -type f -name '*.mp3' -printf \"%P\n\" > ./songs.txt");
 
 //Trim path from songs
-$files=file("./songs.txt");
+$paths=file("./songs.txt");
 
-foreach($files as $key => $line){
+foreach($paths as $key => $line){
   $line=trim($line);
 
   $a = explode("/",$line);
@@ -102,7 +112,7 @@ foreach($files as $key => $line){
 
 //Check all song filenames
 $artists=array();
-foreach($files as $line){
+foreach($files as $key => $line){
 
   //Add artist(s) to array
   $a = explode(" - ",$line);
@@ -127,21 +137,26 @@ foreach($files as $line){
 //  }
   if(false === strpos($line,"-")){
     echo $line." -> missing '-'\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
 
   if(false === strpos($line,"(") && false !== strpos($line,")")){
     echo $line." -> missing '('\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
 
   if(false !== strpos($line,"(") && false === strpos($line,")")){
     echo $line." -> missing ')'\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
 
   if(preg_match('/\s(With)\s.+ - /i',$line,$regs)){//search 'With' which maybe to be replaced with 'Ft.'
     echo $line." -> (".$regs[1].")\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
   if(preg_match('/ (And) .+ - /i',$line,$regs)){//search 'And' which maybe to be replaced with 'Ft.'
     echo $line." -> (".$regs[1].")\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
   if(preg_match('/ (&) .+ - /i',$line,$regs)){//search '&' which maybe to be replaced with 'Ft.'
     $found=false;
@@ -153,6 +168,7 @@ foreach($files as $line){
     }
     if($found)continue;
     echo $line." -> (".$regs[1].")\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
   if(preg_match('/\s(\S+\'\S*)/i',$line,$regs)){//apostrof
     if(false !== strpos($line,"'s"))continue;
@@ -163,43 +179,55 @@ foreach($files as $line){
     if(false !== strpos($line,"I'm"))continue;
     if(false !== strpos($line,"'re"))continue;
     echo $line." -> (".$regs[1].")\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
   if(preg_match('/(  )/i',$line,$regs)){//double space
     echo $line." -> (".$regs[1].")\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
   if(preg_match('/\s([a-z]\S*)\s/',$line,$regs)){//word starting with small letter
     echo $line." -> (".$regs[1].")\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
   if(preg_match('/^([a-z]\S*)\s/',$line,$regs)){//first word starting with small letter
     echo $line." -> (".$regs[1].")\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
   if(preg_match('/([A-Z]{2}\S*)/',$line,$regs)){//Second or futher capital letter 
     if(!in_array($regs[1],$allowedmultiplecapitals)){
       echo $line." -> (".$regs[1].")\n";
+      $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
     }
   }
   foreach($suspiciouswords as $i){//suspicious words
     if(preg_match($i,$line,$regs)){
       echo $line." -> (".$regs[1].")\n";
+      $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
     }
   }
   if(preg_match('/ \-[^\-]*\-/',$line,$regs)){//double '-'
     echo $line." -> (more than one '-')\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
   if(preg_match('/ (\-\S)/',$line,$regs)){//No space after '-'
     echo $line." -> (".$regs[1].")\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
   if(preg_match('/ (\S\-)/',$line,$regs)){//No space before '-'
     echo $line." -> (".$regs[1].")\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
   if(preg_match('/\s(ft\.)\s/',$line,$regs)){//ft with small F
     echo $line." -> (".$regs[1].")\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
   if(preg_match('/\s([Ff]t)[^\.]/',$line,$regs)){//Ft without dot
     echo $line." -> (".$regs[1].")\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
   if(preg_match('/(,)/',$line,$regs)){//','
     echo $line." -> (".$regs[1].")\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
 
   if($checksimilarity){
@@ -216,14 +244,30 @@ foreach($files as $line){
         $line2=trim($line2);
         $similarity = similar_text_lyani($line, $line2);
         if(80 < $similarity && $similarity < 100){
+          $skip = false;
+          foreach($similarity_exclude as $exclude){
+            if(false !== strpos($line,$exclude) ){
+              $skip = true;
+              break;
+            }
+            if(false !== strpos($line2,$exclude) ){
+              $skip = true;
+              break;
+            }
+          }
+          if($skip)continue;
           $similarity = intval($similarity);
           echo "similarity = $similarity % -> '$line' and '$line2'\n";
+          $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
         }
       }
     }
   }
 
 }
+
+if(strlen($renames))file_put_contents("renames.sh",$renames);
+
 
 //Formated print of artists
 ksort($artists);

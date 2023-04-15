@@ -1,28 +1,34 @@
+'Til Tuesday -> 1
 10cc -> 1
 2 Chainz -> 1
 2 Pac -> 1
 2 Unlimited -> 7
 3 Of A Kind -> 1
+3T -> 1
+3lau -> 1
 4 The Cause -> 2
 6lack -> 1
 A Magyar Radio Hangjai -> 1
 A Teens -> 4
+A Tribe Called Quest -> 1
 A.C. Jobim -> 1
 A.L.T. -> 1
-Aaliyah -> 1
+Aaliyah -> 3
 Aaron Neville -> 1
 Aaron Smith -> 1
-Abba -> 66
-Acdc -> 3
-Ace Of Base -> 6
+Abba -> 67
+Acdc -> 4
+Ace Of Base -> 7
 Ad Studio -> 1
+Adam Daniel -> 1
 Adam Faith -> 1
 Adam Levine -> 1
+Adam Shredder -> 1
 Adamski -> 3
 Adele -> 12
 Adiemus -> 1
 Adriano Celentano -> 10
-Aerosmith -> 2
+Aerosmith -> 6
 Aespa -> 2
 Afric Simone -> 1
 Afrojack -> 2
@@ -33,21 +39,25 @@ Ajr -> 2
 Akcent -> 1
 Akon -> 1
 Akos -> 12
+Al Green -> 1
 Al Martino -> 1
 Alain Barriere -> 1
 Alain Delon -> 1
 Alan Walker -> 3
 Alannah Myles -> 1
 Albert -> 1
-Aled Jones -> 1
+Albert Hammond -> 1
+Aled Jones -> 2
 Aleesia -> 1
 Alessandro Safina -> 1
+Alessia Cara -> 1
 Alesso -> 1
 Alex Ubago -> 1
-Alexandra Burke -> 1
+Alexandra Burke -> 2
 Alexandra Stan -> 2
 Alexis Jordan -> 1
 Ali Gatie -> 1
+Alice Cooper -> 1
 Alice Merton -> 1
 Alicia Keys -> 1
 Alida -> 1
@@ -65,9 +75,11 @@ Alphaville -> 8
 Alvaro Soler -> 3
 Amanda Lear -> 19
 Amanda Marshall -> 1
+Amber Van Day -> 1
 Ambrus Kyri -> 1
 America -> 1
 Amor -> 1
+Amy Grant -> 1
 Amy MacDonald -> 1
 Amy Winehouse -> 10
 Ananda Shankar -> 7
@@ -78,8 +90,11 @@ Andrea Bocelli -> 2
 Andreas Vollenweider -> 33
 Andrew Dice Clay -> 1
 Andy Fortuna -> 1
-Andy Williams -> 1
+Andy Williams -> 2
 Ane Brun -> 1
+Anees -> 1
+Angele -> 1
+Angelo Kelly -> 1
 Anika Black -> 1
 Animal Cannibals -> 1
 Anise K -> 1
@@ -90,7 +105,7 @@ Anna Lesko -> 1
 Anne Marie -> 4
 Anne Murray -> 1
 Anne-Marie -> 1
-Annie Lennox -> 10
+Annie Lennox -> 11
 Antonia -> 1
 Antonio Banderas -> 1
 Apache Indian -> 1
@@ -98,7 +113,7 @@ Aphrodite's Child -> 1
 Apollo Four Forty -> 4
 Apostol -> 2
 Aradszky Laszlo -> 1
-Aretha Franklin -> 3
+Aretha Franklin -> 4
 Ariana Grande -> 18
 Armin Van Buuren -> 3
 Army Of Lovers -> 8
@@ -127,15 +142,17 @@ B.O.B -> 1
 B52S -> 1
 BTS -> 16
 Babyface -> 1
+Backstreet Boys -> 2
 Bad Boys Blue -> 18
-Bad Bunny -> 1
+Bad Bunny -> 2
+Bag Raiders -> 1
 Bagossy Brothers Company -> 1
 Bailey Tzuke -> 1
 Bajtala -> 1
 Balazs Feco -> 1
 Baltimora -> 7
 Bananarama -> 1
-Band Aid -> 1
+Band Aid -> 2
 Bangles -> 1
 Barbara Dickson -> 1
 Barbra Streisand -> 21
@@ -154,7 +171,7 @@ Beats International -> 1
 Bebe Rexha -> 6
 Bebel Gilberto -> 8
 Becky G -> 3
-Becky Hill -> 2
+Becky Hill -> 3
 Bee Gees -> 19
 Beleznay Endre -> 5
 Belga -> 5
@@ -167,25 +184,30 @@ Ben E King -> 3
 Benjamin Ingrosso -> 3
 Benko Laszlo -> 17
 Bergendy -> 1
+Berlin -> 1
 Bert Jansch -> 1
 Bery & Váci Eszter -> 1
 Bette Midler -> 7
 Betty Boo -> 1
 Betty Everett -> 1
 Beverley Craven -> 2
-Beyonce -> 1
+Beyonce -> 2
 Bianca Ryan -> 1
+Big Bang -> 1
 Big Fun -> 1
 Big Sean -> 2
 Bikini -> 17
-Billie Eilish -> 1
+Bill Medley -> 1
+Bill Withers -> 3
+Billie Eilish -> 2
 Billy Idol -> 3
-Billy Joel -> 2
+Billy Joel -> 8
 Billy More -> 1
-Billy Ocean -> 1
+Billy Ocean -> 4
 Billy Paul -> 1
 Billy Preston -> 1
-Bing Crosby -> 3
+Billy Swan -> 1
+Bing Crosby -> 6
 Bingoboys -> 1
 Black -> 13
 Black Box -> 2
@@ -193,7 +215,7 @@ Black Cat White Cat -> 1
 Black Eyed Peas -> 1
 Black Machine -> 1
 Blackout Allstars -> 1
-Blackpink -> 11
+Blackpink -> 18
 Blackstreet -> 1
 Blahalouisiana -> 1
 Blair -> 1
@@ -202,6 +224,8 @@ Blonker -> 1
 Blu Cantrell -> 1
 Blue -> 1
 Blue Foundation -> 1
+Blue Swede -> 1
+Blue Öyster Cult -> 1
 Blues Brothers -> 1
 Blur -> 1
 Bob B. Soxx -> 1
@@ -220,13 +244,16 @@ Bon Bon -> 2
 Bon Jovi -> 1
 Bonanza Banzai -> 22
 Boney M -> 23
+Boney M. -> 2
 Bonnie Raitt -> 4
-Bonnie Tyler -> 1
+Bonnie Tyler -> 3
 Bosson -> 2
+Boston -> 1
 Boy George -> 2
 Boys Town Gang -> 1
 Boyz Ii Men -> 2
-Boz Scaggs -> 1
+Boyzone -> 1
+Boz Scaggs -> 2
 Bradley -> 1
 Brandy -> 5
 Bread -> 3
@@ -236,39 +263,45 @@ Brian Hyland -> 1
 Brian Simpson -> 7
 Brielle Von Hugel -> 1
 Briskey -> 1
-Britney Spears -> 9
-Bronski Beat -> 24
+Britney Spears -> 11
+Bronski Beat -> 23
 Bros -> 1
 Bruce & Bongo -> 7
+Bruce Springsteen -> 5
 Bruno Mars -> 10
-Bryan Adams -> 10
+Bryan Adams -> 12
 Bryan Ferry -> 1
 Bryn Christopher -> 1
 Bryson Tiller -> 1
+Bucketheads -> 1
 Buckshot Lefonque -> 1
 Bucovina Club -> 1
-Bukketheads -> 1
+Buffalo Springfield -> 1
 Burak Yeter -> 1
 Burger Lars Dietrich -> 1
 Burl Ives -> 1
+Byor -> 1
 C & C Music Factory -> 2
 C. C. Catch -> 13
 C.J. Stone -> 1
 Caesars Palace -> 1
-Cake -> 1
-Calvin Harris -> 7
+Cake -> 2
+Calvin Harris -> 8
 Camila Cabello -> 3
 Camille Bazbaz -> 10
 Captain & Tennille -> 1
 Captain Hollywood Project -> 1
 Captain Jack -> 1
 Cardi B -> 1
+Carly Paige -> 1
 Carly Rae Jepsen -> 1
 Carly Simon -> 5
+Carnie -> 1
 Caro Emerald -> 23
+Carole King -> 3
 Caroline Lavelle -> 5
 Carolyn Miller -> 1
-Carpenters -> 30
+Carpenters -> 31
 Carrapicho -> 1
 Cars -> 1
 Cassandra -> 1
@@ -282,7 +315,7 @@ Chance The Rapper -> 1
 Charlene -> 1
 Charli Xcx -> 1
 Charlie -> 1
-Charlie Puth -> 6
+Charlie Puth -> 7
 Charly Rich -> 1
 Chelo -> 1
 Cher -> 18
@@ -294,16 +327,16 @@ Chicago -> 1
 Chilli -> 1
 China Anne McClain -> 2
 Chris Brown -> 1
-Chris De Burgh -> 2
+Chris De Burgh -> 3
 Chris Isaak -> 2
 Chris Norman -> 1
 Chris Rea -> 14
 Chrissy DePauw Rooftop -> 1
-Christina Aguilera -> 8
+Christina Aguilera -> 11
 Christina Millian -> 1
 Christopher Cross -> 2
 Christy McDonald -> 1
-Chuck Berry -> 1
+Chuck Berry -> 2
 Chumbawamba -> 1
 Chung Ha -> 2
 Cilla Black -> 1
@@ -320,16 +353,21 @@ Close Ii You -> 1
 Cock Robin -> 3
 Cody Simpson -> 1
 Coely -> 1
+Colbie Caillat -> 1
 Colby O Donis -> 1
 Coldplay -> 3
+Colonia -> 1
 Communards -> 1
+Connie Francis -> 1
 Coolio -> 1
 Corina -> 1
 Cornershop -> 1
 Corona -> 1
 Cover Drive -> 1
 Craig David -> 5
-Crazy Town -> 1
+Crash Test Dummies -> 1
+Crazy Town -> 2
+Cream -> 1
 Cretu -> 4
 Crowded House -> 1
 Crystal Waters -> 2
@@ -339,8 +377,9 @@ Csinibaba -> 1
 Cuentame -> 1
 Curtis Stigers -> 1
 Cutting Crew -> 1
-Cyndi Lauper -> 2
-Cypress Hill -> 1
+Cyndi Lauper -> 3
+Cypress Hill -> 2
+Céline Dion -> 1
 D Note -> 1
 D'Amelie -> 1
 D'banj -> 1
@@ -350,21 +389,24 @@ Daft Punk -> 1
 Dalida -> 1
 Dan Fogelberg -> 2
 Dan Hill -> 1
-Dana -> 1
+Dana -> 2
 Dance Disco Funk -> 1
 Danelle Sandoval -> 1
 Dani Armstrong -> 1
 Daniel Caesar -> 1
+Danko -> 1
 Dannii Minogue -> 1
 Dante Thomas -> 1
 Dany Brillant -> 1
 Dario G -> 2
 Darlene Love -> 2
-Daryl Hall & John Oates -> 1
+Daryl Hall & John Oates -> 5
 Dave Brubeck -> 1
+Dave Mason -> 1
 Dave Mcmurray -> 2
 Dave Stewart -> 2
-David Essex -> 1
+David Bowie -> 2
+David Essex -> 2
 David Gilmour -> 2
 David Grant -> 1
 David Guetta -> 11
@@ -376,8 +418,8 @@ De La Soul -> 1
 De'Lacy -> 1
 De-Phazz -> 12
 Dead Or Alive -> 1
-Dean Martin -> 2
-Debbie Gibson -> 8
+Dean Martin -> 6
+Debbie Gibson -> 9
 Debby Boone -> 1
 Dee C Lee -> 1
 Dee Lite -> 8
@@ -393,28 +435,34 @@ Delta Goodrem -> 1
 Demi Lovato -> 2
 Demis Roussos -> 10
 Demjen Ferenc -> 2
+Deniece Williams -> 2
 Dennis Lloyd -> 1
 Depeche Mode -> 35
 Derek & The Dominos -> 1
+Des'ree -> 1
 Desperado -> 1
-Destiny's Child -> 1
+Destiny's Child -> 5
 Dexys Midnight Runners -> 1
 Diana Krall -> 18
 Diana Ross -> 5
 Dickie Valentine -> 1
-Dido -> 31
+Dido -> 32
 Die Fantastischen Vier -> 1
 Digital Emotion -> 2
 Dimitri From Paris -> 1
 Dimples D. -> 1
+Dinah Washington -> 1
+Dion -> 1
 Dione Warwick Friends -> 1
 Dionne Warwick -> 4
+Diplo -> 1
 Dire Straits -> 12
 Dirty Vegas -> 1
 Disco Megamix -> 1
-Divine -> 3
+Divine -> 2
 Dizzy Gillespie -> 1
 Dj Antoine -> 2
+Dj Antonio -> 1
 Dj Dark -> 1
 Dj Dominique -> 1
 Dj Fresh -> 1
@@ -426,27 +474,29 @@ Dj Regard -> 1
 Dj Robert Georgescu -> 1
 Dj Sammy -> 1
 Dj Snake -> 3
-Dl Mog -> 1
 Dmx -> 2
+Dnce -> 1
 Doja Cat -> 3
 Dolak Saly Robert -> 5
-Dolly Parton -> 1
+Dolly Parton -> 4
 Dolly Roll -> 4
 Dolores O Riordan -> 1
 Don Matias -> 1
 Don McLean -> 1
-Donna Summer -> 4
+Donna Summer -> 5
 Doobie Brothers -> 1
+Doop -> 1
 Doris Day -> 2
 Double Key -> 1
 Double Trouble -> 1
 Dr Alban -> 2
+Dr Dre -> 1
 Dr Hook & The Medicine Show -> 1
 Dr. Alban -> 1
 Drake -> 2
 Dreamcatcher -> 1
 Dschinghis Khan -> 1
-Dua Lipa -> 14
+Dua Lipa -> 23
 Duffy -> 1
 Dukai Regina -> 1
 Duke Dumont -> 2
@@ -454,14 +504,19 @@ Duran Duran -> 21
 Dusty Springfield -> 2
 Dynoro -> 1
 EZ Rollers -> 1
+Eagle-Eye Cherry -> 1
 Eagles -> 12
 Earth Wind & Fire -> 23
-East 17 -> 2
+Eartha Kitt -> 1
+East 17 -> 3
 Echo -> 1
 Echobeatz -> 1
-Ed Sheeran -> 2
+Echosmith -> 1
+Ed Sheeran -> 5
 Edda -> 13
-Eddy Grant -> 16
+Eddie Money -> 1
+Eddie Murphy -> 1
+Eddy Grant -> 15
 Edward Maya -> 1
 Edwyn Collins -> 1
 Egidio -> 1
@@ -469,19 +524,20 @@ Eiffel 65 -> 1
 Eighth Wonder -> 1
 Eimear Quinn -> 1
 Elaine Paige -> 1
+Electric Light Orchestra -> 3
 Electronicas -> 7
-Ella Fitzgerald -> 3
+Ella Fitzgerald -> 4
 Elle King -> 1
-Ellie Goulding -> 3
+Ellie Goulding -> 5
 Elo -> 1
 Elso Emelet -> 15
-Elton John -> 88
+Elton John -> 86
 Elvana Gjata -> 1
-Elvis Presley -> 7
+Elvis Presley -> 10
 Emf -> 1
 Emil Rulez -> 8
 Emilia Ali -> 1
-Eminem -> 3
+Eminem -> 14
 Emma Bunton -> 6
 En Vogue -> 1
 Engelbert Humperdinck -> 3
@@ -499,8 +555,8 @@ Eros Ramazzotti -> 1
 Eruption -> 1
 Estelle -> 2
 Eternal -> 2
-Europe -> 8
-Eurythmics -> 15
+Europe -> 7
+Eurythmics -> 16
 Everglow -> 2
 Fairground Attraction -> 1
 Faith Kakembo -> 1
@@ -516,7 +572,7 @@ Fatboy Slim -> 2
 Fauna Flash -> 4
 Favagok -> 3
 Fay Lovsky -> 1
-Feder -> 1
+Feder -> 2
 Fekete Pako -> 4
 Feleki Kamill -> 1
 Felix -> 1
@@ -528,7 +584,9 @@ Fetty Wap -> 1
 Fiction Factory -> 1
 Fiesta -> 4
 Fifth Harmony -> 6
+Fiona Apple -> 1
 Fiorello -> 1
+Fitz -> 1
 Fjk -> 1
 Fleetwood Mac -> 54
 Fleur East -> 1
@@ -541,11 +599,11 @@ Fonograf -> 2
 Foreigner -> 27
 Foxes -> 1
 Fragma -> 4
-France Gall -> 4
+France Gall -> 3
 Francesco Napoli -> 1
 Francesco Yates -> 1
 Frank Popp Ensemble -> 1
-Frank Sinatra -> 11
+Frank Sinatra -> 12
 Frank Walker -> 1
 Frankely -> 1
 Frankie Goes To Hollywood -> 3
@@ -554,8 +612,8 @@ Freemasons -> 2
 French Affair -> 1
 French Montana -> 1
 Friends -> 1
-Fugees -> 1
-Fun Fun -> 6
+Fugees -> 3
+Fun Fun -> 5
 Funky Bunch -> 1
 Funky Town -> 1
 Fused -> 1
@@ -572,10 +630,13 @@ Ganxta Zolee S A Kartel -> 1
 Ganzler Ors -> 1
 Garcia -> 1
 Gary Moore -> 1
+Geazy -> 1
+Gene Autry -> 1
 Gene Pitney -> 1
 General -> 3
 Genesis -> 2
 Gente De Zona -> 1
+George Ezra -> 1
 George Michael -> 34
 Gerry Rafferty -> 1
 Gery Halliwell -> 1
@@ -591,9 +652,10 @@ Giorgos Alkaios -> 1
 Gipsy Kings -> 10
 Girls Aloud -> 3
 Giveon -> 1
+Gladys Knight -> 1
 Glenn Medeiros -> 1
 Gloria Estefan -> 36
-Gloria Gaynor -> 11
+Gloria Gaynor -> 12
 Glorya -> 1
 Gnarls Barkley -> 1
 Go West -> 1
@@ -605,24 +667,32 @@ Gotye -> 1
 Grace Jones -> 18
 Grace Potter & The Nocturnals -> 5
 Grease -> 1
+Green Day -> 1
 Greg Lake -> 1
 Gregorian -> 3
 Groove House -> 3
+Groove Theory -> 1
 Guano Apes -> 1
 Gucci Mane -> 1
 Guns N Roses -> 10
 Gunther -> 1
+Gwen Stefani -> 2
 Gypsy Kings -> 2
 Haddaway -> 2
 Hall & Oats -> 2
-Halsey -> 3
+Halsey -> 4
 Hands Up -> 1
+Hanson -> 1
 Happy Together -> 1
 Harangozo Teri -> 2
+Harlce -> 1
+Harold Melvin -> 1
 Harpo -> 1
+Harry Nilsson -> 1
 Harry Styles -> 1
 Heather Headley -> 1
 Heather Nova -> 2
+Heatwave -> 1
 Heaven Street Seven -> 16
 Heavy D & The Boyz -> 2
 Helena -> 1
@@ -633,7 +703,7 @@ Hernadi Judit -> 1
 Heroine -> 1
 Hevesi Tamas -> 1
 Him -> 4
-Hofi -> 7
+Hofi -> 6
 Hofi Geza -> 1
 Hollosi Ilona -> 1
 Honthy Hanna -> 1
@@ -641,36 +711,42 @@ Hooligans -> 1
 Hooverphonic -> 1
 House Of Pain -> 3
 Houssdjo -> 1
+Howard Jones -> 1
 Hozier -> 1
+Hugel -> 1
 Hungaria -> 1
 Hungária -> 12
 Ice Cube -> 1
 Icona Pop -> 1
+Idina Menzel -> 1
 Iggy Azalea -> 1
-Illes -> 45
+Iio -> 1
+Illes -> 44
 Illés -> 1
 Ilsey -> 1
 Imagination -> 1
-Imagine Dragons -> 2
+Imagine Dragons -> 3
+Imanbek -> 1
 Imc Vs U2 -> 1
 In Grid -> 1
 Ini Kamoze -> 1
-Inna -> 2
+Inna -> 3
 Inner Circle -> 1
 Inner City -> 1
 Inxs -> 10
 Irie Maffia -> 1
 Irigy Honaljmirigy -> 22
+Isadora -> 1
 Itzy -> 4
 Iu -> 1
 Ivan -> 1
 Izhar Cohen -> 1
 Izone -> 1
-J Balvin -> 1
+J Balvin -> 2
 J.C.A. -> 1
 J.Y. Park -> 1
 Jackie Wilson -> 1
-Jackson 5 -> 3
+Jackson 5 -> 4
 Jadakiss -> 1
 Jael Of Lunik -> 1
 Jakatta -> 2
@@ -682,15 +758,18 @@ James Brown -> 4
 James Ingram -> 3
 James Last -> 1
 James Last & Orchestra -> 54
-James Taylor -> 1
+James Taylor -> 2
 James Taylor Quartet -> 1
-Jamiroquai -> 23
+James Tw -> 1
+Jamie Cullum -> 2
+Jamiroquai -> 24
 Jandy Feliz -> 1
 Jane Birkin -> 1
 Janelle Mone -> 1
 Janet Jackson -> 3
-Jason Derulo -> 6
-Jason Donovan -> 1
+Janis Ian -> 1
+Jason Derulo -> 7
+Jason Donovan -> 2
 Jason Mraz -> 1
 Jawsh 685 -> 1
 Jax Jones -> 2
@@ -698,17 +777,18 @@ Jazzy Jeff & The Fresh Prince -> 2
 Jean Francois Maurice -> 1
 Jean Michel Jarre -> 10
 Jean Pearl -> 1
+Jefferson Airplane -> 1
 Jeffrey Jey -> 1
 Jeffrey Osborne -> 1
 Jen Kipley -> 1
-Jennifer Lopez -> 16
+Jennifer Lopez -> 17
 Jennifer Paige -> 1
 Jennifer Warnes -> 1
 Jermaine Jackson -> 1
 Jermaine Stewart -> 1
 Jess Glynne -> 1
 Jesse & Joy -> 1
-Jessie J -> 2
+Jessie J -> 3
 Jessy Matador -> 1
 Jethro Tull -> 1
 Jewel -> 1
@@ -716,10 +796,12 @@ Jim Carrey -> 1
 Jim Croce -> 2
 Jim Diamond -> 1
 Jim Reeves -> 3
+Jimmy Buffett -> 1
+Jimmy Ray -> 1
 Jimmy Somerville -> 2
 Jingle -> 10
 Joachim Garraud -> 1
-Joan Jett -> 1
+Joan Jett -> 2
 Joao -> 1
 Jocelyn Brown -> 1
 Joe Cocker -> 2
@@ -727,26 +809,31 @@ Joe Dassin -> 1
 Joe Esposito -> 1
 Joe Satriani -> 1
 Joey B. Ellis -> 1
-John Denver -> 1
+John Denver -> 3
 John Farnham -> 1
-John Legend -> 2
-John Lennon -> 1
+John Legend -> 3
+John Lennon -> 2
 John Miles -> 1
 John Newman -> 3
 John Rowles -> 1
+John Travolta -> 1
 Johnny Budz Breaks Mix -> 1
 Johnny Burnette -> 2
 Johnny Hates Jazz -> 2
-Johnny Mathis -> 1
+Johnny Mathis -> 2
+Johnny Nash -> 2
 Johnny Pearson -> 1
 Johnny Tillotson -> 1
 Jon Anderson -> 5
 Jona Lewie -> 1
 Jonas Blue -> 2
-Jonas Brothers -> 3
+Jonas Brothers -> 5
 Jonasu -> 1
+Jordan Smith -> 1
 Jorge Ben -> 1
 Joshua Kadison -> 1
+Journey -> 1
+Joy Denalane -> 1
 Joyce Sims -> 1
 Juanes -> 1
 Jubel -> 1
@@ -754,7 +841,7 @@ Judy Tzuke -> 2
 Julian Lennon -> 1
 Julian Perretta -> 1
 Julie London -> 4
-Justin Bieber -> 13
+Justin Bieber -> 15
 Justin Jesso -> 1
 Justin Timberlake -> 3
 K7 -> 2
@@ -763,30 +850,32 @@ Kadoc -> 1
 Kajun -> 1
 Kalenna -> 1
 Kane Gang -> 1
-Kansas -> 1
+Kansas -> 2
 Kanye West -> 3
 Kaoma -> 1
 Karel Gott -> 1
 Karen Ramirez -> 1
 Karl Keaton -> 1
 Karla Bonoff -> 1
-Kate Bush -> 2
+Kate Bush -> 3
 Kate Ryan -> 2
 Kate Yanai -> 1
 Katie Melua -> 1
 Katrina & The Waves -> 1
-Katy Perry -> 7
+Katy Perry -> 8
 KeSha -> 1
+Keith Whitley -> 1
 Kelly Clarkson -> 6
 Kelly Family -> 1
 Ken Laszlo -> 1
 Kendrick Lamar -> 1
 Kenny G -> 1
-Kenny Loggins -> 1
+Kenny Loggins -> 4
 Kenny Rogers -> 2
 Kerozin -> 1
 Kesha -> 2
 Kevin Lyttle -> 1
+Kevin Mater -> 1
 Kevin Rowland -> 1
 Kft -> 2
 Kid Ink -> 1
@@ -794,6 +883,7 @@ Kid Loco -> 1
 Kim Wilde -> 1
 Kimbra -> 1
 Kinks -> 1
+Kinnie Lane -> 1
 Kirsty MacColl -> 1
 Klf -> 4
 Kodaline -> 1
@@ -806,6 +896,7 @@ Kor Lay -> 1
 Koral -> 1
 Kovacs Eszti -> 1
 Kraftwerk -> 13
+Kris Kross -> 1
 Kungs -> 2
 Kurtis Blow -> 1
 Kwabs -> 1
@@ -818,6 +909,7 @@ La Roux -> 1
 Lady Gaga -> 11
 Laid Back -> 1
 Lana Del Rey -> 1
+Larry Williams -> 1
 Lart Pour Lart Tarsulat -> 1
 Lartiste -> 1
 Las Ketchup -> 1
@@ -826,6 +918,8 @@ Latino Party -> 1
 Lauren Wood -> 1
 Lauv -> 1
 Le Ann Rimes -> 1
+Leah Kate -> 1
+Led Zeppelin -> 1
 Lee Hazlewood -> 3
 Leila K -> 2
 Lena -> 1
@@ -835,7 +929,7 @@ Leona Lewis -> 1
 Lesha Svik -> 1
 Lewis Capaldi -> 1
 Lgt -> 1
-Liam Payne -> 1
+Liam Payne -> 2
 Liberty X -> 1
 Liion -> 1
 Lil Jon -> 1
@@ -846,13 +940,16 @@ Lily Allen -> 2
 Linda Ronstadt -> 3
 Lionel Richie -> 5
 Liquido -> 1
+Lisa Lisa & Cult Jam -> 1
 Lisa Stansfield -> 3
-Little Mix -> 4
+Little Mix -> 5
 Little Peggy March -> 1
+Liu -> 1
 Lizzo -> 1
 Ljubisa Samardzic -> 1
 Lobo -> 1
 London Boys -> 1
+Looking Glass -> 1
 Loona -> 4
 Lord -> 2
 Lorde -> 1
@@ -864,25 +961,30 @@ Lost Civilization -> 1
 Lost Frequencies -> 1
 Lou Bega -> 3
 Lou Rawls -> 2
-Louis Armstrong -> 2
+Lou Reed -> 1
+Louis Armstrong -> 3
 Louis Prima -> 1
 Louisa Johnson -> 1
+Loverboy -> 1
 Lovin Spoonful -> 1
 Lu2vyk -> 1
 Lucky Lo -> 1
 Luis Guisao -> 1
-Luther Vandross -> 1
+Luther Vandross -> 2
 Lutricia McNeal -> 1
 Lyeoka -> 2
 Lykke Li -> 1
-Lynn Anderson -> 1
+Lynn Anderson -> 2
 Lynyrd Skynyrd -> 1
+Lyse -> 1
 M People -> 4
 M. Tarplin -> 1
 M.A.R.S.S. -> 1
 M.I.A -> 1
 Mabel -> 1
 Mac Band -> 1
+Mac Davis -> 1
+Macy Gray -> 1
 Madcon -> 1
 Maddie Ziegler -> 1
 Madison Avenue -> 1
@@ -902,8 +1004,9 @@ Manu Chao -> 1
 Marc Almond -> 1
 Marc Anthony -> 1
 Marc Cohn -> 1
+Mari Ferrari -> 1
 Maria Mckee -> 1
-Mariah Carey -> 19
+Mariah Carey -> 23
 Marianne Faithfull -> 1
 Marie Claire Dubaldo -> 1
 Marie Myriam -> 1
@@ -915,27 +1018,28 @@ Maritza Rodriguez -> 1
 Mark Antony -> 1
 Mark Knopfler -> 1
 Mark Martin -> 1
-Mark Ronson -> 1
+Mark Ronson -> 2
 Marky Mark -> 2
 Marnik & Smack -> 1
 Maroon 5 -> 8
 Marot Viki Es A Nova Kulturzenekar -> 3
 Marshmello -> 2
-Martika -> 1
+Martika -> 2
 Martin Garrix -> 3
 Martin Solveig -> 1
 Marty Balin -> 1
-Marvin Gaye -> 1
+Marvin Gaye -> 4
 Marvin Hamlisch -> 1
 Mary J Blige -> 2
 Mary Mary -> 1
 Mate Peter -> 1
 Mathou -> 1
 Matt Bianco -> 19
+Matthew Wilder -> 1
 Matyi Es A Hegedus -> 1
 Max Beesleys High Vibes -> 1
 Max Graham -> 1
-Maxi Priest -> 1
+Maxi Priest -> 2
 Mazzy Star -> 1
 Mc Hammer -> 1
 Mc Hawer & Tekkno -> 2
@@ -944,24 +1048,28 @@ McClain Sisters -> 1
 Mcfadden & Whitehead -> 1
 Mcnd -> 2
 Md Dj -> 1
+Meat Loaf -> 1
 Mecano -> 1
 Meghan Trainor -> 7
 Meja -> 1
-Mel & Kim -> 10
+Mel & Kim -> 11
+Melanie -> 1
 Melanie Fiona -> 1
 Melanie Martinez -> 2
+Melanie Thornton -> 1
 Melody Gardot -> 1
-Men At Work -> 1
+Men At Work -> 2
 Metro -> 2
 Mezzoforte -> 6
-Miami Sound Machine -> 2
+Miami Sound Machine -> 3
 Miami StarFish -> 1
 Michael Bolton -> 2
 Michael Buble -> 1
-Michael Jackson -> 57
+Michael Jackson -> 59
 Michael McDonald -> 2
 Mick Jagger -> 1
 Middle Of The Road -> 1
+Midnight Oil -> 1
 Mike & The Mechanics -> 7
 Mike Batt -> 1
 Mike Linney -> 1
@@ -974,6 +1082,7 @@ Milli Vanilli -> 1
 Minnie Riperton -> 1
 Mint Royale -> 2
 Misteeq -> 1
+Mitchell Ayres -> 1
 Mo Horizons -> 2
 Modern Talking -> 19
 Modjo -> 1
@@ -982,7 +1091,9 @@ Moloko -> 2
 Monchy & Alexandra -> 1
 Monica -> 1
 Monie Love -> 2
+Monodepth -> 1
 Montefiori Cocktail -> 1
+Moonessa -> 1
 Moony -> 1
 Morcheeba -> 33
 Mornington Lockett -> 1
@@ -993,14 +1104,17 @@ Mr Mo -> 1
 Mr President -> 1
 Mr Rick -> 1
 Mr Sax -> 1
-Mr. Mister -> 1
+Mr. Mister -> 3
 Ms Dynamite -> 1
 Mud -> 1
+Munchener Freiheit -> 1
 Mutya Buena -> 1
+Mýa -> 1
 N Trance -> 3
 Nadia Ali -> 1
 Nancy Sinatra -> 16
-Nat King Cole -> 4
+Nat King Cole -> 9
+Nat King Cole Trio -> 1
 Natalie Cole -> 3
 Natalie Imbruglia -> 1
 Nate Dogg -> 1
@@ -1019,28 +1133,35 @@ Nelly Furtado -> 1
 Neneh Cherry -> 1
 Neo -> 1
 Neoton -> 1
+New Kids On The Block -> 1
+Nexeri -> 1
 Niall Horan -> 1
 Nick Cave -> 1
 Nicki Minaj -> 9
+Nicky Youre Dazy -> 1
 Nico Santos -> 1
 Nightcrawlers -> 1
 Niia -> 1
 Nik Kershaw -> 1
 Nile Rodgers -> 1
 Nilsson -> 2
+Nina Simone -> 1
 Nirvana -> 1
 No Angels -> 1
-No Doubt -> 1
+No Doubt -> 2
 Noarah Jones -> 1
+Norah Jones -> 1
 Not Today Boombayah -> 1
 Notd -> 1
 Nox -> 1
-Nsync -> 1
+Nsync -> 3
 Nyla Fuse -> 1
 Oasis -> 1
 Odyssey -> 1
-Ofenbach -> 2
+Ofenbach -> 3
 Ofra Haza -> 3
+Oh Wonder -> 1
+Ol Dirty Bastard -> 1
 Oleta Adams -> 1
 Oliver Rosa -> 1
 Olivia Newton John -> 1
@@ -1055,6 +1176,7 @@ Orishas -> 5
 Orquestra Imperial -> 1
 Ortal -> 1
 Oscar Brown Junior -> 1
+Otis Redding -> 1
 Ottawan -> 12
 Outkast -> 1
 PMJ -> 41
@@ -1064,30 +1186,34 @@ Pamungkas -> 1
 Panjabi Mc -> 1
 Paradiso -> 1
 Paris Red -> 1
+Pascal Letoublon -> 1
 Pat Benatar -> 1
 Pat Boone -> 1
 Pato Banton -> 2
 Patrick Swayze -> 1
 Patsy Cline -> 1
 Patti Austin -> 2
+Patti LaBelle -> 2
 Patti Labelle -> 2
-Patti Smith Group -> 1
+Patti Smith -> 1
 Patty Smyth -> 1
-Paul Anka -> 2
+Paul Anka -> 4
 Paul Johnson -> 1
 Paul Mauriat -> 1
 Paul McCartney -> 4
 Paul Oakenfold -> 1
-Paul Simon -> 15
-Paul Young -> 3
+Paul Simon -> 18
+Paul Young -> 4
 Paula Abdul -> 2
 Peabo Bryson -> 1
 Peaches & Herb -> 2
+Pearl Jam -> 1
 Pebbles -> 1
 Peggy Lee -> 3
 Pentatonix -> 1
 Percy Sledge -> 1
 Perry Como -> 2
+Perry Como The Fontane Sisters -> 1
 Pet Shop Boys -> 21
 Peter & Gordon -> 1
 Peter Cetera -> 1
@@ -1097,8 +1223,10 @@ Pharrell Williams -> 3
 Phats & Small -> 1
 Phil Carmen -> 1
 Phil Collins -> 3
+Philip Bailey -> 1
 Pia Zadora -> 1
 Pink -> 8
+Pink Floyd -> 2
 Piramis -> 1
 Pitbull -> 8
 Placebo -> 1
@@ -1107,8 +1235,9 @@ Pm Sampson -> 1
 Poe -> 1
 Portugal The Man -> 1
 Poster -> 1
+Pras -> 1
 Pretenders -> 1
-Prince -> 1
+Prince -> 2
 Prince Ital Joe -> 1
 Princess Chelsea -> 1
 Prodigy -> 2
@@ -1118,17 +1247,18 @@ Proyecto Uno -> 1
 Puddles -> 1
 Puerto Rico -> 1
 Pulsedriver -> 1
+Pure Prairie League -> 1
 Purple Disco Machine -> 1
 Pussycat -> 1
 Q Tip GoonRock -> 1
 Quavo -> 1
-Quincy Jones -> 2
+Quincy Jones -> 3
 Quinn Xcii -> 1
 R-Go -> 1
 R. City -> 1
-R3hab -> 1
-REO Speedwagon -> 1
+R3hab -> 2
 Rachel Fuller -> 1
+Rachel Platten -> 1
 Radio Killer -> 2
 Rag N Bone -> 1
 Rainbirds -> 1
@@ -1137,6 +1267,7 @@ Randy Crawford -> 6
 Randy Vanwarmer -> 2
 Rapossa -> 1
 Ray Charles -> 1
+Ray Conniff -> 1
 Ray J -> 1
 Raye -> 1
 Rayon X -> 1
@@ -1144,6 +1275,7 @@ ReMan -> 2
 Real Life -> 1
 Rebel Mc -> 1
 Red Hot Chili Peppers -> 1
+Redbone -> 1
 Redhead Kingpin & Fbi -> 1
 Rednex -> 2
 Reel 2 Reel -> 1
@@ -1152,21 +1284,21 @@ Regina Belle -> 1
 Rem -> 9
 Rene Klein -> 1
 Rene Klijn -> 1
-Reo Speedwagon -> 1
+Reo Speedwagon -> 3
 Ricchi E Poveri -> 7
 Richard Marx -> 4
 Richard Sanderson -> 1
-Rick Astley -> 20
+Rick Astley -> 21
 Rick James -> 2
-Ricky Martin -> 2
-Rihanna -> 10
+Ricky Martin -> 3
+Rihanna -> 12
 Rita Coolidge -> 3
 Rita Ora -> 2
 Ritchie Valens -> 1
 Rizzle Kicks -> 1
 Rob N Raz -> 1
 Rob Thomas -> 1
-Robbie Williams -> 3
+Robbie Williams -> 4
 Robert Cristian -> 2
 Robert Miles -> 1
 Roberta Flack -> 1
@@ -1174,17 +1306,19 @@ Robin Beck -> 1
 Robin Cook -> 2
 Robin Gibb -> 14
 Robin S -> 1
-Robin Schulz -> 12
+Robin Schulz -> 13
 Robin Thicke -> 1
 Robn Raz -> 1
+Robyn -> 1
 Robyn Adele Anderson -> 4
 Rock & Roll Mix -> 1
 Rock Mafia -> 1
-Rod Stewart -> 2
+Rod Stewart -> 3
 Rodriguez -> 1
 Roler Sis -> 1
 Romano & Sapienza -> 1
 Romeo & Julia -> 1
+Ronan Keating -> 1
 Ronnie Milsap -> 1
 Room 5 -> 1
 Roomie -> 1
@@ -1193,40 +1327,47 @@ Rose Royce -> 1
 Roxette -> 34
 Roxy Music -> 2
 Roy Herve -> 1
-Roy Orbison -> 2
+Roy Orbison -> 5
 Rozalla -> 1
+Rozes -> 1
 Rui Da Silva -> 1
-Run Dmc -> 1
+Run DMC -> 1
+Run Dmc -> 2
 Rupert Holmes -> 2
 Ruth Anne -> 1
 Rza -> 1
 Sade -> 23
 Sadie Ama -> 1
 Safri Duo -> 2
+Saint Etienne -> 1
 Sally Oldfield -> 1
 Salome De Bahia -> 1
 Salt N Pepa -> 1
 Sam Brown -> 1
+Sam Cooke -> 2
 Sam Feldt -> 1
 Sam Fischer -> 1
 Sam Martin -> 2
+Sam Smith -> 1
 Sam Sparro -> 1
 Samantha Fox -> 9
 Samantha James -> 1
 Samantha Sang -> 1
 Sambada -> 1
+Sananda Maitreya -> 2
 Sandie Shaw -> 1
 Sandra -> 8
 Sandy Reed -> 2
 Santa Esmeralda -> 1
-Santana -> 1
+Santana -> 3
 Saragossa Band -> 10
 Sarah Brightman -> 15
-Sarah Connor -> 2
-Sarah Lynn -> 2
+Sarah Connor -> 3
+Sarah Lynn -> 1
+Sarah McLachlan -> 2
 Sash -> 1
 Sasha -> 1
-Savage Garden -> 2
+Savage Garden -> 4
 Sb -> 1
 Schiller -> 2
 Scooter -> 1
@@ -1234,8 +1375,9 @@ Scorpions -> 1
 Scotch -> 1
 Seal -> 3
 Sean Paul -> 2
+Seba Bootleg -> 1
 Secret Garden -> 1
-Selena Gomez -> 17
+Selena Gomez -> 18
 Sena Sener -> 1
 Serebro -> 2
 Serge Gainsbourg -> 1
@@ -1252,22 +1394,25 @@ Shantel -> 1
 Shapplin Emma -> 1
 Sharon Corr -> 1
 Sharon Den Adel -> 1
-Shawn Mendes -> 5
+Shawn Colvin -> 1
+Shawn Mendes -> 6
 Sheena Easton -> 1
 Sheila B. Devotion -> 1
-Sheryl Crowe -> 1
+Sheryl Crow -> 1
 Shia LaBeouf -> 1
 Shinehead -> 1
 Shiri Maimon -> 1
 Shirley Bassey -> 2
 Shivaree -> 1
 Shy Martin -> 1
-Sia -> 10
+Sia -> 12
 Sickotoy -> 1
 Sigala -> 2
 Sigma -> 1
+Sigrid -> 1
 Silk City -> 1
-Simon & Garfunkel -> 1
+Silver -> 1
+Simon & Garfunkel -> 4
 Simply Red -> 23
 Sipos F. Tamas -> 2
 Sissel -> 1
@@ -1278,8 +1423,9 @@ Skip Marley -> 1
 Slade -> 1
 Slang -> 1
 Slick Rick -> 1
+Sly & The Family Stone -> 1
 Smash Maker -> 1
-Smash Mouth -> 2
+Smash Mouth -> 3
 Smokey Robinson & The Miracles -> 2
 Snap -> 2
 Snoop Dogg -> 1
@@ -1290,29 +1436,34 @@ Somi -> 1
 Son De Sol -> 1
 Sonique -> 1
 Sonny -> 1
-Sophie B Hawkins -> 1
+Sophie B Hawkins -> 2
+Sophie B. Hawkins -> 1
 Sophie Ellis Bextor -> 15
+Soul Asylum -> 1
 Soul Ii Soul -> 1
 Soulstice -> 1
 Space -> 1
 Spada -> 1
 Spandau Ballet -> 6
-Spice Girls -> 1
+Spice Girls -> 3
 Spin -> 1
-Spin Doctors -> 1
+Spin Doctors -> 2
 Stadium Jakarta -> 1
 Stakka Bo -> 1
 Stan Getz -> 1
 Star City -> 1
 Starley -> 1
+Steeleye Span -> 1
 Stefflon Don -> 1
 Stefre Roland -> 1
 Stephanie Poetri -> 1
 Steppenwolf -> 1
+Steps -> 1
 Stereo Mc's -> 2
-Steve Miller Band -> 1
+Steve Miller Band -> 2
+Steve Perry -> 1
 Stevie B -> 1
-Stevie Wonder -> 6
+Stevie Wonder -> 9
 Sting -> 4
 Stone Poneys -> 1
 Stop -> 1
@@ -1324,10 +1475,12 @@ Styles P -> 1
 Stylistics -> 1
 Styx -> 1
 Sub Bass Monster -> 3
+Sublime -> 1
 Suga -> 1
 Sugababes -> 1
 Sunmi -> 2
 Supertramp -> 2
+Survivor -> 1
 Susan Boyle -> 1
 Suzi Quatro -> 13
 Svet -> 1
@@ -1343,8 +1496,11 @@ T.A.T.U. -> 1
 T.I. -> 2
 TJR -> 1
 Takacs Tamas Dirty Blues Band -> 2
-Take That -> 1
+Take That -> 2
+Tal Bachman -> 1
 Talk Talk -> 1
+Talny -> 1
+Tamia -> 1
 Tamy -> 1
 Tanita Tikaram -> 6
 Tankcsapda -> 1
@@ -1352,60 +1508,78 @@ Tara Maclean -> 1
 Tarkan -> 2
 Tasmin Archer -> 1
 Tate McRae -> 1
-Taylor Swift -> 6
+Taylor Dayne -> 1
+Taylor Swift -> 17
 Technotronic -> 1
+Teddy Pendergrass -> 1
 Tegan & Sara -> 1
 Ten Sharp -> 1
 Terence Trent Darby -> 1
 Terry Jacks -> 1
 Texas -> 1
 The Alphabeta -> 1
+The Andrews Sisters -> 1
 The Animals -> 1
 The Asteroids Galaxy Tour -> 1
-The Bangles -> 2
-The Beach Boys -> 2
-The Beatles -> 1
+The Bangles -> 3
+The Beach Boys -> 3
+The Beatles -> 2
 The Beloved -> 1
 The Bestseller -> 1
 The Billy Bros Orchestra -> 1
+The Blackhearts -> 1
 The Blue Boy -> 1
 The Blue Jeans -> 1
+The Blue Notes -> 1
 The Brand New Heavies -> 4
 The Brothers Four -> 1
 The Byrds -> 1
 The Captain & Tennille -> 1
-The Cardigans -> 7
+The Cardigans -> 8
 The Cascades -> 1
 The Cat Empire -> 1
 The Chainsmokers -> 5
 The Champs -> 1
 The Chordettes -> 1
+The Clash -> 3
 The Commodores -> 2
 The Communards -> 1
 The Connels -> 1
+The Conniff Singers -> 1
 The Corrs -> 30
 The Cranberries -> 14
 The Crystals -> 1
 The Cure -> 3
-The Darkness -> 1
-The Doors -> 3
+The Darkness -> 2
+The Doobie Brothers -> 1
+The Doors -> 4
 The Drifters -> 1
-The Emotions -> 1
+The Emotions -> 2
 The Everly Brothers -> 2
 The Fantastic Oceans -> 3
 The Farm -> 1
+The Five Stairsteps -> 1
 The Fleetwoods -> 1
+The Flying Pickets -> 1
 The Fortunes -> 1
 The Four Tops -> 1
+The Frog Chorus -> 1
+The Guess Who -> 1
+The Harlem Community Choir -> 1
+The Heartbreakers -> 1
 The Hollies -> 1
 The Housemartins -> 1
-The Jacksons -> 4
-The Kelly Family -> 1
+The Hues Corporation -> 1
+The Human League -> 1
+The Isley Brothers -> 2
+The Jacksons -> 5
+The Kelly Family -> 2
 The Kid Laroi -> 1
 The Knocks -> 1
 The Korgis -> 1
 The Lawyer -> 1
 The Mad Stuntman -> 1
+The Main Ingredient -> 1
 The Mamas & The Papas -> 4
 The Manhattans -> 1
 The Mask Of Zorro -> 1
@@ -1413,17 +1587,20 @@ The Moody Blues -> 1
 The Original -> 1
 The Outhere Brothers -> 1
 The Overlanders -> 1
+The Partridge Family -> 1
+The Pips -> 1
+The Plastic Ono Band -> 1
 The Platters -> 4
 The Pogues -> 1
-The Pointer Sisters -> 1
-The Police -> 1
+The Pointer Sisters -> 4
+The Police -> 2
 The Pretenders -> 1
 The Prodigy -> 1
 The Pussycat Dolls -> 1
 The Rasmus -> 2
 The Righteous Brothers -> 2
 The Romantics -> 1
-The Ronettes -> 2
+The Ronettes -> 3
 The Sandpipers -> 1
 The Saturdays -> 1
 The Scene -> 1
@@ -1434,17 +1611,24 @@ The Shirelles -> 1
 The Spinners -> 1
 The Stranglers -> 1
 The Stylistics -> 1
+The Tantrums -> 1
 The Temptations -> 1
+The Three Degrees -> 1
 The Verve -> 1
 The Waitresses -> 1
 The Wanted -> 1
 The Weather Girls -> 1
 The Weavers -> 1
-The Weeknd -> 2
+The Weeknd -> 11
+The Wombles -> 1
+The Youngbloods -> 1
+The Zombies -> 1
 Themby -> 1
 Thievery Corporation -> 1
 Thomas Dybdahl -> 1
+Thompson Twins -> 1
 Tierra Whack -> 1
+Tiffany -> 1
 Timati -> 1
 Timbaland -> 1
 Timmy T -> 1
@@ -1456,20 +1640,24 @@ Tina Winson -> 1
 Tinashe -> 1
 Titio -> 1
 Tito Puente -> 1
+Tlc -> 2
 Tnn -> 1
+Toad The Wet Sprocket -> 1
 Tom Jones -> 19
+Tom Petty -> 1
 Tom Waits -> 7
 Tom Zanetti -> 2
 Tommy Roe -> 1
 Tone Loc -> 1
 Tones & I -> 1
-Toni Braxton -> 2
+Toni Braxton -> 3
 Tony Bennett -> 2
 Tony Carey -> 1
 Tony Orlando & Dawn -> 2
 Topic -> 2
+Torine -> 1
 Total Touch -> 2
-Toto -> 2
+Toto -> 3
 Touch & Go -> 2
 Tove Lo -> 1
 Tower Of Power -> 1
@@ -1495,7 +1683,7 @@ Urban Cookie Collective -> 1
 Urge Overkill -> 1
 Us3 -> 5
 V'moto Rock -> 1
-Van Morrison -> 1
+Van Morrison -> 3
 Vanessa Paradise -> 1
 Vanessa Williams -> 1
 Vargo -> 1
@@ -1512,18 +1700,21 @@ Wamdue Project -> 1
 Warren G -> 2
 Wayne Newton -> 1
 Wayne Wade -> 1
+Wendy Wilson -> 1
 Wes -> 1
+Westlife -> 3
 Wet Wet Wet -> 7
 Wham -> 2
 Whigfield -> 1
 White Lion -> 1
 White Town -> 1
-Whitney Houston -> 6
+Whitney Houston -> 11
 Wild Cherry -> 1
 Wildchild -> 1
-Will Smith -> 1
+Will Smith -> 3
 Will.I.Am -> 1
 William Singe -> 1
+Willow -> 1
 Wilson Phillips -> 2
 Winston Mcanuff -> 1
 Wise Hand -> 1
@@ -1535,15 +1726,19 @@ Y2k -> 1
 Yazoo -> 3
 Yello -> 26
 Yes -> 1
+Yoko Ono -> 1
 Young Mc -> 1
 Youssou N Dour -> 1
 Yvonne Elliman -> 2
+Zager & Evans -> 1
 Zanzibar -> 2
 Zara Larsson -> 5
 Zayn -> 1
+Zaz -> 1
 Zedd -> 2
 Zedd F. Jon Bellion -> 1
 Zendaya -> 1
+Zerky -> 1
 Zoejohnston -> 1
 Zoran -> 1
 Zorba -> 1
