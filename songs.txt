@@ -8,7 +8,6 @@ analogue/Bronski Beat - Smalltown Boy.mp3
 analogue/Poe - Hey Pretty.mp3
 analogue/Kor Lay - Plakala.mp3
 analogue/2 Unlimited - Do What I Like.mp3
-analogue/Kylie Minogue - Plesae Stay.mp3
 analogue/Jean Michel Jarre - Zoolookologie.mp3
 analogue/Kylie Minogue - On A Night Like This.mp3
 analogue/Celine Dion - Misled.mp3
@@ -586,7 +585,6 @@ analogue/Gotan Project - La Viguela.mp3
 analogue/Gotan Project - Lunatico.mp3
 analogue/Gotan Project - Mi Confesion.mp3
 analogue/Gotan Project - Santa Maria (Del Buen Ayre).mp3
-analogue/Gotan Project - Triptico.mp3
 analogue/Grace Jones - I'm Not Perfect.mp3
 analogue/Grace Jones - I've Seen That Face Before.mp3
 analogue/Grace Jones - Pull Up To The Bumper.mp3
@@ -643,7 +641,6 @@ analogue/Klf - 3 Am External.mp3
 analogue/Klf - No More Tears.mp3
 analogue/Klf - The White Room.mp3
 analogue/Kool & The Gang - Big Fun.mp3
-analogue/Kool & The Gang - Celebration.mp3
 analogue/Kool & The Gang - Emergency.mp3
 analogue/Kool & The Gang - Fresh.mp3
 analogue/Kool & The Gang - Get Down On It.mp3
@@ -1491,7 +1488,6 @@ analogue/3T - Anything.mp3
 analogue/Martika - Toy Soldiers.mp3
 analogue/Iio - Rapture.mp3
 analogue/Heatwave - Boogie Nights.mp3
-analogue/Jimmy Ray - Are You Jimmy Ray_.mp3
 analogue/Crash Test Dummies - Mmm Mmm Mmm Mmm.mp3
 analogue/Billy Swan - I Can Help.mp3
 analogue/Bruce Springsteen - Hungry Heart.mp3
@@ -1672,6 +1668,44 @@ analogue/Joan Jett Ft. The Blackhearts - I Love Rock 'N Roll.mp3
 analogue/Nsync - Tearin Up My Heart.mp3
 analogue/Cypress Hill - Insane In The Brain.mp3
 analogue/The Clash - Train In Vain (Stand By Me).mp3
+analogue/Gotan Project - Triptico.mp3
+analogue/Kylie Minogue - Please Stay.mp3
+analogue/Tears For Fears - The Tipping Point.mp3
+analogue/Falco - Der Kommissar.mp3
+analogue/Fun Factory - Get The Rhythm.mp3
+analogue/Le Flex - Georgy Porgy.mp3
+analogue/Tears For Fears - Mad World.mp3
+analogue/Fun Factory - Close To You.mp3
+analogue/Tears For Fears - Everybody Wants To Rule The World.mp3
+analogue/Fun Factory - Baby Come Back.mp3
+analogue/Fun Factory - Celebration.mp3
+analogue/Tears For Fears - Shout.mp3
+analogue/Tears For Fears - Head Over Heels Broken.mp3
+analogue/Tears For Fears - Advice For The Young At Heart.mp3
+analogue/Fun Factory - We Are The World.mp3
+analogue/La Roux - Uptight Downtown.mp3
+analogue/La Roux - Sexotheque.mp3
+analogue/La Roux - Cruel Sexuality.mp3
+analogue/La Roux - Tropical Chancer.mp3
+analogue/Lene Marlin - Sitting Down Here.mp3
+analogue/Salt N Pepa - You Showed Me.mp3
+analogue/Fun Factory - Don't Go Away.mp3
+analogue/Fun Factory - Groove Me.mp3
+analogue/Fun Factory - Factory Of Fun.mp3
+analogue/Fun Factory - Feel So Good.mp3
+analogue/Fun Factory - House Of Love.mp3
+analogue/Fun Factory - Next To You.mp3
+analogue/Fun Factory - I Wanna B With U.mp3
+analogue/Fun Factory - Love Of My Life.mp3
+analogue/Fun Factory - Oh Yeah Yeah.mp3
+analogue/Fun Factory - Pain.mp3
+analogue/Fun Factory - Sha La La La La.mp3
+analogue/Fun Factory - Take Your Chance.mp3
+analogue/Fun Factory - Sing Along.mp3
+analogue/Tears For Fears - Sowing The Seeds Of Love.mp3
+analogue/Fun Factory - Take Me To The Limit.mp3
+analogue/Jimmy Ray - Are You Jimmy Ray.mp3
+analogue/La Roux - Kiss And Not Tell_.mp3
 christmas/PMJ - God Rest Ye Merry Gentlemen.mp3
 christmas/Goombay Dance Band - White Christmas.mp3
 christmas/Darlene Love - Marshmallow World.mp3
@@ -2558,7 +2592,6 @@ digital/Loona - Why Not.mp3
 digital/Omi - Cheerleader.mp3
 digital/Alina Rovnich - New Year.mp3
 digital/Madonna - I'm So Stupid.mp3
-digital/La Roux - In For The Kill.mp3
 digital/Maroon 5 Ft. Kendrick Lamar - Don't Wanna Know.mp3
 digital/3lau Ft. Carly Paige - Touch.mp3
 digital/Ed Sheeran - Shivers.mp3
@@ -2636,6 +2669,31 @@ digital/Adam Shredder Ft. Seba Bootleg - Stay.mp3
 digital/Dua Lipa Ft. Bad Bunny Ft. J Balvin Ft. Talny - One Day.mp3
 digital/Taylor Swift - Anti Hero.mp3
 digital/Mari Ferrari Ft. Monodepth Ft. Kinnie Lane - Plus De Toi.mp3
+digital/Ava Max - Get Outta My Heart.mp3
+digital/Ava Max - Diamonds & Dancefloors.mp3
+digital/Ava Max - Turn Off The Lights.mp3
+digital/Ava Max - Dancing’s Done.mp3
+digital/Ava Max - Maybe You’re The Problem.mp3
+digital/Ava Max - One Of Us.mp3
+digital/Ava Max - Million Dollar Baby.mp3
+digital/Ava Max - Ghost.mp3
+digital/Ava Max - Hold Up (Wait A Minute).mp3
+digital/Ava Max - Sleepwalker.mp3
+digital/Ava Max - Cold As Ice.mp3
+digital/Ava Max - Weapons.mp3
+digital/Ava Max - Last Night On Earth.mp3
+digital/Alok Ft. Alan Walker Ft. Kiddo - Headlights.mp3
+digital/Goldtrix Ft. Andrea Brown - It's Love (Trippin).mp3
+digital/La Roux - Fascination.mp3
+digital/Sabrina Carpenter - Thumbs.mp3
+digital/Coldplay - Paradise.mp3
+digital/Anne Marie - 2002.mp3
+digital/La Roux - As If By Magic.mp3
+digital/La Roux - Tigerlily.mp3
+digital/La Roux - Bulletproof.mp3
+digital/La Roux - Quicksand.mp3
+digital/La Roux - I'm Not Your Toy.mp3
+digital/La Roux - In For The Kill.mp3
 hungarian/analogue/Akos - Az Utolso Level.mp3
 hungarian/analogue/Akos - Be Lettel Oltva.mp3
 hungarian/analogue/Akos - Dudolni Halkan.mp3
@@ -2653,7 +2711,6 @@ hungarian/analogue/Belga - Kirlyok A Hzban.mp3
 hungarian/analogue/Belga - Magyar Nemzeti.mp3
 hungarian/analogue/Bikini - Adj Helyet.mp3
 hungarian/analogue/Bikini - Ezt Nem Tudom Maskepp Mondani.mp3
-hungarian/analogue/Bikini - Fagyi.mp3
 hungarian/analogue/Bikini - Ha Volna Meg Idom.mp3
 hungarian/analogue/Bikini - Indokolatlan Jokedv.mp3
 hungarian/analogue/Bikini - Ki Visz Haza.mp3
@@ -2742,6 +2799,7 @@ hungarian/analogue/Unique - Mozaik.mp3
 hungarian/analogue/Elso Emelet - Allj Vagy Lovok.mp3
 hungarian/analogue/Lgt - Mindenki Maskepp Csinalja.mp3
 hungarian/analogue/Animal Cannibals - Kerek Egy Puszikat.mp3
+hungarian/analogue/Bikini - Fagyi.mp3
 hungarian/night/Ambrus Kyri Ft. Aradszky Laszlo - Allatkerti Seta.mp3
 hungarian/night/Apostol - Nem Tudok Elni Nelkuled.mp3
 hungarian/night/Balazs Feco - Evszakok.mp3
@@ -2986,6 +3044,7 @@ hungarian/Irigy Honaljmirigy - Vetkezz Velem.mp3
 hungarian/Irigy Honaljmirigy - Whiskeys Uvegek.mp3
 hungarian/Irigy Honaljmirigy - Numerakiraly.mp3
 hungarian/Fenyo Miklos - Orokzold Alom.mp3
+hungarian/Irigy Honaljmirigy - Tatogok Mint A Hal.mp3
 jingle/Jingle - 10.mp3
 jingle/Jingle - 11.mp3
 jingle/Jingle - 12.mp3
@@ -4301,7 +4360,6 @@ night/Madonna - Promise To Try.mp3
 night/Madonna - Queen.mp3
 night/Madonna - Ray Of Light.mp3
 night/Madonna - Sanctuary.mp3
-night/Madonna - Secret _.mp3
 night/Madonna - Secret.mp3
 night/Madonna - Shoo Bee Doo.mp3
 night/Madonna - Something To Remember.mp3
@@ -4866,6 +4924,19 @@ night/Otis Redding - Sittin On The Dock Of The Bay.mp3
 night/Gladys Knight Ft. The Pips - Midnight Train To Georgia.mp3
 night/Harold Melvin Ft. The Blue Notes Ft. Teddy Pendergrass - If You Don't Know Me By Now.mp3
 night/Patti Smith - Because The Night.mp3
+night/Fun Factory - I Love You.mp3
+night/Boule Noire - Aimer D Amour.mp3
+night/Tears For Fears - Woman In Chains.mp3
+night/La Roux - Let Me Down Gently.mp3
+night/La Roux - Paradise Is You.mp3
+night/Fun Factory - I Wish.mp3
+night/Patrice Rushen - Remind Me.mp3
+night/Woods Empire - Universal Love.mp3
+night/Atlantic Starr - You.mp3
+night/La Roux - Cover My Eyes.mp3
+night/Fun Factory - Hey Little Girl.mp3
+night/Madonna - Secret .mp3
+night/Fun Factory - Back In The Days.mp3
 party/Lost Frequencies - Are You With Me.mp3
 party/Wamdue Project - King Of My Castle.mp3
 party/Briskey - Kosmo Yahoodi.mp3
@@ -5158,3 +5229,5 @@ party/Gloria Estefan Ft. Miami Sound Machine - Turn The Beat Around.mp3
 party/Twenty 4 Seven Ft. Captain Hollywood Project - I Can't Stand It.mp3
 party/Panjabi Mc - Jogi.mp3
 party/Bucketheads - The Bomb.mp3
+party/Fun Factory - Doh Wah Diddy.mp3
+party/Alex Gaudino Ft. Crystal Waters - Destination Calabria.mp3

@@ -13,7 +13,9 @@ $checksimilarity = true;
 $similarity_exclude = array(
   "I Have A Dream",
   "Best Of My Love",
-  "Ennio Morricone - A Fistful Of"
+  "Ennio Morricone - A Fistful Of",
+  "Fun Factory - Next To You",
+  "Fun Factory - Close To You"
 );
 
 
@@ -138,6 +140,10 @@ foreach($files as $key => $line){
   if(false === strpos($line,"-")){
     echo $line." -> missing '-'\n";
     $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
+  }
+
+  if(false !== strpos($line,"_.mp3")){
+    echo $line." -> not allowed '_.mp3'\n";
   }
 
   if(false === strpos($line,"(") && false !== strpos($line,")")){

@@ -43,7 +43,7 @@ Al Green -> 1
 Al Martino -> 1
 Alain Barriere -> 1
 Alain Delon -> 1
-Alan Walker -> 3
+Alan Walker -> 4
 Alannah Myles -> 1
 Albert -> 1
 Albert Hammond -> 1
@@ -52,6 +52,7 @@ Aleesia -> 1
 Alessandro Safina -> 1
 Alessia Cara -> 1
 Alesso -> 1
+Alex Gaudino -> 1
 Alex Ubago -> 1
 Alexandra Burke -> 2
 Alexandra Stan -> 2
@@ -71,6 +72,7 @@ Alliance Ethnic -> 1
 Alliance Ethnik -> 1
 Alma -> 1
 Alma Cogan -> 1
+Alok -> 1
 Alphaville -> 8
 Alvaro Soler -> 3
 Amanda Lear -> 19
@@ -87,6 +89,7 @@ Anastacia -> 9
 Anbessa -> 1
 Andra -> 1
 Andrea Bocelli -> 2
+Andrea Brown -> 1
 Andreas Vollenweider -> 33
 Andrew Dice Clay -> 1
 Andy Fortuna -> 1
@@ -102,7 +105,7 @@ Anita Baker -> 2
 Anitta -> 1
 Ann Wilson -> 1
 Anna Lesko -> 1
-Anne Marie -> 4
+Anne Marie -> 5
 Anne Murray -> 1
 Anne-Marie -> 1
 Annie Lennox -> 11
@@ -128,11 +131,11 @@ Astrud Gilberto -> 14
 Aswad -> 2
 Atb -> 2
 Atc -> 1
-Atlantic Starr -> 1
+Atlantic Starr -> 2
 Atomic Kitten -> 4
 Aurya -> 1
 Austin Ally -> 1
-Ava Max -> 2
+Ava Max -> 15
 Aventura -> 1
 Avicii -> 3
 Ayo -> 1
@@ -249,6 +252,7 @@ Bonnie Raitt -> 4
 Bonnie Tyler -> 3
 Bosson -> 2
 Boston -> 1
+Boule Noire -> 1
 Boy George -> 2
 Boys Town Gang -> 1
 Boyz Ii Men -> 2
@@ -355,7 +359,7 @@ Cody Simpson -> 1
 Coely -> 1
 Colbie Caillat -> 1
 Colby O Donis -> 1
-Coldplay -> 3
+Coldplay -> 4
 Colonia -> 1
 Communards -> 1
 Connie Francis -> 1
@@ -370,7 +374,7 @@ Crazy Town -> 2
 Cream -> 1
 Cretu -> 4
 Crowded House -> 1
-Crystal Waters -> 2
+Crystal Waters -> 3
 Cserhati Zsuzsa -> 12
 Cserháti Zsuzsa -> 2
 Csinibaba -> 1
@@ -561,7 +565,7 @@ Everglow -> 2
 Fairground Attraction -> 1
 Faith Kakembo -> 1
 Faithless -> 3
-Falco -> 3
+Falco -> 4
 Fancy -> 8
 Faouzia -> 1
 Far Corporation -> 1
@@ -613,6 +617,7 @@ French Affair -> 1
 French Montana -> 1
 Friends -> 1
 Fugees -> 3
+Fun Factory -> 24
 Fun Fun -> 5
 Funky Bunch -> 1
 Funky Town -> 1
@@ -659,6 +664,7 @@ Gloria Gaynor -> 12
 Glorya -> 1
 Gnarls Barkley -> 1
 Go West -> 1
+Goldtrix -> 1
 Goombay Dance Band -> 26
 Goran Bragovic -> 1
 Gordon Lightfoot -> 1
@@ -735,7 +741,7 @@ Inner Circle -> 1
 Inner City -> 1
 Inxs -> 10
 Irie Maffia -> 1
-Irigy Honaljmirigy -> 22
+Irigy Honaljmirigy -> 23
 Isadora -> 1
 Itzy -> 4
 Iu -> 1
@@ -880,6 +886,7 @@ Kevin Rowland -> 1
 Kft -> 2
 Kid Ink -> 1
 Kid Loco -> 1
+Kiddo -> 1
 Kim Wilde -> 1
 Kimbra -> 1
 Kinks -> 1
@@ -890,7 +897,7 @@ Kodaline -> 1
 Kokomo -> 1
 Komar Laszlo -> 3
 Koncz Zsuzsa -> 3
-Kool & The Gang -> 37
+Kool & The Gang -> 36
 Koop -> 1
 Kor Lay -> 1
 Koral -> 1
@@ -905,7 +912,7 @@ Kygo -> 3
 Kylie -> 1
 Kylie Minogue -> 17
 La Bouche -> 1
-La Roux -> 1
+La Roux -> 15
 Lady Gaga -> 11
 Laid Back -> 1
 Lana Del Rey -> 1
@@ -918,11 +925,13 @@ Latino Party -> 1
 Lauren Wood -> 1
 Lauv -> 1
 Le Ann Rimes -> 1
+Le Flex -> 1
 Leah Kate -> 1
 Led Zeppelin -> 1
 Lee Hazlewood -> 3
 Leila K -> 2
 Lena -> 1
+Lene Marlin -> 1
 Lenny Kravitz -> 6
 Leo Sayer -> 4
 Leona Lewis -> 1
@@ -1190,6 +1199,7 @@ Pascal Letoublon -> 1
 Pat Benatar -> 1
 Pat Boone -> 1
 Pato Banton -> 2
+Patrice Rushen -> 1
 Patrick Swayze -> 1
 Patsy Cline -> 1
 Patti Austin -> 2
@@ -1336,13 +1346,14 @@ Run Dmc -> 2
 Rupert Holmes -> 2
 Ruth Anne -> 1
 Rza -> 1
+Sabrina Carpenter -> 1
 Sade -> 23
 Sadie Ama -> 1
 Safri Duo -> 2
 Saint Etienne -> 1
 Sally Oldfield -> 1
 Salome De Bahia -> 1
-Salt N Pepa -> 1
+Salt N Pepa -> 2
 Sam Brown -> 1
 Sam Cooke -> 2
 Sam Feldt -> 1
@@ -1510,6 +1521,7 @@ Tasmin Archer -> 1
 Tate McRae -> 1
 Taylor Dayne -> 1
 Taylor Swift -> 17
+Tears For Fears -> 8
 Technotronic -> 1
 Teddy Pendergrass -> 1
 Tegan & Sara -> 1
@@ -1721,6 +1733,7 @@ Wise Hand -> 1
 Wisin -> 2
 Wiz Khalifa -> 2
 Wizzard -> 1
+Woods Empire -> 1
 Wyclef Jean -> 1
 Y2k -> 1
 Yazoo -> 3
