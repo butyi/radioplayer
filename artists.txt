@@ -617,7 +617,7 @@ French Affair -> 1
 French Montana -> 1
 Friends -> 1
 Fugees -> 3
-Fun Factory -> 24
+Fun Factory -> 26
 Fun Fun -> 5
 Funky Bunch -> 1
 Funky Town -> 1
@@ -935,6 +935,7 @@ Lene Marlin -> 1
 Lenny Kravitz -> 6
 Leo Sayer -> 4
 Leona Lewis -> 1
+Leony -> 1
 Lesha Svik -> 1
 Lewis Capaldi -> 1
 Lgt -> 1
@@ -1235,6 +1236,7 @@ Phil Carmen -> 1
 Phil Collins -> 3
 Philip Bailey -> 1
 Pia Zadora -> 1
+PickupLines -> 1
 Pink -> 8
 Pink Floyd -> 2
 Piramis -> 1
@@ -1489,6 +1491,7 @@ Sub Bass Monster -> 3
 Sublime -> 1
 Suga -> 1
 Sugababes -> 1
+Sunday Scaries -> 1
 Sunmi -> 2
 Supertramp -> 2
 Survivor -> 1
@@ -1685,6 +1688,7 @@ Twenty One Pilots -> 3
 Twice -> 8
 Twisted Sister -> 1
 Ty Dolla Ign -> 1
+Ty Dolla Sign -> 1
 Tydiaz -> 1
 U2 -> 61
 Ub40 -> 21
@@ -1732,6 +1736,7 @@ Winston Mcanuff -> 1
 Wise Hand -> 1
 Wisin -> 2
 Wiz Khalifa -> 2
+WizKid -> 1
 Wizzard -> 1
 Woods Empire -> 1
 Wyclef Jean -> 1
@@ -1745,7 +1750,7 @@ Youssou N Dour -> 1
 Yvonne Elliman -> 2
 Zager & Evans -> 1
 Zanzibar -> 2
-Zara Larsson -> 5
+Zara Larsson -> 13
 Zayn -> 1
 Zaz -> 1
 Zedd -> 2

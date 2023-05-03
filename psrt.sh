@@ -64,7 +64,6 @@ do
       # Do not apply trimmed variant, because it look too short
       echo -e " \e[93mTrim skipped!\e[39m Appended to $ERRORLOGFILE";
       echo -e "$SEP\nTrim skipped in song: $f\nOriginal size is $ORIGSIZE while trimmed size is only $TRIMMEDSIZE ($TRIMPERCENT %)\n\n" >> $ERRORLOGFILE
-      mv ~/tmp.mp3 "$f"
     fi
 
   else

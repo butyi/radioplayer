@@ -1705,7 +1705,9 @@ analogue/Fun Factory - Sing Along.mp3
 analogue/Tears For Fears - Sowing The Seeds Of Love.mp3
 analogue/Fun Factory - Take Me To The Limit.mp3
 analogue/Jimmy Ray - Are You Jimmy Ray.mp3
-analogue/La Roux - Kiss And Not Tell_.mp3
+analogue/La Roux - Kiss And Not Tell.mp3
+analogue/Fun Factory - Dreaming.mp3
+analogue/Fun Factory - Together Forever.mp3
 christmas/PMJ - God Rest Ye Merry Gentlemen.mp3
 christmas/Goombay Dance Band - White Christmas.mp3
 christmas/Darlene Love - Marshmallow World.mp3
@@ -1956,7 +1958,6 @@ digital/Omfg - Hello.mp3
 digital/Madonna - Addicted.mp3
 digital/Ariana Grande Ft. Iggy Azalea - Problem.mp3
 digital/Zayn Ft. Sia - Dusk Till Dawn.mp3
-digital/Clean Bandit Ft. Zara Larsson - Symphony.mp3
 digital/Rock Mafia Ft. Miley Cyrus - The Big Bang.mp3
 digital/Delta Goodrem - Last Night On Earth.mp3
 digital/Avicii Ft. Rita Ora - Lonely Together.mp3
@@ -2069,7 +2070,6 @@ digital/Wisin - Escapate Conmigo.mp3
 digital/Rick Astley - Beautiful Life.mp3
 digital/Savage Garden - To The Moon & Back.mp3
 digital/Twenty One Pilots - Heavydirtysoul.mp3
-digital/Zara Larsson - I Would Like.mp3
 digital/Calvin Harris Ft. Ellie Goulding - Outside.mp3
 digital/Twenty One Pilots - Ride.mp3
 digital/Mary J Blige - Family Affair.mp3
@@ -2347,12 +2347,10 @@ digital/Serebro - Mi Mi Mi.mp3
 digital/Olly Murs Ft. Flo Rida - Troublemaker.mp3
 digital/Fifth Harmony Ft. Ty Dolla Ign - Work From Home.mp3
 digital/Madonna - She`s Not Me.mp3
-digital/Zara Larsson - Ain T My Fault.mp3
 digital/Taylor Swift - I Knew You Were Trouble.mp3
 digital/Dj Antoine Ft. Timati Ft. Kalenna - Welcome To St Tropez.mp3
 digital/Tones & I - Dance Monkey.mp3
 digital/2 Pac - California Love.mp3
-digital/Zara Larsson - Lush Life.mp3
 digital/Madonna - Did You Do It.mp3
 digital/Ariana Grande - Into You.mp3
 digital/Kelly Clarkson - Behind These Hazel Eyes.mp3
@@ -2694,6 +2692,19 @@ digital/La Roux - Bulletproof.mp3
 digital/La Roux - Quicksand.mp3
 digital/La Roux - I'm Not Your Toy.mp3
 digital/La Roux - In For The Kill.mp3
+digital/Leony - Somewhere In Between.mp3
+digital/Sunday Scaries Ft. PickupLines - Chill Like That.mp3
+digital/Zara Larsson - TG4M.mp3
+digital/Zara Larsson - Funeral.mp3
+digital/Zara Larsson - Lush Life.mp3
+digital/Zara Larsson - Ain't My Fault.mp3
+digital/Zara Larsson Ft. Ty Dolla Sign - So Good.mp3
+digital/Clean Bandit Ft. Zara Larsson - Symphony.mp3
+digital/Zara Larsson - Only You.mp3
+digital/Zara Larsson - I Would Like.mp3
+digital/Zara Larsson Ft. WizKid - Sundown.mp3
+digital/Zara Larsson - Don't Let Me Be Yours.mp3
+digital/Zara Larsson - One Mississippi.mp3
 hungarian/analogue/Akos - Az Utolso Level.mp3
 hungarian/analogue/Akos - Be Lettel Oltva.mp3
 hungarian/analogue/Akos - Dudolni Halkan.mp3
@@ -4937,6 +4948,7 @@ night/La Roux - Cover My Eyes.mp3
 night/Fun Factory - Hey Little Girl.mp3
 night/Madonna - Secret .mp3
 night/Fun Factory - Back In The Days.mp3
+night/Zara Larsson - I Can't Fall In Love Without You.mp3
 party/Lost Frequencies - Are You With Me.mp3
 party/Wamdue Project - King Of My Castle.mp3
 party/Briskey - Kosmo Yahoodi.mp3
@@ -5229,5 +5241,5 @@ party/Gloria Estefan Ft. Miami Sound Machine - Turn The Beat Around.mp3
 party/Twenty 4 Seven Ft. Captain Hollywood Project - I Can't Stand It.mp3
 party/Panjabi Mc - Jogi.mp3
 party/Bucketheads - The Bomb.mp3
-party/Fun Factory - Doh Wah Diddy.mp3
 party/Alex Gaudino Ft. Crystal Waters - Destination Calabria.mp3
+party/Fun Factory - Doh Wah Diddy.mp3
