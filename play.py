@@ -9,7 +9,7 @@ __author__ = "Janos BENCSIK"
 __copyright__ = "Copyright 2020, butyi.hu"
 __credits__ = "James Robert (jiaaro) for pydub (https://github.com/jiaaro/pydub)"
 __license__ = "GPL"
-__version__ = "0.0.7"
+__version__ = "0.0.8"
 __maintainer__ = "Janos BENCSIK"
 __email__ = "radioplayer@butyi.hu"
 __status__ = "Prototype"
@@ -72,7 +72,7 @@ JinglePath = ""
 JinglePeriod = 15
 Songs = [] # Empty list for songs
 CurrentProgramme = "Not yet read in";
-SongName = "Jingle.mp3"
+SongName = "-.mp3"
 PrevSong = False
 CurrentSong = False
 NextSong = False
@@ -277,9 +277,9 @@ if __name__ == '__main__':
 
     # Search a song not in RecentlyPlayed list and by different atrist
     SearchCounter = 0 # Loop limit. If 100 trials were not enough to find a sufficient song, do not search more, use the 100th insufficient
+    PrevSong = SongName;
     while SearchCounter < 100:
       SearchCounter = SearchCounter + 1
-      PrevSong = SongName;
       SongName = Songs[random.randrange(0,len(Songs))]
       if os.path.basename(SongName) not in RecentlyPlayed:
         # Ensure to not play too often from the same artists
@@ -341,7 +341,8 @@ if __name__ == '__main__':
           with open(HistoryFile, 'a+') as f:
             f.write(str(datetime.datetime.today())+" -> "+os.path.basename(jin)[:-4]+"\r\n")
         infotext = CurrentProgramme
-        infotext += "\n" + os.path.basename(jin)[:-4]
+        infotext += "\n" + os.path.basename(PrevSong)[:-4]
+        infotext += "\n" + os.path.basename("Jingle")
         infotext += "\n" + os.path.basename(SongName)[:-4]
         try:
           jin = AudioSegment.from_mp3(jin) # Load the choosen jingle

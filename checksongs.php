@@ -15,7 +15,9 @@ $similarity_exclude = array(
   "Best Of My Love",
   "Ennio Morricone - A Fistful Of",
   "Fun Factory - Next To You",
-  "Fun Factory - Close To You"
+  "Fun Factory - Close To You",
+  "Racz Gergo Ft. Orsovai Reni - Aha",
+  "Racz Gergo Ft. Orsovai Reni - Mostantol",
 );
 
 
@@ -68,7 +70,9 @@ $andinartistnames = array(
   "Marnik & Smack",
   "Lisa Lisa & Cult Jam",
   "Sly & The Family Stone",
-  "Zager & Evans"
+  "Zager & Evans",
+  "The Girl & The Dreamcatcher",
+  "Brandy & Monica",
 );
 
 $skipsimilaritycheck = array(
@@ -82,6 +86,8 @@ $allowedmultiplecapitals = array(
   "GM", //GM 49
   "EZ", //EZ Rollers
   "BTS",
+  "PMJ",
+  "POW!GRL",
 );
 
 $suspiciouswords = array(
@@ -131,7 +137,7 @@ foreach($files as $key => $line){
 
   //PMJs filenames are not yet formated, skip from check
   if(false!==strpos($line,"PMJ ")){
-    continue;
+    //continue;
   }
 
 //  if(preg_match('/\s(\S+n\')\s/i',$line,$regs){//"n'"
@@ -192,8 +198,12 @@ foreach($files as $key => $line){
     $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
   if(preg_match('/\s([a-z]\S*)\s/',$line,$regs)){//word starting with small letter
-    echo $line." -> (".$regs[1].")\n";
-    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
+    if( 0 === strpos($line,"PMJ") && $regs[1] == "of" ){
+      //This is allowed
+    } else {
+      echo $line." -> (".$regs[1].")\n";
+      $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
+    }
   }
   if(preg_match('/^([a-z]\S*)\s/',$line,$regs)){//first word starting with small letter
     echo $line." -> (".$regs[1].")\n";
@@ -211,7 +221,7 @@ foreach($files as $key => $line){
       $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
     }
   }
-  if(preg_match('/ \-[^\-]*\-/',$line,$regs)){//double '-'
+  if(0 !== strpos($line,"PMJ") && preg_match('/ \-[^\-]*\-/',$line,$regs)){//double '-'
     echo $line." -> (more than one '-')\n";
     $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
