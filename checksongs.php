@@ -80,6 +80,7 @@ $skipsimilaritycheck = array(
   "Jean Michel Jarre - Equinoxe",
   "Jean Michel Jarre - Magnetic Fields",
   "Depeche Mode - A Question Of",
+  "Jazz Standard Cover By Robyn Adele Anderson",
 );
 
 $allowedmultiplecapitals = array(
@@ -88,6 +89,7 @@ $allowedmultiplecapitals = array(
   "BTS",
   "PMJ",
   "POW!GRL",
+  "HAB", // R3HAB
 );
 
 $suspiciouswords = array(
