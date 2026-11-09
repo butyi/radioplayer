@@ -20,8 +20,12 @@ $similarity_exclude = array(
   "Racz Gergo Ft. Orsovai Reni - Mostantol",
 );
 
+//Accepted 'With' in artists
+$withinartistnames = array(
+  "Girl With No Face",
+);
 
-//Accepted '&' in artists
+//Accepted '&' or 'And' in artists
 $andinartistnames = array(
   "Smokey Robinson & The Miracles",
   "Kool & The Gang",
@@ -165,10 +169,26 @@ foreach($files as $key => $line){
   }
 
   if(preg_match('/\s(With)\s.+ - /i',$line,$regs)){//search 'With' which maybe to be replaced with 'Ft.'
+    $found=false;
+    foreach($withinartistnames as $i){
+      if(false !== strpos($line,$i)){
+        $found=true;
+        break;
+      }
+    }
+    if($found)continue;
     echo $line." -> (".$regs[1].")\n";
     $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
   if(preg_match('/ (And) .+ - /i',$line,$regs)){//search 'And' which maybe to be replaced with 'Ft.'
+    $found=false;
+    foreach($andinartistnames as $i){
+      if(false !== strpos($line,$i)){
+        $found=true;
+        break;
+      }
+    }
+    if($found)continue;
     echo $line." -> (".$regs[1].")\n";
     $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
