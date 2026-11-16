@@ -18,11 +18,34 @@ $similarity_exclude = array(
   "Fun Factory - Close To You",
   "Racz Gergo Ft. Orsovai Reni - Aha",
   "Racz Gergo Ft. Orsovai Reni - Mostantol",
+  "Robyn Adele Anderson - Anaconda",
+  "obyn Adele Anderson - Timber",
+  "Robyn Adele Anderson - Gentleman",
+  "Shoshana Bean - Tomorrow",
+  "Kenton Chen - Closer",
+  "Robyn Adele Anderson - Love",
+  "Robyn Adele Anderson - Helena",
+  "Melinda Doolittle - Baby",
+  "Haley Reinhart - Habits",
+  "Shoshana Bean - Sorry",
+  "Robyn Adele Anderson - Aerials",
+  "Robyn Adele Anderson - Wiggle",
+  "Von Smith - Titanium",
+  "Dani Armstrong - Chandelier",
+  "Morgan James - Maps",
+  "Robyn Adele Anderson Ft. The Tee-Tones - Birthday",
+  "Robyn Adele Anderson Ft. The Tee-Tones - Problem",
+  "Cristina Gatti - Someday",
+  "Dani Armstrong - Roxanne",
+  "Morgan James - Jealous",
+  "Cristina Gatti - Womanizer",
 );
 
 //Accepted 'With' in artists
 $withinartistnames = array(
   "Girl With No Face",
+  "Stay With Me",
+  "Sad Clown With The Golden Voice",
 );
 
 //Accepted '&' or 'And' in artists
@@ -43,7 +66,7 @@ $andinartistnames = array(
   "Heavy D & The Boyz",
   "Jazzy Jeff & The Fresh Prince",
   "Derek & The Dominos",
-  "Hall & Oats",
+  "Hall & Oates",
   "The Mamas & The Papas",
   "Simon & Garfunkel",
   "Tony Orlando & Dawn",
@@ -77,6 +100,10 @@ $andinartistnames = array(
   "Zager & Evans",
   "The Girl & The Dreamcatcher",
   "Brandy & Monica",
+  "Selena Gomez & The Scene",
+  "Dionne Warwick & Friends",
+  "Young & Beautiful",
+  "Come And Get It",
 );
 
 $skipsimilaritycheck = array(
@@ -94,6 +121,7 @@ $allowedmultiplecapitals = array(
   "PMJ",
   "POW!GRL",
   "HAB", // R3HAB
+  "YMCA",
 );
 
 $suspiciouswords = array(
@@ -139,11 +167,6 @@ foreach($files as $key => $line){
         $artists[$i]=1;
       }
     }
-  }
-
-  //PMJs filenames are not yet formated, skip from check
-  if(false!==strpos($line,"PMJ ")){
-    //continue;
   }
 
 //  if(preg_match('/\s(\S+n\')\s/i',$line,$regs){//"n'"
@@ -212,6 +235,21 @@ foreach($files as $key => $line){
     if(false !== strpos($line,"n't"))continue;
     if(false !== strpos($line,"I'm"))continue;
     if(false !== strpos($line,"'re"))continue;
+    if(false !== strpos($line,"in'"))continue; // e.g. Workin' Walkin'
+    if(false !== strpos($line,"C'est"))continue;
+    if(false !== strpos($line,"L'Amour"))continue;
+    if(false !== strpos($line,"D'Arby"))continue;
+    if(false !== strpos($line,"O'Sullivan"))continue;
+    if(false !== strpos($line,"N'Dour"))continue;
+    if(false !== strpos($line,"L'Ombre"))continue;
+    if(false !== strpos($line,"M'Oige"))continue;
+    if(false !== strpos($line,"M'Innamoro"))continue;
+    if(false !== strpos($line,"L'Oiseau"))continue;
+    if(false !== strpos($line,"D'Amour"))continue;
+    if(false !== strpos($line,"D'Agostino"))continue;
+    if(false !== strpos($line,"Guns N' Roses"))continue;
+    if(false !== strpos($line,"Rob 'N' Raz"))continue;
+    
     echo $line." -> (".$regs[1].")\n";
     $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
@@ -220,18 +258,14 @@ foreach($files as $key => $line){
     $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
   if(preg_match('/\s([a-z]\S*)\s/',$line,$regs)){//word starting with small letter
-    if( 0 === strpos($line,"PMJ") && $regs[1] == "of" ){
-      //This is allowed
-    } else {
-      echo $line." -> (".$regs[1].")\n";
-      $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
-    }
+    echo $line." -> (".$regs[1].")\n";
+    $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
   if(preg_match('/^([a-z]\S*)\s/',$line,$regs)){//first word starting with small letter
     echo $line." -> (".$regs[1].")\n";
     $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
-  if(preg_match('/([A-Z]{2}\S*)/',$line,$regs)){//Second or futher capital letter 
+  if(preg_match('/([A-Z]{2,})/',$line,$regs)){//Second or futher capital letter 
     if(!in_array($regs[1],$allowedmultiplecapitals)){
       echo $line." -> (".$regs[1].")\n";
       $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
@@ -243,7 +277,8 @@ foreach($files as $key => $line){
       $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
     }
   }
-  if(0 !== strpos($line,"PMJ") && preg_match('/ \-[^\-]*\-/',$line,$regs)){//double '-'
+  if(preg_match('/ \-[^\-]*\-/',$line,$regs)){//double '-'
+    if(false !== strpos($line,"Un-Break"))continue; // Toni Braxton - Un-Break My Heart.mp3
     echo $line." -> (more than one '-')\n";
     $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
@@ -263,10 +298,13 @@ foreach($files as $key => $line){
     echo $line." -> (".$regs[1].")\n";
     $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
+  /*
+  261115: comma allowed, some song contains 
   if(preg_match('/(,)/',$line,$regs)){//','
     echo $line." -> (".$regs[1].")\n";
     $renames.='mv "'.trim($paths[$key]).'" "'.trim($paths[$key]).'"'.PHP_EOL;
   }
+  */
 
   if($checksimilarity){
     //Find similar songs which maybe duplicated due to file name typo
