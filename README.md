@@ -181,11 +181,9 @@ The following steps I have made to get it work:
 - Enable SSH in raspi-config interface settings.
 - Get know RPi IP address
   `hostname -I`
-- Connect to rpi from PC
+- Connect to RPi from PC
   - `ssh pi@192.168.0.137`
   - Most likely you need to create/update RSA key for SSH
-- Copy (or update) songs to RPi through SSH
-  `rsync -luvrt --delete -e ssh /home/butyi/synas/music/radio/* pi@192.168.0.137:/home/pi/synas/music/radio`
 - Test the player manually by steps in Usage paragraph
 - Now, create the bash file which will be called at boot
   - `cd`
@@ -205,6 +203,18 @@ The following steps I have made to get it work:
   cut. Remember that while this feature is active, all changes are only done in RAM, and will lost at power off. If you want to
   change anything in memory card, first switch this off.
 - From now on just power up RPi and enjoy the music.
+
+## Update songsfrom NAS to Raspberry Pi
+- Log in into RPi by `ssh pi@192.168.0.137`
+- Run `sudo raspi-config`
+- Disable overlay file system (RAM drive for write access)
+- Log out from RPi
+- Copy (or update) songs to RPi through SSH
+  `rsync -luvrt --delete -e ssh /home/butyi/synas/music/radio/* pi@192.168.0.137:/home/pi/synas/music/radio`
+- Log in into RPi by `ssh pi@192.168.0.137`
+- Run `sudo raspi-config`
+- Enable overlay file system
+- Log out from RPi
 
 ## Radio webpage
 
