@@ -204,7 +204,7 @@ The following steps I have made to get it work:
   change anything in memory card, first switch this off.
 - From now on just power up RPi and enjoy the music.
 
-## Update songsfrom NAS to Raspberry Pi
+## Update songs from NAS to Raspberry Pi
 - Log in into RPi by `ssh pi@192.168.0.137`
 - Run `sudo raspi-config`
 - Disable overlay file system (RAM drive for write access)
