@@ -1464,7 +1464,7 @@ Oscar Brown Junior -> 1
 Otis Redding -> 1
 Ottawan -> 12
 Outkast -> 1
-PMJ -> 213
+PMJ -> 212
 POW!GRL -> 1
 Paco De Lucia -> 1
 Padodo -> 2
@@ -1619,7 +1619,7 @@ Robin Schulz -> 13
 Robin Thicke -> 1
 Robyn -> 1
 Robyn Adele -> 1
-Robyn Adele Anderson -> 61
+Robyn Adele Anderson -> 64
 Rochelle Diamante -> 1
 Rock & Roll Mix -> 1
 Rock Mafia -> 1
@@ -2090,7 +2090,7 @@ Virginia Cavaliere -> 1
 Vize -> 1
 Vodku V Glotku -> 1
 Voith Agi -> 1
-Von Smith -> 7
+Von Smith -> 8
 Vonzell Solomon -> 2
 Wamdue Project -> 2
 Warren G -> 2

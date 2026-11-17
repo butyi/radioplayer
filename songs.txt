@@ -1732,7 +1732,6 @@ analogue/Tears For Fears - Head Over Heels.mp3
 analogue/Beloved - Let's Come Together.mp3
 analogue/Kool & The Gang - Let's Go Dancing.mp3
 analogue/Burger Lars Dietrich - Sexy Eis.mp3
-christmas/PMJ - God Rest Ye Merry Gentlemen.mp3
 christmas/Goombay Dance Band - White Christmas.mp3
 christmas/Darlene Love - Marshmallow World.mp3
 christmas/Wizzard - I Wish It Could Be Christmas Everyday.mp3
@@ -1814,7 +1813,6 @@ christmas/Adam Faith - Lonely Pup In A Christmas Shop.mp3
 christmas/Jackson 5 - Someday At Christmas.mp3
 christmas/Darlene Love - Christmas (Baby Please Come Home).mp3
 christmas/Ella Fitzgerald - Baby It's Cold Outside.mp3
-christmas/PMJ - All I Want For Christmas (Mariah Carey) Jazz Cover By Robyn Adele Anderson Ft. Von Smith.mp3
 christmas/Nat King Cole - Silent Night.mp3
 christmas/East 17 - Stay Another Day.mp3
 christmas/Peggy Lee - Happy Holiday.mp3
@@ -1840,7 +1838,6 @@ christmas/Gloria Estefan - Christmas Through Your Eyes.mp3
 christmas/Fay Lovsky - Christmas Was A Friend Of Mine.mp3
 christmas/Goombay Dance Band - Christmas At Sea.mp3
 christmas/George Michael - Last Christmas.mp3
-christmas/PMJ - Have Yourself A Merry Little Christmas Holiday Jazz Cover By Robyn Adele Anderson.mp3
 christmas/Boney M - Mary's Boy Child Oh My Lord.mp3
 christmas/Bing Crosby - It's Beginning To Look A Lot Like Christmas.mp3
 christmas/Alexandra Burke - Hallelujah.mp3
@@ -1929,6 +1926,9 @@ christmas/Burl Ives - A Holly Jolly Christmas.mp3
 christmas/Whitney Houston - Do You Hear What I Hear.mp3
 christmas/Dean Martin - The Christmas Blues.mp3
 christmas/Dean Martin - Rudolph The Red Nosed Reindeer.mp3
+christmas/PMJ Ft. Robyn Adele Anderson - God Rest Ye Merry Gentlemen.mp3
+christmas/Robyn Adele Anderson Ft. Von Smith - All I Want For Christmas.mp3
+christmas/PMJ Ft. Robyn Adele Anderson - Have Yourself A Merry Little Christmas.mp3
 digital/Pink - Try.mp3
 digital/Hozier - Take Me To Church.mp3
 digital/Robin Schulz - Moonlit Sky.mp3
